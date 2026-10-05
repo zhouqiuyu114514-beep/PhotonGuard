@@ -1,0 +1,28 @@
+# Local runtimes, caches, generated evidence and model exchanges
+.runtime/
+.library-helper/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+artifacts/
+imports/
+inputs/
+*.log
+*.zip
+benchmark/*/
+runtime/logs/
+runtime/reproduction/
+# Local credentials, approval configurations and usage ledgers
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*secrets*.json
+*.config.json
+*.ledger.json
+patch.json
+repaired.json
+model-exchanges/
+model-audits/

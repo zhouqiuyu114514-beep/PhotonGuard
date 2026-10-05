@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "task_sha256": "c5d431a1dba092405964351739b952562e61d8f1bd7849928f1a3fa8bcdb0aea",
+  "policy_sha256": "289c883ef4f0c1a2fac02ab54c92e1c76d445bcdaca9706774c167c005be9fde",
+  "confirmation": "Explicit CLI --approve confirmation",
+  "case_id": "epsilon_mismatch"
+}

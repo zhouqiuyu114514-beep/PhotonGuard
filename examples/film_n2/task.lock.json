@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "task_sha256": "760551a8b0d4a9a0844312e8680392a417a04202fa2fcefcba9fc560699eabf3",
+  "policy_sha256": "289c883ef4f0c1a2fac02ab54c92e1c76d445bcdaca9706774c167c005be9fde",
+  "confirmation": "Explicit CLI --approve confirmation",
+  "case_id": "film_n2"
+}

@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "task_sha256": "1cb89ae3ff423f8c933fce401aae7e569207aaa222ce880ad8a4a3a2bdc6a6f4",
+  "policy_sha256": "289c883ef4f0c1a2fac02ab54c92e1c76d445bcdaca9706774c167c005be9fde",
+  "confirmation": "Explicit CLI --approve confirmation",
+  "case_id": "unsupported_angle"
+}

@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "task_sha256": "19c23e46816cc5668007196b87d78b818a8a47b340777fbf637389c5ad9b794f",
+  "policy_sha256": "289c883ef4f0c1a2fac02ab54c92e1c76d445bcdaca9706774c167c005be9fde",
+  "confirmation": "Explicit CLI --approve confirmation",
+  "case_id": "underresolved_high_index"
+}

@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "task_sha256": "1c22e9f270a6df17171571ef10f063bcfeba415cbe43db0f3f259cbc2e63c154",
+  "policy_sha256": "289c883ef4f0c1a2fac02ab54c92e1c76d445bcdaca9706774c167c005be9fde",
+  "confirmation": "Explicit CLI --approve confirmation",
+  "case_id": "unknown_intent"
+}

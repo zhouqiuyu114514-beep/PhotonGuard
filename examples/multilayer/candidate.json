@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "adapter": "film1d-v1",
+  "case_id": "multilayer",
+  "layers": [
+    {
+      "material_kind": "index",
+      "material_value": 1.45,
+      "thickness_um": 0.213
+    },
+    {
+      "material_kind": "index",
+      "material_value": 2.1,
+      "thickness_um": 0.167
+    },
+    {
+      "material_kind": "index",
+      "material_value": 1.7,
+      "thickness_um": 0.281
+    }
+  ],
+  "numerics": {
+    "resolution": 80,
+    "after_sources": 100,
+    "pml_um": 1.0,
+    "air_um": 3.0,
+    "source_amplitude": 1.0
+  },
+  "workflow": {
+    "subtract_incident": true,
+    "reference_amplitude": 1.0,
+    "reference_time_factor": 1.0
+  },
+  "origin": {
+    "kind": "synthetic-development-case",
+    "patch_round": 0
+  }
+}

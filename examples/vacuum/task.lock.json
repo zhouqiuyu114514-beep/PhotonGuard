@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "task_sha256": "89339d63f3bdf99f69895bf7eec7fa07e20ae162f332027843f2f88540d60e9a",
+  "policy_sha256": "289c883ef4f0c1a2fac02ab54c92e1c76d445bcdaca9706774c167c005be9fde",
+  "confirmation": "Explicit CLI --approve confirmation",
+  "case_id": "vacuum"
+}

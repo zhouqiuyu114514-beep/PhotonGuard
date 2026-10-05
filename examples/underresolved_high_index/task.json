@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "case_id": "underresolved_high_index",
+  "physics": {
+    "dimensions": 1,
+    "angle_deg": 0,
+    "lossless": true,
+    "dispersive": false,
+    "isotropic": true,
+    "mu": 1,
+    "n_incident": 1,
+    "n_exit": 1
+  },
+  "units_um": 1.0,
+  "layers": [
+    {
+      "n": 3.5,
+      "thickness_um": 1.8
+    }
+  ],
+  "wavelength_um": [
+    1.3,
+    1.7
+  ],
+  "nfreq": 41,
+  "sources": [
+    {
+      "kind": "synthetic development fixture",
+      "reference": "examples/underresolved_high_index/task.json",
+      "note": "Developer-defined numerical control, not user plan physical intent or a real user case"
+    }
+  ]
+}

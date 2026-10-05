@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "case_id": "multilayer",
+  "physics": {
+    "dimensions": 1,
+    "angle_deg": 0,
+    "lossless": true,
+    "dispersive": false,
+    "isotropic": true,
+    "mu": 1,
+    "n_incident": 1,
+    "n_exit": 1
+  },
+  "units_um": 1.0,
+  "layers": [
+    {
+      "n": 1.45,
+      "thickness_um": 0.213
+    },
+    {
+      "n": 2.1,
+      "thickness_um": 0.167
+    },
+    {
+      "n": 1.7,
+      "thickness_um": 0.281
+    }
+  ],
+  "wavelength_um": [
+    1.3,
+    1.7
+  ],
+  "nfreq": 41,
+  "sources": [
+    {
+      "kind": "synthetic development fixture",
+      "reference": "examples/multilayer/task.json",
+      "note": "Developer-defined numerical control, not user plan physical intent or a real user case"
+    }
+  ]
+}

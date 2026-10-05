@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "task_sha256": "e560d603925daa289444b914ff05922b5c2e86dc0a0e1f82bef211b1eb14417c",
+  "policy_sha256": "289c883ef4f0c1a2fac02ab54c92e1c76d445bcdaca9706774c167c005be9fde",
+  "confirmation": "Explicit CLI --approve confirmation",
+  "case_id": "stale_normalization"
+}

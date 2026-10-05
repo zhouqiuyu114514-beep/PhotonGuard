@@ -1,0 +1,62 @@
+[
+  {
+    "case_id": "film_n2",
+    "expected_status": "PASS",
+    "split": "development",
+    "fault_origin": "development control"
+  },
+  {
+    "case_id": "vacuum",
+    "expected_status": "PASS",
+    "split": "development",
+    "fault_origin": "development control"
+  },
+  {
+    "case_id": "multilayer",
+    "expected_status": "PASS",
+    "split": "development",
+    "fault_origin": "development control"
+  },
+  {
+    "case_id": "epsilon_mismatch",
+    "expected_status": "FAIL",
+    "split": "development",
+    "fault_origin": "synthetic injection"
+  },
+  {
+    "case_id": "stale_normalization",
+    "expected_status": "FAIL",
+    "split": "development",
+    "fault_origin": "synthetic injection"
+  },
+  {
+    "case_id": "missing_subtraction",
+    "expected_status": "FAIL",
+    "split": "development",
+    "fault_origin": "synthetic injection"
+  },
+  {
+    "case_id": "unknown_intent",
+    "expected_status": "INCONCLUSIVE",
+    "split": "development",
+    "fault_origin": "development control"
+  },
+  {
+    "case_id": "unsupported_angle",
+    "expected_status": "UNSUPPORTED",
+    "split": "development",
+    "fault_origin": "development control"
+  },
+  {
+    "case_id": "valid_shorter_reference",
+    "expected_status": "PASS",
+    "split": "development",
+    "fault_origin": "development control"
+  },
+  {
+    "case_id": "underresolved_high_index",
+    "expected_status": "FAIL",
+    "split": "development",
+    "fault_origin": "synthetic injection"
+  }
+]

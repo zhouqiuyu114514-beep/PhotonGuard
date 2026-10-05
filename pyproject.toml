@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "photonguard"
+version = "0.1.0"
+description = "Evidence-first validation for constrained 1D Meep film simulations"
+requires-python = ">=3.10"
+license = {text = "GPL-2.0-or-later"}
+dependencies = ["numpy>=1.26", "tmm==0.2.0"]
+[project.scripts]
+photonguard = "photonguard.cli:main"
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+[tool.setuptools.packages.find]
+include = ["photonguard*"]

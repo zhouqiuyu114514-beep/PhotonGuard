@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "task_sha256": "387a02298325df19a1951a01c80f577fd7d1ba4a500a6f204e1a4011b794b6ea",
+  "policy_sha256": "289c883ef4f0c1a2fac02ab54c92e1c76d445bcdaca9706774c167c005be9fde",
+  "confirmation": "Explicit CLI --approve confirmation",
+  "case_id": "multilayer"
+}

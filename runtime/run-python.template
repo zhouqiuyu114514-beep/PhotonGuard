@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+RUNTIME="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export MPLBACKEND=Agg
+export MPLCONFIGDIR="$RUNTIME/cache/matplotlib"
+export XDG_CACHE_HOME="$RUNTIME/cache"
+export OMP_NUM_THREADS="${OMP_NUM_THREADS:-1}"
+export OPENBLAS_NUM_THREADS="${OPENBLAS_NUM_THREADS:-1}"
+mkdir -p "$MPLCONFIGDIR"
+exec "$RUNTIME/env/bin/python" "$@"

@@ -1,0 +1,15 @@
+# Official serial PyMeep, from conda-forge only. Tested on Linux x86_64.
+name: photonguard
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12.14
+  - pymeep=1.34.0=nompi_py312h1c86e9f_101
+  - numpy=2.5.3
+  - scipy=1.18.1
+  - h5py=3.16.0=nompi_py312hfaa9938_105
+  - matplotlib-base=3.11.2
+  - tmm=0.2.0
+  - pytest=9.1.1
+  - pip=26.2.1

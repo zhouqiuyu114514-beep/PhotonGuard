@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "task_sha256": "3dcb7d137aa1579d680b955309b3721c31247b60bea58c7781ecf0fee55d6e16",
+  "policy_sha256": "289c883ef4f0c1a2fac02ab54c92e1c76d445bcdaca9706774c167c005be9fde",
+  "confirmation": "Explicit CLI --approve confirmation",
+  "case_id": "missing_subtraction"
+}

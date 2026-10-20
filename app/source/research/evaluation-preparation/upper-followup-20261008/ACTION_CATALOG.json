@@ -1,0 +1,66 @@
+{
+  "status": "OFFLINE_TEMPLATE_ENUMERATION_ONLY",
+  "actions": [
+    {
+      "name": "restore_layer_material",
+      "path": [
+        "layers",
+        "index",
+        "material_value"
+      ],
+      "new": "locked task value",
+      "requires": "task parameter mismatch"
+    },
+    {
+      "name": "restore_layer_thickness",
+      "path": [
+        "layers",
+        "index",
+        "thickness_um"
+      ],
+      "new": "locked task value",
+      "requires": "task parameter mismatch"
+    },
+    {
+      "name": "restore_reference_amplitude",
+      "path": [
+        "workflow",
+        "reference_amplitude"
+      ],
+      "new": "numerics.source_amplitude",
+      "requires": "reference_pairing FAIL"
+    },
+    {
+      "name": "enable_incident_subtraction",
+      "path": [
+        "workflow",
+        "subtract_incident"
+      ],
+      "new": true,
+      "requires": "reflection_subtraction FAIL"
+    },
+    {
+      "name": "increase_duration",
+      "path": [
+        "numerics",
+        "after_sources"
+      ],
+      "new": "min(400, current*10)",
+      "requires": "time_sensitivity FAIL"
+    },
+    {
+      "name": "increase_resolution",
+      "path": [
+        "numerics",
+        "resolution"
+      ],
+      "new": "min(320, current*4)",
+      "requires": "grid_sensitivity or base_independent_tmm FAIL"
+    }
+  ],
+  "maximum_changes_per_action": 1,
+  "measured_efficacy": false,
+  "raw_action_effect_labels": null,
+  "new_model_calls": 0,
+  "new_solver_calls": 0
+}

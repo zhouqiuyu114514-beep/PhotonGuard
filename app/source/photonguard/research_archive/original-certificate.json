@@ -1,0 +1,655 @@
+{
+  "status": "SELECTED_RECORD_CONTINUOUS_TARGET_BOUND",
+  "continuous_model_hash": "5c189d2ce2f2969d8282ad69899f3315b876786d8137641199a7ffc9f37b9ff5",
+  "source_worker_hash": "2ac80505cb02db6faa0dfa53d593f36a66e87de52558d16d84535bac9ee95d08",
+  "source_original_record": {
+    "path": "/home/zhou/projects/PhotonGuard-development/local-validation/iteration-20261008-release/reviewed-evidence-v1/production-cap-validation/mode-artifacts/20261008T040316Z-cff43b8a/base-0.775/result.json",
+    "sha256": "b708969d254721cb354e204635a683cdff8f03c83646a64d24fb457edba0bda7",
+    "bytes": 14844
+  },
+  "source_original_field": {
+    "path": "/home/zhou/projects/PhotonGuard-development/local-validation/iteration-20261008-release/reviewed-evidence-v1/production-cap-validation/mode-artifacts/20261008T040316Z-cff43b8a/base-0.775/band-3-fields.npz",
+    "sha256": "5126891164a00e5a04b98671e13c9124ebd6c582ec614d05bec0821d60de62e1",
+    "bytes": 10283135
+  },
+  "source_trial": {
+    "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/CENTER/proposal.npz",
+    "sha256": "51bfdd94bd904192292136ee026a4525af4a310ff2d51c2862a5b2ecbbf9d4df"
+  },
+  "source_forms_and_DOF_hashes": {
+    "forms_first": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/goal-certificate-20261008-release/reviewed-evidence-v1/basis-binding-v3/SH-r40-low.json",
+      "sha256": "b26e89ccc5bf5d485644e1566eb049aaf746f1fd8742dd429baa5874fb010222",
+      "bytes": 9552
+    },
+    "forms_last": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/goal-certificate-20261008-release/reviewed-evidence-v1/basis-binding-v3/SH-r40-high.json",
+      "sha256": "c772eb4ab668100ae3a1154ac5eb3480ec33af0f03fdd683cd386561b75bdd46",
+      "bytes": 9579
+    },
+    "common_dofs": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/goal-certificate-20261008-release/reviewed-evidence-v1/basis-binding-v3/common-r40-trials.npz",
+      "sha256": "53672c438543ea18fbf2acf9c0ecaabf0e6a87d02da79eb88763f488451236d5",
+      "bytes": 10394588
+    },
+    "common_freeze": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/goal-certificate-20261008-release/reviewed-evidence-v1/basis-binding-v3/trial-freeze.json",
+      "sha256": "f88b2fd192d1b82b6c8522cc18b777a43047311f2b7819eb7bcf5da55cb1a2d6",
+      "bytes": 1613
+    }
+  },
+  "rank_and_gap_proofs": {
+    "lower": [
+      {
+        "cut_exact": "1283/1000",
+        "columns": [
+          1,
+          2
+        ],
+        "row_margin_exact": [
+          "109695361960713109728996526038580465564811187960169/119384588122421468502115750166470473814369419688673280",
+          "895591166570785504803499317948817168235677872205609/53059816943298430445384777851764655028608630972743680"
+        ],
+        "row_margin_float": [
+          0.000918840226246183,
+          0.016878896652203785
+        ],
+        "R_exact": [
+          [
+            [
+              [
+                "26786871129527104799521034736487860246158910319/29146627959575553833524353067985955521086284103680",
+                "47621104242943424375116895020351540440613958443/51816227483689873481821072120863920926375616184320"
+              ],
+              [
+                "-819169444831688904657326278208821883574040825231351/65632371408925472197744800482751646820139652150444830621318512640",
+                "819140150109720466183520501476268232627556072355831/65632371408925472197744800482751646820139652150444830621318512640"
+              ]
+            ],
+            [
+              [
+                "-378571785439524224199253394128593684227120643871/1910153409958743496033852002663527581029910715018772480",
+                "-1051587934761801271953858788786993274341782141/5305981694329843044538477785176465502860863097274368"
+              ],
+              [
+                "-2145338710745511086810249969253027584647309913323/977998545898876669969332225363726121487314286089611509760",
+                "-143021131004088714252915314628839323986737503703/65199903059925111331288815024248408099154285739307433984"
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                "-126190594862416299198290052923438628813011402677/636717803319581165344617334221175860343303571672924160",
+                "-9464291438783747920278159679970688250720224869/47753835248968587400846300066588189525747767875469312"
+              ],
+              [
+                "429063457891750863958781962205151796803710769541/195599709179775333993866445072745224297462857217922301952",
+                "2145338387045080849295499592406759016506440117483/977998545898876669969332225363726121487314286089611509760"
+              ]
+            ],
+            [
+              [
+                "874611018650192533015278591136177927662946611821/51816227483689873481821072120863920926375616184320",
+                "1574299833592870908629038358926120137464957459723/93269209470641772267277929817555057667476109131776"
+              ],
+              [
+                "-1431168753026045295042519393497894893689976181404373/131264742817850944395489600965503293640279304300889661242637025280",
+                "477011285402504111534811889757679827066273759290951/43754914272616981465163200321834431213426434766963220414212341760"
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "cut_exact": "1299/1000",
+        "columns": [
+          0,
+          1,
+          2
+        ],
+        "row_margin_exact": [
+          "1140042776707368942021888670340191929795441302170253/241867559715984451190823312178299467630409416368455680",
+          "5511674737663630839883636294820366998783075968944483/483735119431968902381646624356598935260818832736911360",
+          "3310098391500063366683857454604610376920721839776197/120933779857992225595411656089149733815204708184227840"
+        ],
+        "row_margin_float": [
+          0.004713500140515232,
+          0.011393993357637074,
+          0.02737116457772991
+        ],
+        "R_exact": [
+          [
+            [
+              [
+                "2233319018578853377012003580543947868723123633439/472397577570282131232076781598241147715643391344640",
+                "558329754672657943834283053330964141671670356421/118099394392570532808019195399560286928910847836160"
+              ],
+              [
+                "-86211640835793278880352851720227013988496586278189/8310506071547842130472755048961557874934552467143713853003530240",
+                "86211539497404395051006633062496093981039434892589/8310506071547842130472755048961557874934552467143713853003530240"
+              ]
+            ],
+            [
+              [
+                "-842987248998707299869698572068142280544067155379/60466889928996112797705828044574866907602354092113920",
+                "-105373405854757600692090182038963541693056195821/7558361241124514099713228505571858363450294261514240"
+              ],
+              [
+                "103935140182416671618536537376543450575180785201/6191809528729201950485076791764466371338481059032465408",
+                "1039352465063614584127760102833369728946093586667/61918095287292019504850767917644663713384810590324654080"
+              ]
+            ],
+            [
+              [
+                "356872973760263696663214425822506969964881420481/1934940477727875609526586497426395741043275330947645440",
+                "285498430345389688971837002323088911664842354739/1547952382182300487621269197941116592834620264758116352"
+              ],
+              [
+                "-296595724918540938619078528009717635663776846077/495344762298336156038806143341157309707078484722597232640",
+                "-74146928799242415691300781592304451990358921317/123836190574584039009701535835289327426769621180649308160"
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                "-842987249070318597191105645300981455888996005299/60466889928996112797705828044574866907602354092113920",
+                "-105373405845820086894460686588258552106620591341/7558361241124514099713228505571858363450294261514240"
+              ],
+              [
+                "-1039352502426801553639541760282135606840868370667/61918095287292019504850767917644663713384810590324654080",
+                "-103935136446271320664365899006547062040228390449/6191809528729201950485076791764466371338481059032465408"
+              ]
+            ],
+            [
+              [
+                "336823203441297884042870010527530735835540759407/29524848598142633202004798849890071732227711959040",
+                "5389171255175429138666513807241232741611417390211/472397577570282131232076781598241147715643391344640"
+              ],
+              [
+                "-823156022601079802139777988301769154966496069875703/66484048572382737043782040391692462999476419737149710824028241920",
+                "823126376254541599963360889417887028089670914865143/66484048572382737043782040391692462999476419737149710824028241920"
+              ]
+            ],
+            [
+              [
+                "-370875057602801484123508035947337526816383909663/1934940477727875609526586497426395741043275330947645440",
+                "-9271873199313919434635617561550242661260002917/48373511943196890238164662435659893526081883273691136"
+              ],
+              [
+                "-2137346995385180322815206088948908199917695888619/990689524596672312077612286682314619414156969445194465280",
+                "-427465028273397525931216481393282406603123612037/198137904919334462415522457336462923882831393889038893056"
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                "356872972557065822240727712489976298635090239681/1934940477727875609526586497426395741043275330947645440",
+                "285498431313133390703407467507804255631175397427/1547952382182300487621269197941116592834620264758116352"
+              ],
+              [
+                "74146890237944336223960888090719611676696580197/123836190574584039009701535835289327426769621180649308160",
+                "296595879351558454843050632388043848291175502077/495344762298336156038806143341157309707078484722597232640"
+              ]
+            ],
+            [
+              [
+                "-370875056740296296134526052077632538657247674143/1934940477727875609526586497426395741043275330947645440",
+                "-9271873225552664147061302372966276499548079717/48373511943196890238164662435659893526081883273691136"
+              ],
+              [
+                "427465093931630750911598018311389705713310521733/198137904919334462415522457336462923882831393889038893056",
+                "2137346667799373578323534477271776693224497573099/990689524596672312077612286682314619414156969445194465280"
+              ]
+            ],
+            [
+              [
+                "12930249520866831819750075534306272926460754101717/472397577570282131232076781598241147715643391344640",
+                "2586049904196008273470057529269265984447328115979/94479515514056426246415356319648229543128678268928"
+              ],
+              [
+                "-1438359507872282019028637964689635979845550575366869/132968097144765474087564080783384925998952839474299421648056483840",
+                "1438222991887135009553037856678135641172956453188309/132968097144765474087564080783384925998952839474299421648056483840"
+              ]
+            ]
+          ]
+        ]
+      }
+    ],
+    "upper_replay": [
+      {
+        "cut_exact": "1283/1000",
+        "upper_count": 2,
+        "margin": 0.001483858498960285
+      },
+      {
+        "cut_exact": "1299/1000",
+        "upper_count": 3,
+        "margin": 0.000879270964138425
+      }
+    ],
+    "tube": {
+      "status": "CONDITIONAL_ROOT_TUBE_BOUNDS",
+      "J_exact": [
+        "147759766929031711/70368744177664000",
+        "147900504417387039/70368744177664000"
+      ],
+      "a_J_exact": "8965090598225078119/6980579422424269000",
+      "b_J_exact": "9058765470474384439/6980579422424269000",
+      "gap_lower_exact": "33797889171192865763567689808847/6287546977134725080267649125003000",
+      "gap_lower": 0.005375369646398217,
+      "q_upper_exact": "270714017484494175467751691350446693482818357986823739665956600028776644349375/6174458795253345839005983979985355805874342530820083477435803102464946506563584",
+      "q_upper": 0.043844169418153264,
+      "eta_upper_exact": "32046867833149989863467864739068604313892103587/730750818665451459101842416358141509827966271488",
+      "trial_derivative_interval_exact": [
+        "2345505733207037786833881970200/4056481920730325077590194760389",
+        "2345505746271501392050585059800/4056481920730325077590194760389"
+      ],
+      "eigenvalue_derivative_lower_exact": "534169800974944602212694505698676171190682336335122347239358301463403774266257/1148657525234174140979851255817761050204714256051525729953959349303317220032512",
+      "eigenvalue_derivative_lower": 0.4650383506311376,
+      "endpoint_eigenvalue_enclosures_exact": [
+        [
+          "1540128726672589054957806888664473389246574517045167033/1194214107579111229076827534563595945926331223354900480",
+          "205840054404584570139154698736944648313091533648795867/159606019013715049901709207914089684010061146681769984"
+        ],
+        [
+          "229547342491759841417882177438635114431773401540339889/177831456238735682122552142777627834283415842628567040",
+          "1001388526085693224058489477884685167181475280577918981/775770663419688241200721421691256875462499488745127936"
+        ]
+      ],
+      "endpoint_eigenvalue_enclosures": [
+        [
+          1.28965879476563,
+          1.2896760139534373
+        ],
+        [
+          1.290814051388054,
+          1.2908306195434807
+        ]
+      ],
+      "root_existence_if_bound_inputs": true,
+      "root_uniqueness_if_bound_inputs": true,
+      "true_rayleigh_required": true,
+      "common_frozen_field_required": true,
+      "counts_required": true
+    }
+  },
+  "rayleigh_and_residual_bounds": [
+    {
+      "true_rayleigh_interval": [
+        "5808137930948726/4503599627372435",
+        "5808137930958211/4503599627368547"
+      ],
+      "true_rayleigh_residual2_upper": "2096091402572933/37778931862940812312576"
+    },
+    {
+      "true_rayleigh_interval": [
+        "5813345999902021/4503599627372435",
+        "5813345999911512/4503599627368547"
+      ],
+      "true_rayleigh_residual2_upper": "8393634033153691/151115727451763249250304"
+    }
+  ],
+  "selector_interval_bounds": {
+    "status": "CONDITIONAL_SELECTOR_CONE_BOUNDS_ONLY",
+    "bounds_exact": [
+      "2006845443705526337892127545784840331953616517129199921387240557897522520297466209171804461874489/2135987035920910082395021706169552114602704522356652769947041607822219725780640550022962086936576",
+      "128902562300232248117366530807023542206524608492590518149735794016453442143155640046261338532561/133499189745056880149688856635597007162669032647290798121690100488888732861290034376435130433536",
+      "8284877771395256471635488075364016145569894571544497795184909795541356756426170221643948823009/2135987035920910082395021706169552114602704522356652769947041607822219725780640550022962086936576"
+    ],
+    "polarization_lower": 0.9395400861317935,
+    "core_lower": 0.9655681247683764,
+    "outer_upper": 0.003878711636385617,
+    "cone_margins_exact": [
+      "112783733839514246726445376605897796047090643687646528716855600137138843275551024062651162090649/251728487708444357821566919197014634470886781305023263900698977208710973410100064070422465871872",
+      "125444871893816408937254521723935197783764889744645421322707370352058053128528008473085138422129/188796365781333268366175189397760975853165085978767447925524232906533230057575048052816849403904",
+      "3807398833919087178717865456341853790558567190430658611349896789663933880031933362663917427911/23599545722666658545771898674720121981645635747345930990690529113316653757196881006602106175488"
+    ],
+    "thresholds_binary64_exact": [
+      "2476979795053773/4503599627370496",
+      "3152519739159347/9007199254740992",
+      "3602879701896397/72057594037927936"
+    ],
+    "strict_filters_would_pass_if_inputs_certified": true,
+    "continuous_field_or_error_certified": false,
+    "unlocks_target_binding": false
+  },
+  "record_to_trial_bound": {
+    "record_to_trial_distance_upper_exact": "24256094045142930592592733262071309752741469469/1461501637330902918203684832716283019655932542976",
+    "record_to_trial_distance_upper": 0.016596693035145084,
+    "uniform_trial_to_eigenstate_distance_upper_exact": "32046867833149989863467864739068604313892103587/730750818665451459101842416358141509827966271488",
+    "record_to_eigenstate_distance_upper_exact": "88349829711442910319528462740208518380525676643/1461501637330902918203684832716283019655932542976",
+    "record_to_eigenstate_distance_upper": 0.060451406590822286,
+    "target_projection_mass_fraction_lower_exact": "18183131968145846100932569028752057654732803134703781688799802305219400068154242019856717924750200476691476848440428797387334427618621673299821101056693792739326418690878775898776749319570432209/18249762470488780874564686422801165299572914028994239722316770071597100668834709546023651245269485599114569238294377629242754818885501751993010645278888856753007978697441059800331496768986415104",
+    "target_projection_mass_fraction_lower": 0.9963489660508907,
+    "preregistered_quarter_distance_passes": true,
+    "unique_dominant_rank_one_component": true,
+    "scope": "Unique nearest normalized continuous eigenstate up to phase inside the certified simple-branch root tube; not an all-spectrum largest-neff claim"
+  },
+  "root_existence": true,
+  "root_uniqueness": true,
+  "J": [
+    "147759766929031711/70368744177664000",
+    "147900504417387039/70368744177664000"
+  ],
+  "selection_replay": {
+    "contract": {
+      "status": "PRODUCTION_FINITE_CANDIDATE_CONTRACT_VERIFIED",
+      "worker_sha256": "2ac80505cb02db6faa0dfa53d593f36a66e87de52558d16d84535bac9ee95d08",
+      "searched_bands": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "search_kind": "find_k roots on four requested sorted branches; numerical returned roots, not all continuous modes",
+      "thresholds_exact": {
+        "Ex_min": "2476979795053773/4503599627370496",
+        "neff_min": "3242591731706757/2251799813685248",
+        "core_min": "3152519739159347/9007199254740992",
+        "outer_max": "3602879701896397/72057594037927936"
+      },
+      "core_mask": "ridge rectangle |x|<=width/2, |y|<=film/2; excludes residual slab outside ridge",
+      "outer_mask": "|y|>.45*sy OR |x|>.45*sx",
+      "polarization_kind": "unweighted electric L2",
+      "selection": "maximum neff among passing returned candidates",
+      "all_spectrum_existence_sufficient": false,
+      "candidate_membership_still_requires_proof": true,
+      "continuous_target_certified": false
+    },
+    "selected_mode": {
+      "band": 3,
+      "frequency_cycles_per_um": 1.2903225808146233,
+      "k_cycles_per_um": 2.710700103974941,
+      "beta_rad_per_um": 17.03183106546553,
+      "neff": 2.1007925805805794,
+      "electric_component_norm_fraction": [
+        0.987121913423375,
+        0.0011705656403777683,
+        0.011707520936247174
+      ],
+      "core_electric_energy_fraction": 0.9829502807163013,
+      "outer_cell_energy_fraction": 5.940528454355087e-08,
+      "field_shape": [
+        320,
+        320,
+        1,
+        3
+      ],
+      "fields_npz": "band-3-fields.npz",
+      "solver_iterations_last": 141,
+      "actual_grid": {
+        "backend_get_dims": [
+          320,
+          320
+        ],
+        "axis_order": [
+          "x",
+          "y",
+          "z"
+        ],
+        "shape_xyz": [
+          320,
+          320,
+          1
+        ],
+        "lattice_size_um": [
+          4,
+          4,
+          0
+        ],
+        "spacing_um": [
+          0.0125,
+          0.0125,
+          null
+        ],
+        "nominal_grid_before_optimization": [
+          320,
+          320,
+          1
+        ],
+        "optimize_grid_size": true,
+        "coordinates": "periodic cell centers from -S/2, no duplicated endpoint"
+      },
+      "raw_dpwr_audit": {
+        "finite": true,
+        "minimum": 1.5278254225005443e-13,
+        "maximum": 3.434036810000084,
+        "negative_sample_count": 0,
+        "negative_absolute_sum": -0.0,
+        "raw_sum": 6399.9999999999945,
+        "audited_before_display_clipping": true
+      },
+      "electric_component_fraction_kind": "unweighted E-component L2; not anisotropic electric energy",
+      "core_mask_kind": "ridge rectangle only; excludes residual slab outside ridge",
+      "fixed_material_df_dk_cycles_per_um_per_cycles_per_um": 0.4481307302279625,
+      "df_dk_is_not_material_dispersive_group_velocity": true,
+      "returned_root_cycles_per_um": 2.710700103974941
+    },
+    "returned_roots": [
+      2.7909286515353773,
+      2.7383636107059615,
+      2.710700103974941,
+      2.659812729573096
+    ],
+    "passing_bands": [
+      3,
+      4
+    ]
+  },
+  "continuous_target_association": "Unique dominant continuous eigenprojection of the fixed L2 reconstruction of the actual selected record, with a unique root in J",
+  "continuous_global_neff_maximum_proved": false,
+  "pump_bound_replay": {
+    "status": "MODEL_PUMP_UPPER_VERIFIED",
+    "model_sha256": "48acef4960cdf8a654a9ce06aa07f18b4f93766991333c13fc20b97170a27102",
+    "strict_neff_upper_exact": "41/20",
+    "neff_upper_outward_binary64": 2.0500000000000003,
+    "proof": {
+      "TE_margin_lower_exact": "1171/2500",
+      "TM_margin_lower_exact": "21961559/12677325",
+      "wavelength_joint_interval_exact": [
+        "31/20",
+        "6980579422424269/4503599627370496"
+      ],
+      "pi_interval_exact": [
+        "91171921753093592702999304747976765064736582225370570321159265330625782562880092251826912589166568105366019022827778607184249663349890965333179026576121880793327265828/29020924036384690365012007150845113643054221444698706198481928799655614278799385789725492844564517798541941018811331605772305076076171559407157474197447299957275390625",
+        "39902978656314487098877516477292399291941820105878627069223569984351499925322751425840213838197938471995926919916153783649411842196493238409075395098937045469508336/12701512594485692812193417110539518584694867668939053149665590938383262845012948735896383486180440555374529953437147286362417095322285831571207381784915924072265625"
+      ],
+      "all_rational_inequalities": true
+    },
+    "second_implementation": {
+      "scalar_review_passed": true,
+      "precision_decimal_digits": 72,
+      "TE_margin_interval": [
+        "0.582153907772554934693619261380606720783396965954074030573533077335492689",
+        "0.582153907772562697102930959629730324177790290864895034017997826942527771"
+      ],
+      "TM_margin_interval": [
+        "1.76115152001567440383575924164005565671474907237343003184740104601503342",
+        "1.76115152001567793033763051813205276767788811769721994708325794405689988"
+      ],
+      "method": "Independent Decimal intervals, 100-term Machin, sine/cosine alternating remainder, correctly-rounded exp/sqrt widened one ULP"
+    },
+    "scope": "All forward pump modes of the specified frozen-coefficient periodic model; not measured material/device certification",
+    "theorem": "Material order on common div_beta H=0 space, TE/TM positive periodic supersolution, strict ground-state identity",
+    "proof_review": "Explicit local mathematical derivation and separate scalar implementation; not an external human review",
+    "SH_or_target_rank_certified": false,
+    "production_changed": false,
+    "new_eigensolves": 0,
+    "new_API_calls": 0
+  },
+  "scalar_phase_checker": {
+    "research_policy": "conditional-phase-envelope-v2",
+    "delta_beta_interval_rad_per_um": [
+      0.08952590975127642,
+      16.725779135986784
+    ],
+    "distance_from_zero_rad_per_um": 0.08952590975127642,
+    "length_um": 1000,
+    "target": 0.8,
+    "conditional_phase_factor_upper": 0.0004990711962641469,
+    "conditional_exclusion_if_interval_were_certified": true,
+    "status": "CONDITIONAL_EXCLUSION_UNPROVEN",
+    "design_goal_status": "NOT_EVALUATED",
+    "reason": "No independent continuous-mode interval certifier; caller Boolean/hash cannot certify an interval",
+    "input_provenance": {
+      "certificate": "This replayed source-bound continuous record/root-tube chain",
+      "F_is_phase_factor_not_conversion_efficiency": true
+    },
+    "continuous_truth_interval_certified": false,
+    "scalar_arithmetic": "exact rational operations, outward conversion to binary64",
+    "production_policy_or_previous_receipt_changed": false,
+    "fundamental_neff_interval": [
+      0,
+      2.0500000000000003
+    ],
+    "harmonic_neff_interval": [
+      2.099792580580579,
+      2.1017925805805797
+    ],
+    "wavelength_um": 1.55,
+    "period_um": 20,
+    "qpm_order": 1,
+    "pi_validation": "Machin identity; exact rational alternating-series interval, 80 terms"
+  },
+  "research_goal_decision": "EXCLUDED_FOR_THIS_FROZEN_MODEL",
+  "certified_phase_factor_upper": 0.0004990711962641469,
+  "original_goal": {
+    "length_um": 1000,
+    "period_um": 20,
+    "qpm_order": 1,
+    "phase_budget_rad": 0.1,
+    "phase_factor_target": 0.8
+  },
+  "limits": [
+    "Original frozen-coefficient periodic continuous model; not fabricated-device or material-uncertainty certification",
+    "Source-bound outward integration and upstream common-domain/tail proofs under the documented IEEE assumptions; not an external formal proof",
+    "Actual returned-record correspondence uses the preregistered periodic nearest-center L2 reconstruction and dominant-projection criterion"
+  ],
+  "production_JSON_modified": false,
+  "new_MPB_Meep_API_calls": 0,
+  "input_bindings": {
+    "B_certificate": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/STRICT-repair1/certificate.json",
+      "sha256": "670013e61fbc991c4914cf68c8b448bdd04d6c2ee040ddd569c2629530eb5541",
+      "bytes": 7136
+    },
+    "B_plan": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/strict-repair1-plan.json",
+      "sha256": "b0c17e620f3701a78637256ca2d4ca8dbe7c928f5f0e05d0a19f32a61c805430",
+      "bytes": 3391
+    },
+    "topology": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/E3/anchor-and-topology.npz",
+      "sha256": "f31ca9f67802d27635f3a5c1696752eb8d7b8a4310d9640b0c96a0f1f13d33e4",
+      "bytes": 3401843
+    },
+    "initial": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/E3/proposal.npz",
+      "sha256": "721b35cb752e853390c516b16f029e1179486463972d540911680126578d588e",
+      "bytes": 3189131
+    },
+    "model": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/goal-certificate-20261008-release/reviewed-evidence-v1/model.json",
+      "sha256": "5c189d2ce2f2969d8282ad69899f3315b876786d8137641199a7ffc9f37b9ff5",
+      "bytes": 4882
+    },
+    "record": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/iteration-20261008-release/reviewed-evidence-v1/production-cap-validation/mode-artifacts/20261008T040316Z-cff43b8a/base-0.775/result.json",
+      "sha256": "b708969d254721cb354e204635a683cdff8f03c83646a64d24fb457edba0bda7",
+      "bytes": 14844
+    },
+    "selected_field": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/iteration-20261008-release/reviewed-evidence-v1/production-cap-validation/mode-artifacts/20261008T040316Z-cff43b8a/base-0.775/band-3-fields.npz",
+      "sha256": "5126891164a00e5a04b98671e13c9124ebd6c582ec614d05bec0821d60de62e1",
+      "bytes": 10283135
+    },
+    "worker": {
+      "path": "/home/zhou/projects/PhotonGuard-development/photonguard/adapters/mpb_worker.py",
+      "sha256": "2ac80505cb02db6faa0dfa53d593f36a66e87de52558d16d84535bac9ee95d08",
+      "bytes": 8124
+    },
+    "forms_first": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/goal-certificate-20261008-release/reviewed-evidence-v1/basis-binding-v3/SH-r40-low.json",
+      "sha256": "b26e89ccc5bf5d485644e1566eb049aaf746f1fd8742dd429baa5874fb010222",
+      "bytes": 9552
+    },
+    "forms_last": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/goal-certificate-20261008-release/reviewed-evidence-v1/basis-binding-v3/SH-r40-high.json",
+      "sha256": "c772eb4ab668100ae3a1154ac5eb3480ec33af0f03fdd683cd386561b75bdd46",
+      "bytes": 9579
+    },
+    "common_dofs": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/goal-certificate-20261008-release/reviewed-evidence-v1/basis-binding-v3/common-r40-trials.npz",
+      "sha256": "53672c438543ea18fbf2acf9c0ecaabf0e6a87d02da79eb88763f488451236d5",
+      "bytes": 10394588
+    },
+    "common_freeze": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/goal-certificate-20261008-release/reviewed-evidence-v1/basis-binding-v3/trial-freeze.json",
+      "sha256": "f88b2fd192d1b82b6c8522cc18b777a43047311f2b7819eb7bcf5da55cb1a2d6",
+      "bytes": 1613
+    },
+    "execution-plan.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/execution-plan.json",
+      "sha256": "739f9becf96f25d47ab2164adbbd0e3df83c008ee614cfb8a6deef57f6dc8340"
+    },
+    "center-lower-counts.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/center-lower-counts.json",
+      "sha256": "b06cab2d0c7a889be255bb9b7a56b038eaaa04e5a8400edb30798e8b41a94aba"
+    },
+    "center-recombined-forms.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/center-recombined-forms.json",
+      "sha256": "f3d842a4abf3ef4343703ea7c6363ba13c8b99881cc866a5b442f8f2a1b974c0"
+    },
+    "upper-1/result.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/upper-1/result.json",
+      "sha256": "076105327d1248c536bf368645c58432b7982bd5e6404da936f1ffd37afd72e5"
+    },
+    "upper-2/result.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/upper-2/result.json",
+      "sha256": "be79daeba93b16b8afe7d0d3e0be8999e417abc24a5fc2e14433c876d649d5b8"
+    },
+    "selection-replay.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/selection-replay.json",
+      "sha256": "945af9693d6ffd9c7c8d45d5c980018ef27f288b02ec4ac0528b53067db778bd"
+    },
+    "center-stage-plan.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/center-stage-plan.json",
+      "sha256": "ce051278fecc3168e56783947b5d263f7e92b422107cf0b86a3d5c2835044786"
+    },
+    "CENTER/root-tube.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/CENTER/root-tube.json",
+      "sha256": "dad7acbc7972f8b292267c8722f23aae607eb5f99fd5952cfef813f4d9b9415a"
+    },
+    "CENTER/endpoint-0.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/CENTER/endpoint-0.json",
+      "sha256": "1cda711d30814b7181e6f97cf71f0f1429df2bc887b26297a4c079fb06835e37"
+    },
+    "CENTER/endpoint-1.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/CENTER/endpoint-1.json",
+      "sha256": "1ecb7c2e25ac5258f77b050d89c10e13de057eb4bb907f8094b7d23b338e8850"
+    },
+    "CENTER/FINAL.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/CENTER/FINAL.json",
+      "sha256": "0d455ed27d0e0fcf3673471b88601e2651e40f84f4e221e99503bdd10852f03a"
+    },
+    "proposal": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/CENTER/proposal.npz",
+      "sha256": "51bfdd94bd904192292136ee026a4525af4a310ff2d51c2862a5b2ecbbf9d4df"
+    },
+    "final-replay:RECORD/integrals.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/RECORD/integrals.json",
+      "sha256": "8c6093706e6d0806b5ef97c72db4eeaee33fb9ccd1ca7e971510c17028df36e0"
+    },
+    "final-replay:CENTER/endpoint-0.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/CENTER/endpoint-0.json",
+      "sha256": "1cda711d30814b7181e6f97cf71f0f1429df2bc887b26297a4c079fb06835e37"
+    },
+    "final-replay:CENTER/endpoint-1.json": {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/c-autonomous-research-20261010/C/CENTER/endpoint-1.json",
+      "sha256": "1ecb7c2e25ac5258f77b050d89c10e13de057eb4bb907f8094b7d23b338e8850"
+    }
+  }
+}

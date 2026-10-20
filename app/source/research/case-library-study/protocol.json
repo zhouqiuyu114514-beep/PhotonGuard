@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "created_after_library_lock": true,
+  "task_order": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12"
+  ],
+  "arms": [
+    "A",
+    "G"
+  ],
+  "max_calls_per_task_arm": 3,
+  "maximum_formal_requests": 72,
+  "optional_ablation_task_ids": [
+    "C01",
+    "C02"
+  ],
+  "ablation_maximum_requests": 6,
+  "model": "deepseek-flash",
+  "same_public_case_library": true,
+  "same_tools_and_budgets": true,
+  "factor": "G enforces selected-parent physical locks; A receives the same parent and constraints, with violations graded afterwards. Common model, physics, resources and public recipe contract are identical.",
+  "scope": "Local familiar-template adaptation and synthetic state-machine interaction; not unseen external evaluation.",
+  "human_participants_added": 0,
+  "correct_stop_is_not_design_goal_success": true,
+  "correct_unmet_goal_report_is_not_system_failure": true,
+  "no_score_driven_retries": true
+}

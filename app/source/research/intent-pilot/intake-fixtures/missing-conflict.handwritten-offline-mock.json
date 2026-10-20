@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "input_sha256": "7a5c728ec730248afc3fb046eaf58279f11f5d62c34eef5d7d034db7247e3219",
+  "fields": [
+    {
+      "path": "physics.dimensions",
+      "state": "proposed",
+      "value": 1,
+      "unit": "count",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 1,
+          "quote": "使用一维正入射模型，入射角0度。"
+        }
+      ]
+    },
+    {
+      "path": "physics.angle_deg",
+      "state": "proposed",
+      "value": 0,
+      "unit": "deg",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 1,
+          "quote": "使用一维正入射模型，入射角0度。"
+        }
+      ]
+    },
+    {
+      "path": "physics.lossless",
+      "state": "proposed",
+      "value": true,
+      "unit": "bool",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 2,
+          "quote": "膜为无损、无色散、各向同性，相对磁导率为1。"
+        }
+      ]
+    },
+    {
+      "path": "physics.dispersive",
+      "state": "proposed",
+      "value": false,
+      "unit": "bool",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 2,
+          "quote": "膜为无损、无色散、各向同性，相对磁导率为1。"
+        }
+      ]
+    },
+    {
+      "path": "physics.isotropic",
+      "state": "proposed",
+      "value": true,
+      "unit": "bool",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 2,
+          "quote": "膜为无损、无色散、各向同性，相对磁导率为1。"
+        }
+      ]
+    },
+    {
+      "path": "physics.mu",
+      "state": "proposed",
+      "value": 1,
+      "unit": "1",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 2,
+          "quote": "膜为无损、无色散、各向同性，相对磁导率为1。"
+        }
+      ]
+    },
+    {
+      "path": "physics.n_incident",
+      "state": "proposed",
+      "value": 1,
+      "unit": "1",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 3,
+          "quote": "入射和出射介质折射率都为1。"
+        }
+      ]
+    },
+    {
+      "path": "physics.n_exit",
+      "state": "proposed",
+      "value": 1,
+      "unit": "1",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 3,
+          "quote": "入射和出射介质折射率都为1。"
+        }
+      ]
+    },
+    {
+      "path": "units_um",
+      "state": "proposed",
+      "value": 1000,
+      "unit": "nm",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 4,
+          "quote": "每个Meep长度单位对应1000 nm。"
+        }
+      ]
+    },
+    {
+      "path": "layers.0.n",
+      "state": "unknown",
+      "value": null,
+      "unit": null,
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 5,
+          "quote": "未给定薄膜折射率。膜厚写为200，但没有说明单位。"
+        }
+      ]
+    },
+    {
+      "path": "layers.0.thickness_um",
+      "state": "unknown",
+      "value": null,
+      "unit": null,
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 5,
+          "quote": "未给定薄膜折射率。膜厚写为200，但没有说明单位。"
+        }
+      ]
+    },
+    {
+      "path": "wavelength_um.0",
+      "state": "proposed",
+      "value": 650,
+      "unit": "nm",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 6,
+          "quote": "扫描下限650 nm，上限0.9 um，共41个频点。"
+        }
+      ]
+    },
+    {
+      "path": "wavelength_um.1",
+      "state": "conflict",
+      "value": null,
+      "unit": null,
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 6,
+          "quote": "扫描下限650 nm，上限0.9 um，共41个频点。"
+        },
+        {
+          "document_id": "revision",
+          "line": 1,
+          "quote": "另一份需求记录的上限为1100 nm，未确认应采用哪份。"
+        }
+      ]
+    },
+    {
+      "path": "nfreq",
+      "state": "proposed",
+      "value": 41,
+      "unit": "count",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 6,
+          "quote": "扫描下限650 nm，上限0.9 um，共41个频点。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "path": "layers.0.n",
+      "text": "请依据独立需求说明薄膜折射率；脚本的1.45不能当作你的意图。"
+    },
+    {
+      "path": "layers.0.thickness_um",
+      "text": "厚度200的单位是什么（例如nm或um）？未明确前保持为空。"
+    },
+    {
+      "path": "wavelength_um.1",
+      "text": "波段上限应采用0.9 um还是1100 nm？请确认资料优先级并说明依据。"
+    }
+  ]
+}

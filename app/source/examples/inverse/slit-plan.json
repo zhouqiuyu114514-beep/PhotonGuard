@@ -1,0 +1,15 @@
+{
+  "schema": "photonguard.offline-inverse.v1",
+  "settings": {
+    "model": "double_slit_width_spacing_v1",
+    "fixed": {"wavelength_nm": 633.0, "focal_length_mm": 200.0, "relative_phase_rad": 0.0, "measurement_plane": "FOURIER_FOCAL_PLANE"},
+    "bounds": {"slit_width_um": [8.0, 45.0], "slit_separation_um": [130.0, 230.0], "center_shift_mm": [-0.3, 0.3], "amplitude": [0.15, 2.0], "background": [-0.15, 0.25]},
+    "loss": "linear", "f_scale": 1.0, "registration": "SHARED_REGISTERED",
+    "weighting": "EQUAL_DATASET_TRAINING_COUNT", "scale": 0.008, "scale_source": "DECLARED_NUMERICAL_SCALE"
+  },
+  "source": {"source_kind": "SYNTHETIC_TEACHING", "source_name": "Public RC7 teaching example; disclosed generator, not a blind test", "license": "GPL-2.0-or-later"},
+  "constraints": {"max_abs_x_mm": 5.0, "points": 81, "min_step_mm": 0.001, "allow_extension": true, "stable_exposure_background": true, "registration_uncertainty_mm": 0.0},
+  "research_goal": {"target": "balanced", "source": "USER_FORM", "tolerances": {"slit_width_um": 0.5, "slit_separation_um": 0.1}},
+  "profile": {"parameter": "slit_width_um", "grid_points": 9},
+  "policy": "conservative"
+}

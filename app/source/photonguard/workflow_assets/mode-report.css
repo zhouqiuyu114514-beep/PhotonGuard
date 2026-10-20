@@ -1,0 +1,110 @@
+/* Shared report presentation; compatible with the same-origin stylesheet CSP. */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+  overflow-wrap: anywhere;
+}
+
+body {
+  width: 100%;
+  max-width: 1050px;
+  margin: 32px auto;
+  padding: 20px;
+  color: #173b33;
+  background: #fff;
+  font: 16px/1.7 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+main, section, article, details, figure {
+  min-width: 0;
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  line-height: 1.35;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  display: inline-block;
+  width: calc(50% - 24px);
+  margin: 16px 12px;
+  vertical-align: top;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: .9rem;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 9px;
+  border: 1px solid #c4d1cb;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+pre {
+  min-width: 0;
+  max-width: 100%;
+  padding: 14px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  background: #f3f6f4;
+  border: 1px solid #dce4df;
+  border-radius: 6px;
+  font-size: .875rem;
+}
+
+summary {
+  cursor: pointer;
+}
+
+.warning {
+  padding: 15px;
+  background: #fff1cf;
+  border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+  body {
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  figure {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 16px 0;
+  }
+
+  table {
+    font-size: .875rem;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+}

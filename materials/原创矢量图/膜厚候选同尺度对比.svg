@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1120" height="310" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1120 310" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1120" height="310"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-310)" style="clip-path: url(#clip)">
+		<g transform="">
+			<path d="M 195,112.5 L 1085,112.5 Z" style="stroke: rgb(86%,90%,88%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 195,217.5 L 1085,217.5 Z" style="stroke: rgb(86%,90%,88%); stroke-linecap: butt; stroke-width: 1;"/>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 195,60 L 1085,60 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 195,60 L 195,55 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 373,60 L 373,55 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 551,60 L 551,55 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 729,60 L 729,55 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 907,60 L 907,55 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 1085,60 L 1085,55 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,195,55)">
+							<text x="-5.571044921875" y="-19.0" style="font-family: Microsoft YaHei; font-size: 19px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-38) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,373,55)">
+							<text x="-16.713134765625" y="-19.0" style="font-family: Microsoft YaHei; font-size: 19px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-38) scale(1,-1)">200</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,551,55)">
+							<text x="-16.713134765625" y="-19.0" style="font-family: Microsoft YaHei; font-size: 19px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-38) scale(1,-1)">400</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,729,55)">
+							<text x="-16.713134765625" y="-19.0" style="font-family: Microsoft YaHei; font-size: 19px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-38) scale(1,-1)">600</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,907,55)">
+							<text x="-16.713134765625" y="-19.0" style="font-family: Microsoft YaHei; font-size: 19px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-38) scale(1,-1)">800</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,1085,55)">
+							<text x="-22.2841796875" y="-19.0" style="font-family: Microsoft YaHei; font-size: 19px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-38) scale(1,-1)">1000</text>
+						</g>
+					</g>
+				</g>
+				<g transform=""/>
+				<g transform="">
+					<circle cx="239.4195800444363" cy="217.5" r="6.0" style="stroke: rgb(40%,54%,52%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(40%,54%,52%); fill-rule: evenodd;"/>
+					<circle cx="291.4229197338971" cy="217.5" r="6.0" style="stroke: rgb(40%,54%,52%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(40%,54%,52%); fill-rule: evenodd;"/>
+					<circle cx="380.2620800451973" cy="217.5" r="6.0" style="stroke: rgb(40%,54%,52%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(40%,54%,52%); fill-rule: evenodd;"/>
+					<circle cx="432.265419725288" cy="217.5" r="6.0" style="stroke: rgb(40%,54%,52%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(40%,54%,52%); fill-rule: evenodd;"/>
+					<circle cx="521.1045800519532" cy="217.5" r="6.0" style="stroke: rgb(40%,54%,52%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(40%,54%,52%); fill-rule: evenodd;"/>
+					<circle cx="573.1079196723681" cy="217.5" r="6.0" style="stroke: rgb(40%,54%,52%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(40%,54%,52%); fill-rule: evenodd;"/>
+					<circle cx="661.9470804753221" cy="217.5" r="6.0" style="stroke: rgb(40%,54%,52%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(40%,54%,52%); fill-rule: evenodd;"/>
+					<circle cx="713.9504182492582" cy="217.5" r="6.0" style="stroke: rgb(40%,54%,52%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(40%,54%,52%); fill-rule: evenodd;"/>
+					<circle cx="802.7895825698909" cy="217.5" r="6.0" style="stroke: rgb(40%,54%,52%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(40%,54%,52%); fill-rule: evenodd;"/>
+					<circle cx="854.7929165395365" cy="217.5" r="6.0" style="stroke: rgb(40%,54%,52%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(40%,54%,52%); fill-rule: evenodd;"/>
+					<circle cx="943.6320850051667" cy="217.5" r="6.0" style="stroke: rgb(40%,54%,52%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(40%,54%,52%); fill-rule: evenodd;"/>
+					<circle cx="995.6354145355568" cy="217.5" r="6.0" style="stroke: rgb(40%,54%,52%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(40%,54%,52%); fill-rule: evenodd;"/>
+					<polygon points="374.2865 112.5, 380.2865 118.5, 386.2865 112.5, 380.2865 106.5" style="stroke: rgb(14%,49%,47%); stroke-linecap: butt; stroke-width: 0.1; fill: rgb(14%,49%,47%); fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="10" y="211" style="font-family: Microsoft YaHei; font-size: 21px;fill: rgb(7%,23%,21%); stroke:none;" transform="translate(0,422) scale(1,-1)">633 nm · 12 组</text>
+			<text x="10" y="106" style="font-family: Microsoft YaHei; font-size: 21px;fill: rgb(7%,23%,21%); stroke:none;" transform="translate(0,212) scale(1,-1)">633 + 850 nm</text>
+			<text x="55" y="76" style="font-family: Microsoft YaHei; font-size: 21px;fill: rgb(7%,23%,21%); stroke:none;" transform="translate(0,152) scale(1,-1)">1 组</text>
+			<text x="535" y="15" style="font-family: Microsoft YaHei; font-size: 22px;fill: rgb(7%,23%,21%); stroke:none;" transform="translate(0,30) scale(1,-1)">膜厚候选位置（nm）</text>
+			<text x="460" y="140" style="font-family: Microsoft YaHei; font-size: 21px;fill: rgb(7%,23%,21%); stroke:none;" transform="translate(0,280) scale(1,-1)">208.19 nm</text>
+			<path d="M 385,113 L 450,141 Z" style="stroke: rgb(7%,23%,21%); stroke-linecap: butt; stroke-width: 1;"/>
+		</g>
+	</g>
+</svg>

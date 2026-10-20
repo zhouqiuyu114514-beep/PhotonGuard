@@ -1,0 +1,3 @@
+# Minimal local tools; no Meep, LightPipes or API client required.
+numpy==2.5.3
+tmm==0.2.0

@@ -1,0 +1,167 @@
+{
+  "scope": "Development probes; independent expression of SAME model; not real measurements, blind tests, or AI evaluation.",
+  "source_commit": "a649705bc04d4db8adf3aa0bdaca348b2a0e6677",
+  "verified_manifest_items": 566,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "new_fit_calls": 6,
+  "new_fft_calls": 0,
+  "new_fdtd_calls": 0,
+  "new_mpb_calls": 0,
+  "new_model_calls": 0,
+  "production_modified": false,
+  "cases": [
+    {
+      "case": "P01_in_model",
+      "generating_d_um": 120,
+      "truth_identifiable_in_case": true,
+      "generating_shift_mm": -0.18,
+      "status": "ESTIMATE_READY",
+      "warnings": [],
+      "usable_for_forward": true,
+      "estimated": {
+        "slit_separation_um": 120.00201350738215,
+        "center_shift_mm": -0.18005097151328583,
+        "amplitude": 0.6997212044302449,
+        "background": 0.06007251662797316
+      },
+      "abs_d_error_um": 0.002013507382145008,
+      "holdout": {
+        "count": 81,
+        "rmse": 0.002661178934183604,
+        "median_absolute_residual": 0.00223238076835669
+      },
+      "actual_residual_calls": 802,
+      "elapsed_seconds": 0.32478685599994606,
+      "starts": 9
+    },
+    {
+      "case": "P02_in_model",
+      "generating_d_um": 150,
+      "truth_identifiable_in_case": true,
+      "generating_shift_mm": 0.24,
+      "status": "ESTIMATE_READY",
+      "warnings": [],
+      "usable_for_forward": true,
+      "estimated": {
+        "slit_separation_um": 150.00025720796302,
+        "center_shift_mm": 0.2400330382125687,
+        "amplitude": 1.2004088277280909,
+        "background": 0.020144855244974186
+      },
+      "abs_d_error_um": 0.000257207963016981,
+      "holdout": {
+        "count": 81,
+        "rmse": 0.003938123524635213,
+        "median_absolute_residual": 0.002787527353402819
+      },
+      "actual_residual_calls": 1827,
+      "elapsed_seconds": 0.16080067600000802,
+      "starts": 9
+    },
+    {
+      "case": "P03_in_model",
+      "generating_d_um": 210,
+      "truth_identifiable_in_case": true,
+      "generating_shift_mm": -0.24,
+      "status": "ESTIMATE_READY",
+      "warnings": [],
+      "usable_for_forward": true,
+      "estimated": {
+        "slit_separation_um": 209.99006878661297,
+        "center_shift_mm": -0.23991441378609019,
+        "amplitude": 0.5991180286594874,
+        "background": 0.12027670009522147
+      },
+      "abs_d_error_um": 0.009931213387034177,
+      "holdout": {
+        "count": 81,
+        "rmse": 0.003875120667889214,
+        "median_absolute_residual": 0.002592773194540099
+      },
+      "actual_residual_calls": 1353,
+      "elapsed_seconds": 0.11989553500006878,
+      "starts": 9
+    },
+    {
+      "case": "P04_in_model",
+      "generating_d_um": 240,
+      "truth_identifiable_in_case": true,
+      "generating_shift_mm": 0.17,
+      "status": "ESTIMATE_READY",
+      "warnings": [],
+      "usable_for_forward": true,
+      "estimated": {
+        "slit_separation_um": 239.98847759040513,
+        "center_shift_mm": 0.1699531918981761,
+        "amplitude": 1.3980756309359308,
+        "background": -0.01923568783083832
+      },
+      "abs_d_error_um": 0.011522409594874716,
+      "holdout": {
+        "count": 81,
+        "rmse": 0.005187219275277523,
+        "median_absolute_residual": 0.0034374747883265666
+      },
+      "actual_residual_calls": 929,
+      "elapsed_seconds": 0.0805475720000004,
+      "starts": 9
+    },
+    {
+      "case": "P05_narrow_scan",
+      "generating_d_um": 180,
+      "truth_identifiable_in_case": true,
+      "generating_shift_mm": 0.03,
+      "status": "NEEDS_REVIEW",
+      "warnings": [
+        "INSUFFICIENT_INFORMATION"
+      ],
+      "usable_for_forward": false,
+      "estimated": {
+        "slit_separation_um": 179.56548372220405,
+        "center_shift_mm": 0.029985716863654702,
+        "amplitude": 0.9023327138550546,
+        "background": 0.02773029511997505
+      },
+      "abs_d_error_um": 0.43451627779595015,
+      "holdout": {
+        "count": 81,
+        "rmse": 0.004420402414149629,
+        "median_absolute_residual": 0.003238243865612875
+      },
+      "actual_residual_calls": 604,
+      "elapsed_seconds": 0.051014169000040965,
+      "starts": 9
+    },
+    {
+      "case": "P06_flat",
+      "generating_d_um": 180,
+      "truth_identifiable_in_case": false,
+      "generating_shift_mm": 0.0,
+      "status": "NEEDS_REVIEW",
+      "warnings": [
+        "BOUNDARY_HIT",
+        "INSUFFICIENT_INFORMATION",
+        "MULTIPLE_COMPARABLE_SOLUTIONS",
+        "POSSIBLE_MODEL_MISMATCH"
+      ],
+      "usable_for_forward": false,
+      "estimated": {
+        "slit_separation_um": 96.15482618247117,
+        "center_shift_mm": 1.1407948517599539e-07,
+        "amplitude": 0.010000000000000002,
+        "background": 0.1959046923444398
+      },
+      "abs_d_error_um": null,
+      "holdout": {
+        "count": 81,
+        "rmse": 0.0028873027056260728,
+        "median_absolute_residual": 0.0026770729931351045
+      },
+      "actual_residual_calls": 3558,
+      "elapsed_seconds": 0.2806620510000357,
+      "starts": 9
+    }
+  ]
+}

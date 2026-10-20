@@ -1,0 +1,180 @@
+{
+  "status": "PUBLIC_SEMANTIC_INTERFACE_READY_FOR_COORDINATOR_REVIEW_NATIVE_BRIDGE_BLOCKED",
+  "legacy_fields": [
+    {
+      "implementation_key": "physics.dimensions",
+      "required_unit": "count"
+    },
+    {
+      "implementation_key": "physics.angle_deg",
+      "required_unit": "deg"
+    },
+    {
+      "implementation_key": "physics.lossless",
+      "required_unit": "bool"
+    },
+    {
+      "implementation_key": "physics.dispersive",
+      "required_unit": "bool"
+    },
+    {
+      "implementation_key": "physics.isotropic",
+      "required_unit": "bool"
+    },
+    {
+      "implementation_key": "physics.mu",
+      "required_unit": "1"
+    },
+    {
+      "implementation_key": "physics.n_incident",
+      "required_unit": "1"
+    },
+    {
+      "implementation_key": "physics.n_exit",
+      "required_unit": "1"
+    },
+    {
+      "implementation_key": "units_um",
+      "required_unit": "um"
+    },
+    {
+      "implementation_key": "layers.0.n",
+      "required_unit": "1"
+    },
+    {
+      "implementation_key": "layers.0.thickness_um",
+      "required_unit": "um"
+    },
+    {
+      "implementation_key": "wavelength_um.0",
+      "required_unit": "um"
+    },
+    {
+      "implementation_key": "wavelength_um.1",
+      "required_unit": "um"
+    },
+    {
+      "implementation_key": "nfreq",
+      "required_unit": "count"
+    }
+  ],
+  "semantic_mapping": [
+    {
+      "semantic_key": "spatial_dimension",
+      "semantic_type": "enum",
+      "implementation_key": "physics.dimensions",
+      "conversion": "1D枚举→整数1；其他维度不能冒充受支持",
+      "expressibility": "EXACT_PARTIAL_PROJECTION_REQUIRES_NATIVE_BOUNDS_PRECISION_REVIEW"
+    },
+    {
+      "semantic_key": "incidence_angle",
+      "semantic_type": "quantity",
+      "implementation_key": "physics.angle_deg",
+      "conversion": "deg/°精确同义",
+      "expressibility": "EXACT_PARTIAL_PROJECTION_REQUIRES_NATIVE_BOUNDS_PRECISION_REVIEW"
+    },
+    {
+      "semantic_key": "relative_permeability",
+      "semantic_type": "number",
+      "implementation_key": "physics.mu",
+      "conversion": "无量纲精确十进制",
+      "expressibility": "EXACT_PARTIAL_PROJECTION_REQUIRES_NATIVE_BOUNDS_PRECISION_REVIEW"
+    },
+    {
+      "semantic_key": "lossless",
+      "semantic_type": "boolean",
+      "implementation_key": "physics.lossless",
+      "conversion": "布尔恒等，公共unit null→旧bool元数据",
+      "expressibility": "EXACT_PARTIAL_PROJECTION_REQUIRES_NATIVE_BOUNDS_PRECISION_REVIEW"
+    },
+    {
+      "semantic_key": "isotropic",
+      "semantic_type": "boolean",
+      "implementation_key": "physics.isotropic",
+      "conversion": "布尔恒等",
+      "expressibility": "EXACT_PARTIAL_PROJECTION_REQUIRES_NATIVE_BOUNDS_PRECISION_REVIEW"
+    },
+    {
+      "semantic_key": "nondispersive",
+      "semantic_type": "boolean",
+      "implementation_key": "physics.dispersive",
+      "conversion": "明确proposed布尔取反；未定null不取反",
+      "expressibility": "EXACT_PARTIAL_PROJECTION_REQUIRES_NATIVE_BOUNDS_PRECISION_REVIEW"
+    },
+    {
+      "semantic_key": "layer_count",
+      "semantic_type": "integer",
+      "implementation_key": null,
+      "conversion": "无旧字段；显式保留sidecar",
+      "expressibility": "NO_LEGACY_PATH"
+    },
+    {
+      "semantic_key": "incident_index",
+      "semantic_type": "number",
+      "implementation_key": "physics.n_incident",
+      "conversion": "无量纲；native仅n=1受支持",
+      "expressibility": "EXACT_PARTIAL_PROJECTION_REQUIRES_NATIVE_BOUNDS_PRECISION_REVIEW"
+    },
+    {
+      "semantic_key": "film_index",
+      "semantic_type": "number",
+      "implementation_key": "layers.0.n",
+      "conversion": "无量纲；旧pilot范围[1,5]",
+      "expressibility": "EXACT_PARTIAL_PROJECTION_REQUIRES_NATIVE_BOUNDS_PRECISION_REVIEW"
+    },
+    {
+      "semantic_key": "exit_index",
+      "semantic_type": "number",
+      "implementation_key": "physics.n_exit",
+      "conversion": "无量纲；native仅n=1受支持",
+      "expressibility": "EXACT_PARTIAL_PROJECTION_REQUIRES_NATIVE_BOUNDS_PRECISION_REVIEW"
+    },
+    {
+      "semantic_key": "film_thickness",
+      "semantic_type": "quantity",
+      "implementation_key": "layers.0.thickness_um",
+      "conversion": "声明长度单位精确→um，不浮点化",
+      "expressibility": "EXACT_PARTIAL_PROJECTION_REQUIRES_NATIVE_BOUNDS_PRECISION_REVIEW"
+    },
+    {
+      "semantic_key": "wavelength_min",
+      "semantic_type": "quantity",
+      "implementation_key": "wavelength_um.0",
+      "conversion": "声明长度单位精确→um",
+      "expressibility": "EXACT_PARTIAL_PROJECTION_REQUIRES_NATIVE_BOUNDS_PRECISION_REVIEW"
+    },
+    {
+      "semantic_key": "wavelength_max",
+      "semantic_type": "quantity",
+      "implementation_key": "wavelength_um.1",
+      "conversion": "声明长度单位精确→um",
+      "expressibility": "EXACT_PARTIAL_PROJECTION_REQUIRES_NATIVE_BOUNDS_PRECISION_REVIEW"
+    },
+    {
+      "semantic_key": "wavelength_samples",
+      "semantic_type": "integer",
+      "implementation_key": "nfreq",
+      "conversion": "仅点数可投影；等距波长≠等距频率",
+      "expressibility": "COUNT_ONLY_GRID_BLOCKED"
+    }
+  ],
+  "legacy_only": [
+    {
+      "implementation_key": "units_um",
+      "semantic_key": null,
+      "value": null,
+      "reason": "Public physical units do not supply or authorize a native Meep scale choice"
+    }
+  ],
+  "unmapped_or_blocked": [
+    "layer_count missing legacy path",
+    "units_um not supplied",
+    "uniform wavelength vs uniform frequency",
+    "native ranges and JSON float precision",
+    "document authority/source role needs human review"
+  ],
+  "stable_core_sha256": "859fc096afc46a7684928566de0d4e2e0577788dc6dfa0c17246f1b2d6e7f3a2",
+  "field_count_is_not_compatibility": true,
+  "model_calls": 0,
+  "solver_calls": 0
+}

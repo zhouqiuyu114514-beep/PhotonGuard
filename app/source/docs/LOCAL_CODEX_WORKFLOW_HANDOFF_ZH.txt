@@ -1,0 +1,59 @@
+给本地 Codex 的增量接手说明（供用户主动交给本地 Codex）
+
+目标
+在用户电脑上审阅并启动新增图形前端，让用户实际在浏览器完成一个公开合成薄膜演示。
+不要将只读证据查看器当作完整工作流；新入口是 photonguard.workflow，默认端口8766。
+本包只在dot云端验证过，不代表用户本地已安装、应用或运行。
+
+先保护本地最新工作
+1. 不直接把此ZIP覆盖到现有项目，不覆盖任何task.lock.json、报告、模型账本或用户脚本。
+2. 找到用户当前实际工作的Linux项目目录，先查看git status及现有修改；不要清理或重置。
+3. 输入基线ZIP SHA-256必须是：
+   967f826ba286f86ffa5adc29ad88868789eb0dfee0feffa2ed2a27fd6efa5488
+   名称：PhotonGuard-live-continuation-source-20261006.zip
+   这是生成审阅增量的已上传基线，不证明当前本地工作树仍等于它。
+4. 用包根目录的check_local_baseline.py只读对比：
+   python3 check_local_baseline.py --project /实际/当前项目目录
+   它按BASELINE_SOURCE_MANIFEST.json检查基线文件，并报告新增目标文件的同名冲突。
+   非零退出或任一差异都意味着不能盲目套用补丁。不得以“恢复基线”为由覆盖本地新工作。
+5. 建议直接把完整PhotonGuard/解压到一个新的审阅目录。若最终需要合并回现有项目，
+   按CHANGES.json与workflow-increment.patch逐项三方审阅，保留本地改动后再运行测试。
+   本包不会自动merge、reset、checkout、覆盖或执行补丁。
+
+启动独立审阅目录
+若新目录没有.runtime，不必把旧源码搬过来。可复用已安装的官方Linux包装器（它不改变cwd）：
+   cd /实际/新审阅目录/PhotonGuard
+   /实际/现有项目/.runtime/run-python -m photonguard.workflow --data workflow-data --port 8766
+如果本目录已有正确运行时，执行：
+   .runtime/run-python -m photonguard.workflow --data workflow-data --port 8766
+不要使用PyPI上无关的meep包。缺运行时才按runtime/README.md准备；不要找任何API密钥。
+
+Windows PowerShell 启动器
+新增START_WORKFLOW.ps1只调用明确给出的WSL目录，不安装或修改源码：
+   .\START_WORKFLOW.ps1 -ProjectPath '/实际/新审阅目录/PhotonGuard' -Distribution 'Ubuntu' -RuntimeCommand '/实际/现有项目/.runtime/run-python'
+若新项目本身有.runtime，可省略RuntimeCommand。
+旧START_LOCAL.ps1仍启动旧只读查看器；不要拿它验证新流程。
+本脚本在云端只做了源码审阅，未实际运行PowerShell或Windows/WSL。
+
+让用户打开什么
+同一台运行机器的浏览器：http://127.0.0.1:8766/
+Windows/WSL实际端口转发应在用户本机核对；不要改成0.0.0.0、公网托管或隧道来规避问题。
+打开后应看到“先弄清任务，再相信结果。”和“开始引导演示”，而不只是历史报告列表。
+选择完整合成教学演示。用户依次审核背景、独立任务、AST脚本，明确确认任务，运行，
+审阅ε2→4建议，明确批准，再运行完整Meep并查看FAIL/PASS曲线。
+真实用户的确认应由用户完成，不把云端开发测试的程序化确认当成真人审核证据。
+
+需要本地补做的验证
+- 浏览器实际渲染、控件点击、键盘焦点、滚动、窄屏布局
+- 暂停前草稿保存、刷新/重新打开、切换任务、重复点击和过期页面
+- 跑pytest、runtime tests与17项DOM检查；必要时执行公开合成HTTP检查点
+- 检查实际本地曲线有41点；本机新报告与云端历史证据分开
+可复跑的HTTP检查点（仅开发合成案例，会程序化批准该合成任务，执行16次真实FDTD）：
+   PYTHONPATH=. /实际/运行时/run-python benchmark/run_workflow_checkpoint.py
+
+不得扩大范围
+数学策略、容差、独立来源与锁定任务不可改变以获得PASS。
+公共14字段等波长语义试点、冻结P02、真实AI试验账本均保持原样；本前端不做自动转换。
+模型12/12额度用尽；默认NO AI，不查密钥、不重置账本、不新增调用。
+只识别已文档化的AST模板，不执行上传Python或任意命令。
+这次交付是受限原型，不是通用Meep/2D/LNOI或科学正确性认证。

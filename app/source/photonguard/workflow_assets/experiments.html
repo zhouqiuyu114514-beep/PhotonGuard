@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="PhotonGuard AI 光学实验工作台：把研究目标变成可核对的计划，用开源计算验证，再选择下一步。">
+  <title>AI 光学实验工作台 · PhotonGuard</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%23143c37'/%3E%3Ctext x='24' y='35' text-anchor='middle' font-size='38' fill='white'%3E%CF%86%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/assets/experiments.css">
+  <script src="/assets/experiments.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到实验内容</a>
+  <div class="shell">
+    <aside class="sidebar" aria-label="实验导航">
+      <a class="brand" href="/experiments"><span class="brand-mark" aria-hidden="true">φ</span><span>PhotonGuard<small>AI 光学实验工作台</small></span></a>
+      <button class="new-button" type="button" id="new-case">＋ 开始新实验</button>
+      <p class="sidebar-label">本机的实验记录</p>
+      <nav id="case-list" aria-label="已保存的实验"><p class="muted">正在读取…</p></nav>
+      <div class="sidebar-bottom"><a href="/">薄膜仿真核对与档案 ↗</a><p>本地保存 · 参数有出处<br>修改另存为新版本</p></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span>明确目标 · 核对计划 · 分析结果 · 规划观测</span><div class="actions"><span id="ai-status" class="badge">正在读取连接状态</span><button id="ai-settings" class="button" type="button" disabled>连接 AI</button></div></header>
+      <main id="main" tabindex="-1">
+        <div class="message error" id="error" role="alert" hidden></div>
+        <div class="message notice" id="notice" role="status" hidden></div>
+        <div id="content"><p class="loading">正在读取实验工作台…</p></div>
+      </main>
+      <footer>PhotonGuard · AI 光学实验工作台<span>只比较实际计算的候选，结果受模型假设约束</span></footer>
+    </div>
+  </div>
+  <dialog id="ai-dialog" aria-labelledby="ai-dialog-title"></dialog>
+  <noscript>此工作台需要 JavaScript。请启用后重新打开；已有记录保存在本机。</noscript>
+</body>
+</html>

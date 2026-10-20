@@ -1,0 +1,78 @@
+{
+  "id": "D04",
+  "version": "1.0.0",
+  "title": "波长变化与干涉图样",
+  "domain": "diffraction",
+  "scope": "均匀相干照明、标量近轴、理想薄透镜傅里叶焦平面；不是自由空间Fresnel传播。",
+  "tags": [
+    "波长对比",
+    "不同波长",
+    "颜色",
+    "衍射"
+  ],
+  "required_parameters": [
+    "focal_length_mm",
+    "slit_width_um",
+    "slit_height_um",
+    "slit_separation_um",
+    "relative_phase_rad"
+  ],
+  "fixed_parameters": {
+    "aperture": "double_slit"
+  },
+  "numeric_defaults": {
+    "grid_size": 256,
+    "window_mm": 0.4
+  },
+  "recipe": {
+    "method": "catalog",
+    "variable": "wavelength_nm"
+  },
+  "teaching": {
+    "parameters": {
+      "wavelength_nm": 600,
+      "focal_length_mm": 200,
+      "slit_width_um": 20,
+      "slit_height_um": 100,
+      "slit_separation_um": 126.6,
+      "relative_phase_rad": 0
+    },
+    "goal": {
+      "metric": "fringe_period_mm",
+      "operator": "near",
+      "target": 0.95,
+      "tolerance": 0.02
+    },
+    "values": [
+      500,
+      600,
+      700
+    ]
+  },
+  "variables": [
+    "wavelength_nm"
+  ],
+  "metrics": [
+    "fringe_period_mm"
+  ],
+  "sources": [
+    {
+      "url": "https://opticspy.github.io/lightpipes/examples.html",
+      "relation": "示例选题与工具背景；没有复制上游图像或结果",
+      "license": "BSD-3-Clause (upstream LightPipes)"
+    },
+    {
+      "url": "https://opticspy.github.io/lightpipes/YoungsExperiment.html",
+      "relation": "范围对照：该上游示例用Fresnel，本案例使用理想透镜焦平面，不宣称原例复现"
+    }
+  ],
+  "interpretation": [
+    "先核对事实和允许变量，再明确批准实际计算。",
+    "未达标仅表示这组候选未达到目标，不是全局无解。",
+    "解析提议、实际计算、独立检查分别标记。"
+  ],
+  "preview": {
+    "status": "NOT_COMPUTED",
+    "label": "尚未计算；选用后生成新计划，不展示固定答案。"
+  }
+}

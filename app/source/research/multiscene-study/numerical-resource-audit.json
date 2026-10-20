@@ -1,0 +1,89 @@
+{
+  "status": "PRE_FREEZE_PAPER_RESOURCE_CHECK_ONLY",
+  "actual_physical_solver_calls": 0,
+  "actual_model_calls": 0,
+  "window_policy": "Shared 0.320 mm window is the smallest 0.064 mm step above the 0.280 mm aperture-fit bound; 256 grid gives 25.6 pixels across 32 um slits.",
+  "estimation_formula": "candidate_count * 40 * (grid_size**2 + 4*image_grid**2) + 1048576",
+  "image_grid_formula": "min(grid_size, 2*floor(0.1*window_mm*1e6/wavelength_nm)+1)",
+  "note": "Physical inputs, goals, thresholds and complete candidate lists are unchanged. Single-slit fictitious relative-phase field removed to match the fixed public tool.",
+  "tasks": [
+    {
+      "id": "M02",
+      "grid_size": 256,
+      "window_mm": 0.32,
+      "candidate_count": 1,
+      "largest_aperture_span_um": 32.0,
+      "slit_width_pixels": 25.6,
+      "image_grid_upper": 121,
+      "estimated_output_bytes": 6012576,
+      "output_cap_bytes": 67108864,
+      "geometry_inside_80_percent_window": true,
+      "at_least_8_width_pixels": true
+    },
+    {
+      "id": "M05",
+      "grid_size": 256,
+      "window_mm": 0.32,
+      "candidate_count": 1,
+      "largest_aperture_span_um": 224,
+      "slit_width_pixels": 25.6,
+      "image_grid_upper": 107,
+      "estimated_output_bytes": 5501856,
+      "output_cap_bytes": 67108864,
+      "geometry_inside_80_percent_window": true,
+      "at_least_8_width_pixels": true
+    },
+    {
+      "id": "M08",
+      "grid_size": 256,
+      "window_mm": 0.32,
+      "candidate_count": 3,
+      "largest_aperture_span_um": 224.0,
+      "slit_width_pixels": 25.6,
+      "image_grid_upper": 131,
+      "estimated_output_bytes": 17150176,
+      "output_cap_bytes": 67108864,
+      "geometry_inside_80_percent_window": true,
+      "at_least_8_width_pixels": true
+    },
+    {
+      "id": "M11",
+      "grid_size": 256,
+      "window_mm": 0.32,
+      "candidate_count": 2,
+      "largest_aperture_span_um": 224,
+      "slit_width_pixels": 25.6,
+      "image_grid_upper": 115,
+      "estimated_output_bytes": 10523456,
+      "output_cap_bytes": 67108864,
+      "geometry_inside_80_percent_window": true,
+      "at_least_8_width_pixels": true
+    },
+    {
+      "id": "DEV02",
+      "grid_size": 256,
+      "window_mm": 0.32,
+      "candidate_count": 2,
+      "largest_aperture_span_um": 192.0,
+      "slit_width_pixels": 25.6,
+      "image_grid_upper": 123,
+      "estimated_output_bytes": 11132736,
+      "output_cap_bytes": 67108864,
+      "geometry_inside_80_percent_window": true,
+      "at_least_8_width_pixels": true
+    },
+    {
+      "id": "DEV04",
+      "grid_size": 256,
+      "window_mm": 0.32,
+      "candidate_count": 2,
+      "largest_aperture_span_um": 192,
+      "slit_width_pixels": 25.6,
+      "image_grid_upper": 123,
+      "estimated_output_bytes": 11132736,
+      "output_cap_bytes": 67108864,
+      "geometry_inside_80_percent_window": true,
+      "at_least_8_width_pixels": true
+    }
+  ]
+}

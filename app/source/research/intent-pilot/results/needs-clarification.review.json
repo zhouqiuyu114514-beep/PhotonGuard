@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic_offline_review",
+  "bundle_sha256": "b3bed4e36b68adf3cc844408eaa9215c4b51a226f55eeacba2564ea23f4cf029",
+  "proposal_sha256": "d4f8c411cf23c533c7364faddf7717806faf217457ec385bef6153f2098d8757",
+  "status": "CLARIFICATION_REQUIRED",
+  "task_approved": false,
+  "task_lock_created": false,
+  "model_calls": 0,
+  "solver_calls": 0,
+  "source_semantics_verified": false,
+  "human_review_required": true,
+  "note": "结构化事实由开发样例作者手写；引用匹配不证明文本语义。数值字符串为精确十进制；本结果不是 task.json。",
+  "fields": [
+    {
+      "path": "physics.dimensions",
+      "state": "proposed",
+      "suggested_value": "1",
+      "unit": "count",
+      "evidence_ids": [
+        "spec-01"
+      ],
+      "evidence": [
+        {
+          "id": "spec-01",
+          "value": 1,
+          "unit": "count",
+          "source": {
+            "document_id": "spec",
+            "line": 1,
+            "quote": "独立规格：一维模型。"
+          }
+        }
+      ]
+    },
+    {
+      "path": "physics.angle_deg",
+      "state": "proposed",
+      "suggested_value": "0",
+      "unit": "deg",
+      "evidence_ids": [
+        "spec-02"
+      ],
+      "evidence": [
+        {
+          "id": "spec-02",
+          "value": 0,
+          "unit": "deg",
+          "source": {
+            "document_id": "spec",
+            "line": 2,
+            "quote": "独立规格：入射角为0度。"
+          }
+        }
+      ]
+    },
+    {
+      "path": "physics.lossless",
+      "state": "proposed",
+      "suggested_value": true,
+      "unit": "bool",
+      "evidence_ids": [
+        "spec-03"
+      ],
+      "evidence": [
+        {
+          "id": "spec-03",
+          "value": true,
+          "unit": "bool",
+          "source": {
+            "document_id": "spec",
+            "line": 3,
+            "quote": "独立规格：材料无损。"
+          }
+        }
+      ]
+    },
+    {
+      "path": "physics.dispersive",
+      "state": "proposed",
+      "suggested_value": false,
+      "unit": "bool",
+      "evidence_ids": [
+        "spec-04"
+      ],
+      "evidence": [
+        {
+          "id": "spec-04",
+          "value": false,
+          "unit": "bool",
+          "source": {
+            "document_id": "spec",
+            "line": 4,
+            "quote": "独立规格：材料无色散。"
+          }
+        }
+      ]
+    },
+    {
+      "path": "physics.isotropic",
+      "state": "proposed",
+      "suggested_value": true,
+      "unit": "bool",
+      "evidence_ids": [
+        "spec-05"
+      ],
+      "evidence": [
+        {
+          "id": "spec-05",
+          "value": true,
+          "unit": "bool",
+          "source": {
+            "document_id": "spec",
+            "line": 5,
+            "quote": "独立规格：材料各向同性。"
+          }
+        }
+      ]
+    },
+    {
+      "path": "physics.mu",
+      "state": "proposed",
+      "suggested_value": "1",
+      "unit": "1",
+      "evidence_ids": [
+        "spec-06"
+      ],
+      "evidence": [
+        {
+          "id": "spec-06",
+          "value": 1,
+          "unit": "1",
+          "source": {
+            "document_id": "spec",
+            "line": 6,
+            "quote": "独立规格：相对磁导率为1。"
+          }
+        }
+      ]
+    },
+    {
+      "path": "physics.n_incident",
+      "state": "proposed",
+      "suggested_value": "1",
+      "unit": "1",
+      "evidence_ids": [
+        "spec-07"
+      ],
+      "evidence": [
+        {
+          "id": "spec-07",
+          "value": 1,
+          "unit": "1",
+          "source": {
+            "document_id": "spec",
+            "line": 7,
+            "quote": "独立规格：入射介质折射率为1。"
+          }
+        }
+      ]
+    },
+    {
+      "path": "physics.n_exit",
+      "state": "proposed",
+      "suggested_value": "1",
+      "unit": "1",
+      "evidence_ids": [
+        "spec-08"
+      ],
+      "evidence": [
+        {
+          "id": "spec-08",
+          "value": 1,
+          "unit": "1",
+          "source": {
+            "document_id": "spec",
+            "line": 8,
+            "quote": "独立规格：出射介质折射率为1。"
+          }
+        }
+      ]
+    },
+    {
+      "path": "units_um",
+      "state": "proposed",
+      "suggested_value": "1.000",
+      "unit": "um",
+      "evidence_ids": [
+        "spec-09"
+      ],
+      "evidence": [
+        {
+          "id": "spec-09",
+          "value": 1000,
+          "unit": "nm",
+          "source": {
+            "document_id": "spec",
+            "line": 9,
+            "quote": "独立规格：每Meep单位对应1000 nm。"
+          }
+        }
+      ]
+    },
+    {
+      "path": "layers.0.n",
+      "state": "unknown",
+      "suggested_value": null,
+      "unit": "1",
+      "evidence_ids": [],
+      "evidence": []
+    },
+    {
+      "path": "layers.0.thickness_um",
+      "state": "unknown",
+      "suggested_value": null,
+      "unit": "um",
+      "evidence_ids": [
+        "spec-11"
+      ],
+      "evidence": [
+        {
+          "id": "spec-11",
+          "value": 200,
+          "unit": null,
+          "source": {
+            "document_id": "spec",
+            "line": 11,
+            "quote": "独立规格：膜层厚度写为200，单位尚未提供。"
+          }
+        }
+      ]
+    },
+    {
+      "path": "wavelength_um.0",
+      "state": "proposed",
+      "suggested_value": "0.500",
+      "unit": "um",
+      "evidence_ids": [
+        "spec-12"
+      ],
+      "evidence": [
+        {
+          "id": "spec-12",
+          "value": 500,
+          "unit": "nm",
+          "source": {
+            "document_id": "spec",
+            "line": 12,
+            "quote": "独立规格：波长下限500 nm。"
+          }
+        }
+      ]
+    },
+    {
+      "path": "wavelength_um.1",
+      "state": "conflict",
+      "suggested_value": null,
+      "unit": "um",
+      "evidence_ids": [
+        "spec-13",
+        "spec-conflict"
+      ],
+      "evidence": [
+        {
+          "id": "spec-13",
+          "value": 0.9,
+          "unit": "um",
+          "source": {
+            "document_id": "spec",
+            "line": 13,
+            "quote": "独立规格：波长上限0.9 um。"
+          }
+        },
+        {
+          "id": "spec-conflict",
+          "value": 1100,
+          "unit": "nm",
+          "source": {
+            "document_id": "spec-other",
+            "line": 1,
+            "quote": "另一份独立规格写波长上限为1100 nm，与原规格冲突，尚未确认优先级。"
+          }
+        }
+      ]
+    },
+    {
+      "path": "nfreq",
+      "state": "proposed",
+      "suggested_value": "21",
+      "unit": "count",
+      "evidence_ids": [
+        "spec-14"
+      ],
+      "evidence": [
+        {
+          "id": "spec-14",
+          "value": 21,
+          "unit": "count",
+          "source": {
+            "document_id": "spec",
+            "line": 14,
+            "quote": "独立规格：21个频点。"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "paths": [
+        "layers.0.n"
+      ],
+      "reason": "unknown",
+      "text": "请依据独立规格补充 layers.0.n 的明确值和单位（目标 1）；当前留空。"
+    },
+    {
+      "paths": [
+        "layers.0.thickness_um"
+      ],
+      "reason": "unknown",
+      "text": "请依据独立规格补充 layers.0.thickness_um 的明确值和单位（目标 um）；当前留空。"
+    },
+    {
+      "paths": [
+        "wavelength_um.1"
+      ],
+      "reason": "conflict",
+      "text": "wavelength_um.1 的独立来源不一致，请明确采用哪项并记录依据；当前留空。"
+    }
+  ],
+  "scope_blockers": [],
+  "ignored_script_fact_ids": [
+    "script-n"
+  ]
+}

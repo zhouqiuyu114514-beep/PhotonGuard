@@ -1,0 +1,13 @@
+{
+  "files": {
+    "original-certificate.json": {
+      "bytes": 33258,
+      "sha256": "7636632cfb878df245e9c7566b5c0de1942aca43928fb5ff04bb729afe784a90"
+    },
+    "design-result.json": {
+      "bytes": 17718,
+      "sha256": "f2b08e2817773caa15a59ddc69b77534b1c5d50768528ab358a18bd13ca2dc1d"
+    }
+  },
+  "scope": "Read-only archive; no current-case or production verdict promotion"
+}

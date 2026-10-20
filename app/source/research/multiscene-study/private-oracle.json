@@ -1,0 +1,1507 @@
+{
+  "M01": {
+    "id": "M01",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "film",
+      "context_kind": "specified",
+      "known_parameters": {
+        "layers": [
+          {
+            "n": 2.1,
+            "thickness_um": 0.115
+          }
+        ],
+        "wavelengths_um": [
+          0.5,
+          0.62,
+          0.74
+        ]
+      },
+      "parameter_sources": {
+        "layers": {
+          "unit": "n: dimensionless; thickness_um: um",
+          "quote": "空气两侧、正入射、无损无色散单膜。折射率 2.1，厚度 0.115 μm。实际采样波长（μm）：0.5, 0.62, 0.74。所有物理参数固定，不进行候选扫描。目标是在 0.62 μm 的反射率至少 0.10，请实际判断。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        },
+        "wavelengths_um": {
+          "unit": "um",
+          "quote": "空气两侧、正入射、无损无色散单膜。折射率 2.1，厚度 0.115 μm。实际采样波长（μm）：0.5, 0.62, 0.74。所有物理参数固定，不进行候选扫描。目标是在 0.62 μm 的反射率至少 0.10，请实际判断。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "layers",
+        "wavelengths_um"
+      ],
+      "allowed_variables": {},
+      "goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "target": 0.1,
+        "wavelength_um": 0.62
+      },
+      "resource_budget": {
+        "max_candidates": 1,
+        "max_fast_evaluations": 1,
+        "max_meep_validations": 1,
+        "max_fdtd": 8
+      },
+      "parent_task_id": null
+    },
+    "candidates": [
+      {
+        "variable_values": {},
+        "metric_value": 0.2124772092516826,
+        "goal_met": true
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {}
+    ],
+    "relative_metric_tolerance": 1e-08,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "M02": {
+    "id": "M02",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "diffraction",
+      "context_kind": "specified",
+      "known_parameters": {
+        "aperture": "single_slit",
+        "wavelength_nm": 532.0,
+        "focal_length_mm": 150.0,
+        "slit_width_um": 32.0,
+        "slit_height_um": 128.0,
+        "grid_size": 256,
+        "window_mm": 0.32
+      },
+      "parameter_sources": {
+        "aperture": {
+          "unit": "enum",
+          "quote": "均匀相干照明，标量近轴模型，单缝后的理想薄透镜后焦面；波长 532.0 nm，焦距 150.0 mm，缝宽 32.0 μm，缝高 128.0 μm，数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是中心到第一零点约 2.49375 mm，绝对容差 0.1 mm。"
+        },
+        "wavelength_nm": {
+          "unit": "nm",
+          "quote": "均匀相干照明，标量近轴模型，单缝后的理想薄透镜后焦面；波长 532.0 nm，焦距 150.0 mm，缝宽 32.0 μm，缝高 128.0 μm，数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是中心到第一零点约 2.49375 mm，绝对容差 0.1 mm。"
+        },
+        "focal_length_mm": {
+          "unit": "mm",
+          "quote": "均匀相干照明，标量近轴模型，单缝后的理想薄透镜后焦面；波长 532.0 nm，焦距 150.0 mm，缝宽 32.0 μm，缝高 128.0 μm，数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是中心到第一零点约 2.49375 mm，绝对容差 0.1 mm。"
+        },
+        "slit_width_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，单缝后的理想薄透镜后焦面；波长 532.0 nm，焦距 150.0 mm，缝宽 32.0 μm，缝高 128.0 μm，数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是中心到第一零点约 2.49375 mm，绝对容差 0.1 mm。"
+        },
+        "slit_height_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，单缝后的理想薄透镜后焦面；波长 532.0 nm，焦距 150.0 mm，缝宽 32.0 μm，缝高 128.0 μm，数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是中心到第一零点约 2.49375 mm，绝对容差 0.1 mm。"
+        },
+        "grid_size": {
+          "unit": "samples",
+          "quote": "均匀相干照明，标量近轴模型，单缝后的理想薄透镜后焦面；波长 532.0 nm，焦距 150.0 mm，缝宽 32.0 μm，缝高 128.0 μm，数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是中心到第一零点约 2.49375 mm，绝对容差 0.1 mm。"
+        },
+        "window_mm": {
+          "unit": "mm",
+          "quote": "均匀相干照明，标量近轴模型，单缝后的理想薄透镜后焦面；波长 532.0 nm，焦距 150.0 mm，缝宽 32.0 μm，缝高 128.0 μm，数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是中心到第一零点约 2.49375 mm，绝对容差 0.1 mm。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "aperture",
+        "focal_length_mm",
+        "grid_size",
+        "slit_height_um",
+        "slit_width_um",
+        "wavelength_nm",
+        "window_mm"
+      ],
+      "allowed_variables": {},
+      "goal": {
+        "metric": "first_zero_mm",
+        "operator": "near",
+        "target": 2.49375,
+        "tolerance": 0.1
+      },
+      "resource_budget": {
+        "max_candidates": 1,
+        "max_fast_evaluations": 2,
+        "max_meep_validations": 0,
+        "max_fdtd": 0
+      },
+      "parent_task_id": null
+    },
+    "candidates": [
+      {
+        "variable_values": {},
+        "metric_value": 2.49375,
+        "goal_met": true
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {}
+    ],
+    "relative_metric_tolerance": 0.04,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "M03": {
+    "id": "M03",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "gaussian",
+      "context_kind": "specified",
+      "known_parameters": {
+        "wavelength_nm": 780.0,
+        "waist_radius_um": 600.0,
+        "waist_z_mm": -30.0,
+        "focal_length_mm": 125.0,
+        "screen_distance_mm": 125.0,
+        "z_max_mm": 250.0
+      },
+      "parameter_sources": {
+        "wavelength_nm": {
+          "unit": "nm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 780.0 nm，束腰的 1/e² 强度半径 600.0 μm，束腰位置 z=-30.0 mm，当前焦距 125.0 mm，屏幕位置 z=125.0 mm，束宽曲线绘制到 z=250.0 mm。所有物理参数固定，不进行候选扫描。目标是该屏上半径不超过 60 μm。"
+        },
+        "waist_radius_um": {
+          "unit": "um",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 780.0 nm，束腰的 1/e² 强度半径 600.0 μm，束腰位置 z=-30.0 mm，当前焦距 125.0 mm，屏幕位置 z=125.0 mm，束宽曲线绘制到 z=250.0 mm。所有物理参数固定，不进行候选扫描。目标是该屏上半径不超过 60 μm。"
+        },
+        "waist_z_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 780.0 nm，束腰的 1/e² 强度半径 600.0 μm，束腰位置 z=-30.0 mm，当前焦距 125.0 mm，屏幕位置 z=125.0 mm，束宽曲线绘制到 z=250.0 mm。所有物理参数固定，不进行候选扫描。目标是该屏上半径不超过 60 μm。"
+        },
+        "focal_length_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 780.0 nm，束腰的 1/e² 强度半径 600.0 μm，束腰位置 z=-30.0 mm，当前焦距 125.0 mm，屏幕位置 z=125.0 mm，束宽曲线绘制到 z=250.0 mm。所有物理参数固定，不进行候选扫描。目标是该屏上半径不超过 60 μm。"
+        },
+        "screen_distance_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 780.0 nm，束腰的 1/e² 强度半径 600.0 μm，束腰位置 z=-30.0 mm，当前焦距 125.0 mm，屏幕位置 z=125.0 mm，束宽曲线绘制到 z=250.0 mm。所有物理参数固定，不进行候选扫描。目标是该屏上半径不超过 60 μm。"
+        },
+        "z_max_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 780.0 nm，束腰的 1/e² 强度半径 600.0 μm，束腰位置 z=-30.0 mm，当前焦距 125.0 mm，屏幕位置 z=125.0 mm，束宽曲线绘制到 z=250.0 mm。所有物理参数固定，不进行候选扫描。目标是该屏上半径不超过 60 μm。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "focal_length_mm",
+        "screen_distance_mm",
+        "waist_radius_um",
+        "waist_z_mm",
+        "wavelength_nm",
+        "z_max_mm"
+      ],
+      "allowed_variables": {},
+      "goal": {
+        "metric": "screen_radius_um",
+        "operator": "<=",
+        "target": 60.0
+      },
+      "resource_budget": {
+        "max_candidates": 1,
+        "max_fast_evaluations": 1,
+        "max_meep_validations": 0,
+        "max_fdtd": 0
+      },
+      "parent_task_id": null
+    },
+    "candidates": [
+      {
+        "variable_values": {},
+        "metric_value": 51.72535650486599,
+        "goal_met": true
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {}
+    ],
+    "relative_metric_tolerance": 1e-08,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "M04": {
+    "id": "M04",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "film",
+      "context_kind": "specified",
+      "known_parameters": {
+        "layers": [
+          {
+            "n": 1.9,
+            "thickness_um": 0.135
+          }
+        ],
+        "wavelengths_um": [
+          0.55,
+          0.65,
+          0.75
+        ]
+      },
+      "parameter_sources": {
+        "layers": {
+          "unit": "n: dimensionless; thickness_um: um",
+          "quote": "确认这层实际厚度为 0.135 μm，折射率仍为 1.9。"
+        },
+        "wavelengths_um": {
+          "unit": "um",
+          "quote": "空气两侧、正入射、无损无色散单膜。折射率 1.9，此参数尚未提供，需向我核实。实际采样波长（μm）：0.55, 0.65, 0.75。所有物理参数固定，不进行候选扫描。目标是在 0.65 μm 的反射率至少 0.10。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "layers",
+        "wavelengths_um"
+      ],
+      "allowed_variables": {},
+      "goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "target": 0.1,
+        "wavelength_um": 0.65
+      },
+      "resource_budget": {
+        "max_candidates": 1,
+        "max_fast_evaluations": 1,
+        "max_meep_validations": 1,
+        "max_fdtd": 8
+      },
+      "parent_task_id": null
+    },
+    "candidates": [
+      {
+        "variable_values": {},
+        "metric_value": 0.15133479302514605,
+        "goal_met": true
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {}
+    ],
+    "relative_metric_tolerance": 1e-08,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": true,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "M05": {
+    "id": "M05",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "diffraction",
+      "context_kind": "specified",
+      "known_parameters": {
+        "aperture": "double_slit",
+        "wavelength_nm": 594,
+        "focal_length_mm": 180,
+        "slit_width_um": 32,
+        "slit_height_um": 128.0,
+        "grid_size": 256,
+        "window_mm": 0.32,
+        "slit_separation_um": 192,
+        "relative_phase_rad": 0.0
+      },
+      "parameter_sources": {
+        "aperture": {
+          "unit": "enum",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 594 nm，此参数尚未提供，需向我核实，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是条纹周期 0.556875 mm，绝对容差 0.025 mm。"
+        },
+        "wavelength_nm": {
+          "unit": "nm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 594 nm，此参数尚未提供，需向我核实，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是条纹周期 0.556875 mm，绝对容差 0.025 mm。"
+        },
+        "focal_length_mm": {
+          "unit": "mm",
+          "quote": "确认理想透镜焦距为 180 mm；这里是后焦面，不是自由传播屏距。"
+        },
+        "slit_width_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 594 nm，此参数尚未提供，需向我核实，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是条纹周期 0.556875 mm，绝对容差 0.025 mm。"
+        },
+        "slit_height_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 594 nm，此参数尚未提供，需向我核实，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是条纹周期 0.556875 mm，绝对容差 0.025 mm。"
+        },
+        "grid_size": {
+          "unit": "samples",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 594 nm，此参数尚未提供，需向我核实，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是条纹周期 0.556875 mm，绝对容差 0.025 mm。"
+        },
+        "window_mm": {
+          "unit": "mm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 594 nm，此参数尚未提供，需向我核实，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是条纹周期 0.556875 mm，绝对容差 0.025 mm。"
+        },
+        "slit_separation_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 594 nm，此参数尚未提供，需向我核实，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是条纹周期 0.556875 mm，绝对容差 0.025 mm。"
+        },
+        "relative_phase_rad": {
+          "unit": "rad",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 594 nm，此参数尚未提供，需向我核实，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。目标是条纹周期 0.556875 mm，绝对容差 0.025 mm。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "aperture",
+        "focal_length_mm",
+        "grid_size",
+        "relative_phase_rad",
+        "slit_height_um",
+        "slit_separation_um",
+        "slit_width_um",
+        "wavelength_nm",
+        "window_mm"
+      ],
+      "allowed_variables": {},
+      "goal": {
+        "metric": "fringe_period_mm",
+        "operator": "near",
+        "target": 0.556875,
+        "tolerance": 0.025
+      },
+      "resource_budget": {
+        "max_candidates": 1,
+        "max_fast_evaluations": 2,
+        "max_meep_validations": 0,
+        "max_fdtd": 0
+      },
+      "parent_task_id": null
+    },
+    "candidates": [
+      {
+        "variable_values": {},
+        "metric_value": 0.556875,
+        "goal_met": true
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {}
+    ],
+    "relative_metric_tolerance": 0.04,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": true,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "M06": {
+    "id": "M06",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "gaussian",
+      "context_kind": "specified",
+      "known_parameters": {
+        "wavelength_nm": 850,
+        "waist_radius_um": 550,
+        "waist_z_mm": -40,
+        "focal_length_mm": 120,
+        "screen_distance_mm": 120,
+        "z_max_mm": 250.0
+      },
+      "parameter_sources": {
+        "wavelength_nm": {
+          "unit": "nm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 850 nm，束腰的 1/e² 强度半径 550 μm，此参数尚未提供，需向我核实，当前焦距 120 mm，屏幕位置 z=120 mm，束宽曲线绘制到 z=250.0 mm。所有物理参数固定，不进行候选扫描。目标是该屏上半径不超过 65 μm。"
+        },
+        "waist_radius_um": {
+          "unit": "um",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 850 nm，束腰的 1/e² 强度半径 550 μm，此参数尚未提供，需向我核实，当前焦距 120 mm，屏幕位置 z=120 mm，束宽曲线绘制到 z=250.0 mm。所有物理参数固定，不进行候选扫描。目标是该屏上半径不超过 65 μm。"
+        },
+        "waist_z_mm": {
+          "unit": "mm",
+          "quote": "确认束腰在透镜前 40 mm，即束腰位置 z=-40 mm。"
+        },
+        "focal_length_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 850 nm，束腰的 1/e² 强度半径 550 μm，此参数尚未提供，需向我核实，当前焦距 120 mm，屏幕位置 z=120 mm，束宽曲线绘制到 z=250.0 mm。所有物理参数固定，不进行候选扫描。目标是该屏上半径不超过 65 μm。"
+        },
+        "screen_distance_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 850 nm，束腰的 1/e² 强度半径 550 μm，此参数尚未提供，需向我核实，当前焦距 120 mm，屏幕位置 z=120 mm，束宽曲线绘制到 z=250.0 mm。所有物理参数固定，不进行候选扫描。目标是该屏上半径不超过 65 μm。"
+        },
+        "z_max_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 850 nm，束腰的 1/e² 强度半径 550 μm，此参数尚未提供，需向我核实，当前焦距 120 mm，屏幕位置 z=120 mm，束宽曲线绘制到 z=250.0 mm。所有物理参数固定，不进行候选扫描。目标是该屏上半径不超过 65 μm。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "focal_length_mm",
+        "screen_distance_mm",
+        "waist_radius_um",
+        "waist_z_mm",
+        "wavelength_nm",
+        "z_max_mm"
+      ],
+      "allowed_variables": {},
+      "goal": {
+        "metric": "screen_radius_um",
+        "operator": "<=",
+        "target": 65.0
+      },
+      "resource_budget": {
+        "max_candidates": 1,
+        "max_fast_evaluations": 1,
+        "max_meep_validations": 0,
+        "max_fdtd": 0
+      },
+      "parent_task_id": null
+    },
+    "candidates": [
+      {
+        "variable_values": {},
+        "metric_value": 59.032015255902984,
+        "goal_met": true
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {}
+    ],
+    "relative_metric_tolerance": 1e-08,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": true,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "M07": {
+    "id": "M07",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "film",
+      "context_kind": "specified",
+      "known_parameters": {
+        "material_n_high": 2.2,
+        "material_n_low": 1.6,
+        "layer_count": 2,
+        "design_wavelength_um": 0.72,
+        "wavelengths_um": [
+          0.64,
+          0.68,
+          0.72,
+          0.76,
+          0.8
+        ]
+      },
+      "parameter_sources": {
+        "material_n_high": {
+          "unit": "dimensionless",
+          "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.2，nL=1.6，设计波长 0.72 μm，当前层数 2。实际采样波长（μm）：0.64, 0.68, 0.72, 0.76, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。比较全部候选，选择 0.72 μm 反射率最高的可行方案，目标至少 0.50。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        },
+        "material_n_low": {
+          "unit": "dimensionless",
+          "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.2，nL=1.6，设计波长 0.72 μm，当前层数 2。实际采样波长（μm）：0.64, 0.68, 0.72, 0.76, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。比较全部候选，选择 0.72 μm 反射率最高的可行方案，目标至少 0.50。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        },
+        "layer_count": {
+          "unit": "count",
+          "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.2，nL=1.6，设计波长 0.72 μm，当前层数 2。实际采样波长（μm）：0.64, 0.68, 0.72, 0.76, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。比较全部候选，选择 0.72 μm 反射率最高的可行方案，目标至少 0.50。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        },
+        "design_wavelength_um": {
+          "unit": "um",
+          "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.2，nL=1.6，设计波长 0.72 μm，当前层数 2。实际采样波长（μm）：0.64, 0.68, 0.72, 0.76, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。比较全部候选，选择 0.72 μm 反射率最高的可行方案，目标至少 0.50。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        },
+        "wavelengths_um": {
+          "unit": "um",
+          "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.2，nL=1.6，设计波长 0.72 μm，当前层数 2。实际采样波长（μm）：0.64, 0.68, 0.72, 0.76, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。比较全部候选，选择 0.72 μm 反射率最高的可行方案，目标至少 0.50。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "design_wavelength_um",
+        "material_n_high",
+        "material_n_low",
+        "wavelengths_um"
+      ],
+      "allowed_variables": {
+        "layer_count": [
+          2,
+          4,
+          6
+        ]
+      },
+      "goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "target": 0.5,
+        "wavelength_um": 0.72
+      },
+      "resource_budget": {
+        "max_candidates": 3,
+        "max_fast_evaluations": 3,
+        "max_meep_validations": 1,
+        "max_fdtd": 8
+      },
+      "parent_task_id": null
+    },
+    "candidates": [
+      {
+        "variable_values": {
+          "layer_count": 2
+        },
+        "metric_value": 0.09493060628195761,
+        "goal_met": false
+      },
+      {
+        "variable_values": {
+          "layer_count": 4
+        },
+        "metric_value": 0.316732810573681,
+        "goal_met": false
+      },
+      {
+        "variable_values": {
+          "layer_count": 6
+        },
+        "metric_value": 0.5508616786546963,
+        "goal_met": true
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {
+        "layer_count": 6
+      }
+    ],
+    "relative_metric_tolerance": 1e-08,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "M08": {
+    "id": "M08",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "diffraction",
+      "context_kind": "specified",
+      "known_parameters": {
+        "aperture": "double_slit",
+        "wavelength_nm": 488,
+        "focal_length_mm": 160,
+        "slit_width_um": 32,
+        "slit_height_um": 128.0,
+        "grid_size": 256,
+        "window_mm": 0.32,
+        "slit_separation_um": 160,
+        "relative_phase_rad": 0.0
+      },
+      "parameter_sources": {
+        "aperture": {
+          "unit": "enum",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 488 nm，焦距 160 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0, 192.0]}。其他参数不得改变。比较全部缝距，选择条纹周期最接近 0.488 mm 的候选，绝对容差 0.02 mm。"
+        },
+        "wavelength_nm": {
+          "unit": "nm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 488 nm，焦距 160 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0, 192.0]}。其他参数不得改变。比较全部缝距，选择条纹周期最接近 0.488 mm 的候选，绝对容差 0.02 mm。"
+        },
+        "focal_length_mm": {
+          "unit": "mm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 488 nm，焦距 160 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0, 192.0]}。其他参数不得改变。比较全部缝距，选择条纹周期最接近 0.488 mm 的候选，绝对容差 0.02 mm。"
+        },
+        "slit_width_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 488 nm，焦距 160 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0, 192.0]}。其他参数不得改变。比较全部缝距，选择条纹周期最接近 0.488 mm 的候选，绝对容差 0.02 mm。"
+        },
+        "slit_height_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 488 nm，焦距 160 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0, 192.0]}。其他参数不得改变。比较全部缝距，选择条纹周期最接近 0.488 mm 的候选，绝对容差 0.02 mm。"
+        },
+        "grid_size": {
+          "unit": "samples",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 488 nm，焦距 160 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0, 192.0]}。其他参数不得改变。比较全部缝距，选择条纹周期最接近 0.488 mm 的候选，绝对容差 0.02 mm。"
+        },
+        "window_mm": {
+          "unit": "mm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 488 nm，焦距 160 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0, 192.0]}。其他参数不得改变。比较全部缝距，选择条纹周期最接近 0.488 mm 的候选，绝对容差 0.02 mm。"
+        },
+        "slit_separation_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 488 nm，焦距 160 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0, 192.0]}。其他参数不得改变。比较全部缝距，选择条纹周期最接近 0.488 mm 的候选，绝对容差 0.02 mm。"
+        },
+        "relative_phase_rad": {
+          "unit": "rad",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 488 nm，焦距 160 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0, 192.0]}。其他参数不得改变。比较全部缝距，选择条纹周期最接近 0.488 mm 的候选，绝对容差 0.02 mm。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "aperture",
+        "focal_length_mm",
+        "grid_size",
+        "relative_phase_rad",
+        "slit_height_um",
+        "slit_width_um",
+        "wavelength_nm",
+        "window_mm"
+      ],
+      "allowed_variables": {
+        "slit_separation_um": [
+          128.0,
+          160.0,
+          192.0
+        ]
+      },
+      "goal": {
+        "metric": "fringe_period_mm",
+        "operator": "near",
+        "target": 0.488,
+        "tolerance": 0.02
+      },
+      "resource_budget": {
+        "max_candidates": 3,
+        "max_fast_evaluations": 6,
+        "max_meep_validations": 0,
+        "max_fdtd": 0
+      },
+      "parent_task_id": null
+    },
+    "candidates": [
+      {
+        "variable_values": {
+          "slit_separation_um": 128.0
+        },
+        "metric_value": 0.61,
+        "goal_met": false
+      },
+      {
+        "variable_values": {
+          "slit_separation_um": 160.0
+        },
+        "metric_value": 0.488,
+        "goal_met": true
+      },
+      {
+        "variable_values": {
+          "slit_separation_um": 192.0
+        },
+        "metric_value": 0.4066666666666667,
+        "goal_met": false
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {
+        "slit_separation_um": 160.0
+      }
+    ],
+    "relative_metric_tolerance": 0.04,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "M09": {
+    "id": "M09",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "gaussian",
+      "context_kind": "specified",
+      "known_parameters": {
+        "wavelength_nm": 650,
+        "waist_radius_um": 450,
+        "waist_z_mm": -25,
+        "focal_length_mm": 90,
+        "screen_distance_mm": 90,
+        "z_max_mm": 250.0
+      },
+      "parameter_sources": {
+        "wavelength_nm": {
+          "unit": "nm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 450 μm，束腰位置 z=-25 mm，当前焦距 90 mm，屏幕位置 z=90 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [80.0, 90.0, 110.0]}。其他参数不得改变。从所给目录比较全部焦距，选择屏幕半径最小的那一个，只讨论该目录。"
+        },
+        "waist_radius_um": {
+          "unit": "um",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 450 μm，束腰位置 z=-25 mm，当前焦距 90 mm，屏幕位置 z=90 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [80.0, 90.0, 110.0]}。其他参数不得改变。从所给目录比较全部焦距，选择屏幕半径最小的那一个，只讨论该目录。"
+        },
+        "waist_z_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 450 μm，束腰位置 z=-25 mm，当前焦距 90 mm，屏幕位置 z=90 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [80.0, 90.0, 110.0]}。其他参数不得改变。从所给目录比较全部焦距，选择屏幕半径最小的那一个，只讨论该目录。"
+        },
+        "focal_length_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 450 μm，束腰位置 z=-25 mm，当前焦距 90 mm，屏幕位置 z=90 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [80.0, 90.0, 110.0]}。其他参数不得改变。从所给目录比较全部焦距，选择屏幕半径最小的那一个，只讨论该目录。"
+        },
+        "screen_distance_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 450 μm，束腰位置 z=-25 mm，当前焦距 90 mm，屏幕位置 z=90 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [80.0, 90.0, 110.0]}。其他参数不得改变。从所给目录比较全部焦距，选择屏幕半径最小的那一个，只讨论该目录。"
+        },
+        "z_max_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 450 μm，束腰位置 z=-25 mm，当前焦距 90 mm，屏幕位置 z=90 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [80.0, 90.0, 110.0]}。其他参数不得改变。从所给目录比较全部焦距，选择屏幕半径最小的那一个，只讨论该目录。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "screen_distance_mm",
+        "waist_radius_um",
+        "waist_z_mm",
+        "wavelength_nm",
+        "z_max_mm"
+      ],
+      "allowed_variables": {
+        "focal_length_mm": [
+          80.0,
+          90.0,
+          110.0
+        ]
+      },
+      "goal": {
+        "metric": "screen_radius_um",
+        "operator": "minimize"
+      },
+      "resource_budget": {
+        "max_candidates": 3,
+        "max_fast_evaluations": 3,
+        "max_meep_validations": 0,
+        "max_fdtd": 0
+      },
+      "parent_task_id": null
+    },
+    "candidates": [
+      {
+        "variable_values": {
+          "focal_length_mm": 80.0
+        },
+        "metric_value": 68.9894432163619,
+        "goal_met": null
+      },
+      {
+        "variable_values": {
+          "focal_length_mm": 90.0
+        },
+        "metric_value": 41.38028520389279,
+        "goal_met": null
+      },
+      {
+        "variable_values": {
+          "focal_length_mm": 110.0
+        },
+        "metric_value": 92.64919342436349,
+        "goal_met": null
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {
+        "focal_length_mm": 90.0
+      }
+    ],
+    "relative_metric_tolerance": 1e-08,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "M10": {
+    "id": "M10",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "film",
+      "context_kind": "specified",
+      "known_parameters": {
+        "material_n_high": 2.3,
+        "material_n_low": 1.4,
+        "layer_count": 2,
+        "design_wavelength_um": 0.7,
+        "wavelengths_um": [
+          0.6,
+          0.65,
+          0.7,
+          0.75,
+          0.8
+        ]
+      },
+      "parameter_sources": {
+        "material_n_high": {
+          "unit": "dimensionless",
+          "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.3，nL=1.4，设计波长 0.7 μm，当前层数 2。实际采样波长（μm）：0.6, 0.65, 0.7, 0.75, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。修改目标：现在考察 0.75 μm，反射率至少 0.65。仍只改层数，不许把原设计波长 0.70 μm 偷改成目标波长。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        },
+        "material_n_low": {
+          "unit": "dimensionless",
+          "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.3，nL=1.4，设计波长 0.7 μm，当前层数 2。实际采样波长（μm）：0.6, 0.65, 0.7, 0.75, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。修改目标：现在考察 0.75 μm，反射率至少 0.65。仍只改层数，不许把原设计波长 0.70 μm 偷改成目标波长。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        },
+        "layer_count": {
+          "unit": "count",
+          "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.3，nL=1.4，设计波长 0.7 μm，当前层数 2。实际采样波长（μm）：0.6, 0.65, 0.7, 0.75, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。修改目标：现在考察 0.75 μm，反射率至少 0.65。仍只改层数，不许把原设计波长 0.70 μm 偷改成目标波长。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        },
+        "design_wavelength_um": {
+          "unit": "um",
+          "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.3，nL=1.4，设计波长 0.7 μm，当前层数 2。实际采样波长（μm）：0.6, 0.65, 0.7, 0.75, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。修改目标：现在考察 0.75 μm，反射率至少 0.65。仍只改层数，不许把原设计波长 0.70 μm 偷改成目标波长。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        },
+        "wavelengths_um": {
+          "unit": "um",
+          "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.3，nL=1.4，设计波长 0.7 μm，当前层数 2。实际采样波长（μm）：0.6, 0.65, 0.7, 0.75, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。修改目标：现在考察 0.75 μm，反射率至少 0.65。仍只改层数，不许把原设计波长 0.70 μm 偷改成目标波长。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "design_wavelength_um",
+        "material_n_high",
+        "material_n_low",
+        "wavelengths_um"
+      ],
+      "allowed_variables": {
+        "layer_count": [
+          2,
+          4,
+          6
+        ]
+      },
+      "goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "target": 0.65,
+        "wavelength_um": 0.75
+      },
+      "resource_budget": {
+        "max_candidates": 3,
+        "max_fast_evaluations": 3,
+        "max_meep_validations": 1,
+        "max_fdtd": 8
+      },
+      "parent_task_id": "M10-parent"
+    },
+    "candidates": [
+      {
+        "variable_values": {
+          "layer_count": 2
+        },
+        "metric_value": 0.21822618642770564,
+        "goal_met": false
+      },
+      {
+        "variable_values": {
+          "layer_count": 4
+        },
+        "metric_value": 0.5757893824677018,
+        "goal_met": false
+      },
+      {
+        "variable_values": {
+          "layer_count": 6
+        },
+        "metric_value": 0.8063674307054565,
+        "goal_met": true
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {
+        "layer_count": 6
+      }
+    ],
+    "relative_metric_tolerance": 1e-08,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "M11": {
+    "id": "M11",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "diffraction",
+      "context_kind": "specified",
+      "known_parameters": {
+        "aperture": "double_slit",
+        "wavelength_nm": 561,
+        "focal_length_mm": 175,
+        "slit_width_um": 32,
+        "slit_height_um": 128.0,
+        "grid_size": 256,
+        "window_mm": 0.32,
+        "slit_separation_um": 192,
+        "relative_phase_rad": 0.0
+      },
+      "parameter_sources": {
+        "aperture": {
+          "unit": "enum",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 561 nm，焦距 175 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。修改目标：把中心亮纹变暗，使中心强度相对同几何同相中心不超过 0.01。只许改相对相位，缝宽、缝高、缝距、波长和焦距全部保留。"
+        },
+        "wavelength_nm": {
+          "unit": "nm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 561 nm，焦距 175 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。修改目标：把中心亮纹变暗，使中心强度相对同几何同相中心不超过 0.01。只许改相对相位，缝宽、缝高、缝距、波长和焦距全部保留。"
+        },
+        "focal_length_mm": {
+          "unit": "mm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 561 nm，焦距 175 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。修改目标：把中心亮纹变暗，使中心强度相对同几何同相中心不超过 0.01。只许改相对相位，缝宽、缝高、缝距、波长和焦距全部保留。"
+        },
+        "slit_width_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 561 nm，焦距 175 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。修改目标：把中心亮纹变暗，使中心强度相对同几何同相中心不超过 0.01。只许改相对相位，缝宽、缝高、缝距、波长和焦距全部保留。"
+        },
+        "slit_height_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 561 nm，焦距 175 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。修改目标：把中心亮纹变暗，使中心强度相对同几何同相中心不超过 0.01。只许改相对相位，缝宽、缝高、缝距、波长和焦距全部保留。"
+        },
+        "grid_size": {
+          "unit": "samples",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 561 nm，焦距 175 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。修改目标：把中心亮纹变暗，使中心强度相对同几何同相中心不超过 0.01。只许改相对相位，缝宽、缝高、缝距、波长和焦距全部保留。"
+        },
+        "window_mm": {
+          "unit": "mm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 561 nm，焦距 175 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。修改目标：把中心亮纹变暗，使中心强度相对同几何同相中心不超过 0.01。只许改相对相位，缝宽、缝高、缝距、波长和焦距全部保留。"
+        },
+        "slit_separation_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 561 nm，焦距 175 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。修改目标：把中心亮纹变暗，使中心强度相对同几何同相中心不超过 0.01。只许改相对相位，缝宽、缝高、缝距、波长和焦距全部保留。"
+        },
+        "relative_phase_rad": {
+          "unit": "rad",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 561 nm，焦距 175 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 192 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。修改目标：把中心亮纹变暗，使中心强度相对同几何同相中心不超过 0.01。只许改相对相位，缝宽、缝高、缝距、波长和焦距全部保留。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "aperture",
+        "focal_length_mm",
+        "grid_size",
+        "slit_height_um",
+        "slit_separation_um",
+        "slit_width_um",
+        "wavelength_nm",
+        "window_mm"
+      ],
+      "allowed_variables": {
+        "relative_phase_rad": [
+          0.0,
+          3.141592653589793
+        ]
+      },
+      "goal": {
+        "metric": "central_intensity_ratio",
+        "operator": "<=",
+        "target": 0.01
+      },
+      "resource_budget": {
+        "max_candidates": 2,
+        "max_fast_evaluations": 4,
+        "max_meep_validations": 0,
+        "max_fdtd": 0
+      },
+      "parent_task_id": "M11-parent"
+    },
+    "candidates": [
+      {
+        "variable_values": {
+          "relative_phase_rad": 0.0
+        },
+        "metric_value": 1.0,
+        "goal_met": false
+      },
+      {
+        "variable_values": {
+          "relative_phase_rad": 3.141592653589793
+        },
+        "metric_value": 3.749399456654644e-33,
+        "goal_met": true
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {
+        "relative_phase_rad": 3.141592653589793
+      }
+    ],
+    "relative_metric_tolerance": 0.04,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "M12": {
+    "id": "M12",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "gaussian",
+      "context_kind": "specified",
+      "known_parameters": {
+        "wavelength_nm": 532,
+        "waist_radius_um": 400,
+        "waist_z_mm": -20,
+        "focal_length_mm": 100,
+        "screen_distance_mm": 100,
+        "z_max_mm": 250.0
+      },
+      "parameter_sources": {
+        "wavelength_nm": {
+          "unit": "nm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 532 nm，束腰的 1/e² 强度半径 400 μm，束腰位置 z=-20 mm，当前焦距 100 mm，屏幕位置 z=100 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [90.0, 100.0, 120.0]}。其他参数不得改变。修改目标：现在要求固定 z=100 mm 的屏上半径不超过 50 μm。只许选原焦距目录，不能缩小束腰、移动束腰、换波长或移动屏幕。"
+        },
+        "waist_radius_um": {
+          "unit": "um",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 532 nm，束腰的 1/e² 强度半径 400 μm，束腰位置 z=-20 mm，当前焦距 100 mm，屏幕位置 z=100 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [90.0, 100.0, 120.0]}。其他参数不得改变。修改目标：现在要求固定 z=100 mm 的屏上半径不超过 50 μm。只许选原焦距目录，不能缩小束腰、移动束腰、换波长或移动屏幕。"
+        },
+        "waist_z_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 532 nm，束腰的 1/e² 强度半径 400 μm，束腰位置 z=-20 mm，当前焦距 100 mm，屏幕位置 z=100 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [90.0, 100.0, 120.0]}。其他参数不得改变。修改目标：现在要求固定 z=100 mm 的屏上半径不超过 50 μm。只许选原焦距目录，不能缩小束腰、移动束腰、换波长或移动屏幕。"
+        },
+        "focal_length_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 532 nm，束腰的 1/e² 强度半径 400 μm，束腰位置 z=-20 mm，当前焦距 100 mm，屏幕位置 z=100 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [90.0, 100.0, 120.0]}。其他参数不得改变。修改目标：现在要求固定 z=100 mm 的屏上半径不超过 50 μm。只许选原焦距目录，不能缩小束腰、移动束腰、换波长或移动屏幕。"
+        },
+        "screen_distance_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 532 nm，束腰的 1/e² 强度半径 400 μm，束腰位置 z=-20 mm，当前焦距 100 mm，屏幕位置 z=100 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [90.0, 100.0, 120.0]}。其他参数不得改变。修改目标：现在要求固定 z=100 mm 的屏上半径不超过 50 μm。只许选原焦距目录，不能缩小束腰、移动束腰、换波长或移动屏幕。"
+        },
+        "z_max_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 532 nm，束腰的 1/e² 强度半径 400 μm，束腰位置 z=-20 mm，当前焦距 100 mm，屏幕位置 z=100 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [90.0, 100.0, 120.0]}。其他参数不得改变。修改目标：现在要求固定 z=100 mm 的屏上半径不超过 50 μm。只许选原焦距目录，不能缩小束腰、移动束腰、换波长或移动屏幕。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "screen_distance_mm",
+        "waist_radius_um",
+        "waist_z_mm",
+        "wavelength_nm",
+        "z_max_mm"
+      ],
+      "allowed_variables": {
+        "focal_length_mm": [
+          90.0,
+          100.0,
+          120.0
+        ]
+      },
+      "goal": {
+        "metric": "screen_radius_um",
+        "operator": "<=",
+        "target": 50.0
+      },
+      "resource_budget": {
+        "max_candidates": 3,
+        "max_fast_evaluations": 3,
+        "max_meep_validations": 0,
+        "max_fdtd": 0
+      },
+      "parent_task_id": "M12-parent"
+    },
+    "candidates": [
+      {
+        "variable_values": {
+          "focal_length_mm": 90.0
+        },
+        "metric_value": 60.73555522293315,
+        "goal_met": false
+      },
+      {
+        "variable_values": {
+          "focal_length_mm": 100.0
+        },
+        "metric_value": 42.33521486244417,
+        "goal_met": true
+      },
+      {
+        "variable_values": {
+          "focal_length_mm": 120.0
+        },
+        "metric_value": 79.73826539350677,
+        "goal_met": false
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {
+        "focal_length_mm": 100.0
+      }
+    ],
+    "relative_metric_tolerance": 1e-08,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "DEV01": {
+    "id": "DEV01",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "film",
+      "context_kind": "specified",
+      "known_parameters": {
+        "layers": [
+          {
+            "n": 1.8,
+            "thickness_um": 0.105
+          }
+        ],
+        "wavelengths_um": [
+          0.5,
+          0.58,
+          0.68
+        ]
+      },
+      "parameter_sources": {
+        "layers": {
+          "unit": "n: dimensionless; thickness_um: um",
+          "quote": "空气两侧、正入射、无损无色散单膜。折射率 1.8，厚度 0.105 μm。实际采样波长（μm）：0.5, 0.58, 0.68。所有物理参数固定，不进行候选扫描。目标是在 0.58 μm 反射率至少 0.10。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        },
+        "wavelengths_um": {
+          "unit": "um",
+          "quote": "空气两侧、正入射、无损无色散单膜。折射率 1.8，厚度 0.105 μm。实际采样波长（μm）：0.5, 0.58, 0.68。所有物理参数固定，不进行候选扫描。目标是在 0.58 μm 反射率至少 0.10。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "layers",
+        "wavelengths_um"
+      ],
+      "allowed_variables": {},
+      "goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "target": 0.1,
+        "wavelength_um": 0.58
+      },
+      "resource_budget": {
+        "max_candidates": 1,
+        "max_fast_evaluations": 1,
+        "max_meep_validations": 1,
+        "max_fdtd": 8
+      },
+      "parent_task_id": null
+    },
+    "candidates": [
+      {
+        "variable_values": {},
+        "metric_value": 0.23410420772490897,
+        "goal_met": true
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {}
+    ],
+    "relative_metric_tolerance": 1e-08,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "DEV02": {
+    "id": "DEV02",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "diffraction",
+      "context_kind": "specified",
+      "known_parameters": {
+        "aperture": "double_slit",
+        "wavelength_nm": 520,
+        "focal_length_mm": 140,
+        "slit_width_um": 32,
+        "slit_height_um": 128.0,
+        "grid_size": 256,
+        "window_mm": 0.32,
+        "slit_separation_um": 160,
+        "relative_phase_rad": 0.0
+      },
+      "parameter_sources": {
+        "aperture": {
+          "unit": "enum",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0]}。其他参数不得改变。选择条纹周期接近 0.455 mm 的候选，绝对容差 0.025 mm。"
+        },
+        "wavelength_nm": {
+          "unit": "nm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0]}。其他参数不得改变。选择条纹周期接近 0.455 mm 的候选，绝对容差 0.025 mm。"
+        },
+        "focal_length_mm": {
+          "unit": "mm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0]}。其他参数不得改变。选择条纹周期接近 0.455 mm 的候选，绝对容差 0.025 mm。"
+        },
+        "slit_width_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0]}。其他参数不得改变。选择条纹周期接近 0.455 mm 的候选，绝对容差 0.025 mm。"
+        },
+        "slit_height_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0]}。其他参数不得改变。选择条纹周期接近 0.455 mm 的候选，绝对容差 0.025 mm。"
+        },
+        "grid_size": {
+          "unit": "samples",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0]}。其他参数不得改变。选择条纹周期接近 0.455 mm 的候选，绝对容差 0.025 mm。"
+        },
+        "window_mm": {
+          "unit": "mm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0]}。其他参数不得改变。选择条纹周期接近 0.455 mm 的候选，绝对容差 0.025 mm。"
+        },
+        "slit_separation_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0]}。其他参数不得改变。选择条纹周期接近 0.455 mm 的候选，绝对容差 0.025 mm。"
+        },
+        "relative_phase_rad": {
+          "unit": "rad",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0]}。其他参数不得改变。选择条纹周期接近 0.455 mm 的候选，绝对容差 0.025 mm。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "aperture",
+        "focal_length_mm",
+        "grid_size",
+        "relative_phase_rad",
+        "slit_height_um",
+        "slit_width_um",
+        "wavelength_nm",
+        "window_mm"
+      ],
+      "allowed_variables": {
+        "slit_separation_um": [
+          128.0,
+          160.0
+        ]
+      },
+      "goal": {
+        "metric": "fringe_period_mm",
+        "operator": "near",
+        "target": 0.455,
+        "tolerance": 0.025
+      },
+      "resource_budget": {
+        "max_candidates": 2,
+        "max_fast_evaluations": 4,
+        "max_meep_validations": 0,
+        "max_fdtd": 0
+      },
+      "parent_task_id": null
+    },
+    "candidates": [
+      {
+        "variable_values": {
+          "slit_separation_um": 128.0
+        },
+        "metric_value": 0.56875,
+        "goal_met": false
+      },
+      {
+        "variable_values": {
+          "slit_separation_um": 160.0
+        },
+        "metric_value": 0.455,
+        "goal_met": true
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {
+        "slit_separation_um": 160.0
+      }
+    ],
+    "relative_metric_tolerance": 0.04,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "DEV03": {
+    "id": "DEV03",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "gaussian",
+      "context_kind": "specified",
+      "known_parameters": {
+        "wavelength_nm": 660,
+        "waist_radius_um": 480,
+        "waist_z_mm": 0,
+        "focal_length_mm": 110,
+        "screen_distance_mm": 110,
+        "z_max_mm": 250.0
+      },
+      "parameter_sources": {
+        "wavelength_nm": {
+          "unit": "nm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 660 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=0 mm，当前焦距 110 mm，屏幕位置 z=110 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100.0, 110.0, 130.0]}。其他参数不得改变。选择目录中屏上半径最小的焦距。"
+        },
+        "waist_radius_um": {
+          "unit": "um",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 660 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=0 mm，当前焦距 110 mm，屏幕位置 z=110 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100.0, 110.0, 130.0]}。其他参数不得改变。选择目录中屏上半径最小的焦距。"
+        },
+        "waist_z_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 660 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=0 mm，当前焦距 110 mm，屏幕位置 z=110 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100.0, 110.0, 130.0]}。其他参数不得改变。选择目录中屏上半径最小的焦距。"
+        },
+        "focal_length_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 660 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=0 mm，当前焦距 110 mm，屏幕位置 z=110 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100.0, 110.0, 130.0]}。其他参数不得改变。选择目录中屏上半径最小的焦距。"
+        },
+        "screen_distance_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 660 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=0 mm，当前焦距 110 mm，屏幕位置 z=110 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100.0, 110.0, 130.0]}。其他参数不得改变。选择目录中屏上半径最小的焦距。"
+        },
+        "z_max_mm": {
+          "unit": "mm",
+          "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 660 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=0 mm，当前焦距 110 mm，屏幕位置 z=110 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100.0, 110.0, 130.0]}。其他参数不得改变。选择目录中屏上半径最小的焦距。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "screen_distance_mm",
+        "waist_radius_um",
+        "waist_z_mm",
+        "wavelength_nm",
+        "z_max_mm"
+      ],
+      "allowed_variables": {
+        "focal_length_mm": [
+          100.0,
+          110.0,
+          130.0
+        ]
+      },
+      "goal": {
+        "metric": "screen_radius_um",
+        "operator": "minimize"
+      },
+      "resource_budget": {
+        "max_candidates": 3,
+        "max_fast_evaluations": 3,
+        "max_meep_validations": 0,
+        "max_fdtd": 0
+      },
+      "parent_task_id": null
+    },
+    "candidates": [
+      {
+        "variable_values": {
+          "focal_length_mm": 100.0
+        },
+        "metric_value": 67.98441284712196,
+        "goal_met": null
+      },
+      {
+        "variable_values": {
+          "focal_length_mm": 110.0
+        },
+        "metric_value": 48.144370285298336,
+        "goal_met": null
+      },
+      {
+        "variable_values": {
+          "focal_length_mm": 130.0
+        },
+        "metric_value": 88.15404033870337,
+        "goal_met": null
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {
+        "focal_length_mm": 110.0
+      }
+    ],
+    "relative_metric_tolerance": 1e-08,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  },
+  "DEV04": {
+    "id": "DEV04",
+    "reference_spec": {
+      "schema_version": 1,
+      "domain": "diffraction",
+      "context_kind": "specified",
+      "known_parameters": {
+        "aperture": "double_slit",
+        "wavelength_nm": 520,
+        "focal_length_mm": 140,
+        "slit_width_um": 32,
+        "slit_height_um": 128.0,
+        "grid_size": 256,
+        "window_mm": 0.32,
+        "slit_separation_um": 160,
+        "relative_phase_rad": 0.0
+      },
+      "parameter_sources": {
+        "aperture": {
+          "unit": "enum",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+        },
+        "wavelength_nm": {
+          "unit": "nm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+        },
+        "focal_length_mm": {
+          "unit": "mm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+        },
+        "slit_width_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+        },
+        "slit_height_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+        },
+        "grid_size": {
+          "unit": "samples",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+        },
+        "window_mm": {
+          "unit": "mm",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+        },
+        "slit_separation_um": {
+          "unit": "um",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+        },
+        "relative_phase_rad": {
+          "unit": "rad",
+          "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+        }
+      },
+      "assumptions": [],
+      "locked_parameters": [
+        "aperture",
+        "focal_length_mm",
+        "grid_size",
+        "slit_height_um",
+        "slit_separation_um",
+        "slit_width_um",
+        "wavelength_nm",
+        "window_mm"
+      ],
+      "allowed_variables": {
+        "relative_phase_rad": [
+          0.0,
+          3.141592653589793
+        ]
+      },
+      "goal": {
+        "metric": "central_intensity_ratio",
+        "operator": "<=",
+        "target": 0.01
+      },
+      "resource_budget": {
+        "max_candidates": 2,
+        "max_fast_evaluations": 4,
+        "max_meep_validations": 0,
+        "max_fdtd": 0
+      },
+      "parent_task_id": "DEV04-parent"
+    },
+    "candidates": [
+      {
+        "variable_values": {
+          "relative_phase_rad": 0.0
+        },
+        "metric_value": 1.0,
+        "goal_met": false
+      },
+      {
+        "variable_values": {
+          "relative_phase_rad": 3.141592653589793
+        },
+        "metric_value": 3.749399456654644e-33,
+        "goal_met": true
+      }
+    ],
+    "acceptable_winner_variable_values": [
+      {
+        "relative_phase_rad": 3.141592653589793
+      }
+    ],
+    "relative_metric_tolerance": 0.04,
+    "absolute_metric_tolerance": 1e-08,
+    "requires_clarification": false,
+    "reference_origin": "Separate textbook expressions in build_fixtures.py; not product outputs, attached Pro examples, or empirical measurements.",
+    "is_independent_scientific_certificate": false
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "case_id": "PG-DEV-CONFLICT",
+  "input_sha256": "57d7191320717b5a283ca41cc3b92b769c18708ff46b7b7ba629d9ea28304e24",
+  "review_status": "CLARIFICATION_REQUIRED",
+  "fields": {
+    "spatial_dimension": {
+      "status": "proposed",
+      "value": "1D",
+      "unit": null,
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 1,
+          "quote": "独立规格：一维模型。"
+        }
+      ]
+    },
+    "incidence_angle": {
+      "status": "proposed",
+      "value": 0,
+      "unit": "deg",
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 2,
+          "quote": "独立规格：入射角为0度。"
+        }
+      ]
+    },
+    "relative_permeability": {
+      "status": "proposed",
+      "value": 1,
+      "unit": "dimensionless",
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 6,
+          "quote": "独立规格：相对磁导率为1。"
+        }
+      ]
+    },
+    "lossless": {
+      "status": "proposed",
+      "value": true,
+      "unit": null,
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 3,
+          "quote": "独立规格：材料无损。"
+        }
+      ]
+    },
+    "isotropic": {
+      "status": "proposed",
+      "value": true,
+      "unit": null,
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 5,
+          "quote": "独立规格：材料各向同性。"
+        }
+      ]
+    },
+    "nondispersive": {
+      "status": "proposed",
+      "value": true,
+      "unit": null,
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 4,
+          "quote": "独立规格：材料无色散。"
+        }
+      ]
+    },
+    "layer_count": {
+      "status": "unknown",
+      "value": null,
+      "unit": null,
+      "evidence": []
+    },
+    "incident_index": {
+      "status": "proposed",
+      "value": 1,
+      "unit": "dimensionless",
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 7,
+          "quote": "独立规格：入射介质折射率为1。"
+        }
+      ]
+    },
+    "film_index": {
+      "status": "unknown",
+      "value": null,
+      "unit": null,
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 10,
+          "quote": "独立规格：尚未提供膜层折射率。"
+        }
+      ]
+    },
+    "exit_index": {
+      "status": "proposed",
+      "value": 1,
+      "unit": "dimensionless",
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 8,
+          "quote": "独立规格：出射介质折射率为1。"
+        }
+      ]
+    },
+    "film_thickness": {
+      "status": "unknown",
+      "value": null,
+      "unit": null,
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 11,
+          "quote": "独立规格：膜层厚度写为200，单位尚未提供。"
+        }
+      ]
+    },
+    "wavelength_min": {
+      "status": "proposed",
+      "value": 500,
+      "unit": "nm",
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 12,
+          "quote": "独立规格：波长下限500 nm。"
+        }
+      ]
+    },
+    "wavelength_max": {
+      "status": "conflict",
+      "value": null,
+      "unit": null,
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 13,
+          "quote": "独立规格：波长上限0.9 um。"
+        },
+        {
+          "document": "spec-other",
+          "line": 1,
+          "quote": "另一份独立规格写波长上限为1100 nm，与原规格冲突，尚未确认优先级。"
+        }
+      ]
+    },
+    "wavelength_samples": {
+      "status": "proposed",
+      "value": 21,
+      "unit": null,
+      "evidence": [
+        {
+          "document": "spec",
+          "line": 14,
+          "quote": "独立规格：21个频点。"
+        }
+      ]
+    }
+  },
+  "questions": [
+    {
+      "targets": [
+        "layer_count"
+      ],
+      "text": "请确认有限厚度膜层数量（layer_count）；现有独立规格未提供该值。"
+    },
+    {
+      "targets": [
+        "film_index"
+      ],
+      "text": "请提供膜层的实折射率（film_index）；独立规格明确尚未提供。"
+    },
+    {
+      "targets": [
+        "film_thickness"
+      ],
+      "text": "请提供膜层厚度的单位（film_thickness）；独立规格仅写为200，单位尚未提供。"
+    },
+    {
+      "targets": [
+        "wavelength_max"
+      ],
+      "text": "波长上限存在冲突：一份独立规格为0.9 um，另一份为1100 nm，请确认优先级或正确值。"
+    }
+  ],
+  "conflicts": [
+    "wavelength_max"
+  ],
+  "refusal": {
+    "reason_codes": [
+      "UNRESOLVED_CONFLICT",
+      "MISSING_REQUIRED_INTENT",
+      "SCRIPT_NOT_INDEPENDENT_INTENT"
+    ],
+    "text": "仅生成待人工审核草稿；未执行、未求解、未批准。脚本中的 index=1.45 不是独立意图，未用于填充 film_index。波长上限冲突未解决，膜层数量、膜层折射率与膜层厚度单位缺失，需人工澄清。"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "R01": {
+    "id": "R01",
+    "required_fields": [
+      "layers"
+    ],
+    "aliases": [
+      "厚度",
+      "thickness",
+      "layers"
+    ],
+    "reply": "已核实的参数如下：空气两侧、正入射、无损无色散单膜。折射率 2.0，厚度 0.12 μm。实际采样波长（μm）：0.54, 0.66, 0.78。",
+    "origin": "SIMULATED_STATE_MACHINE_AUTHOR_FACT",
+    "must_ask_before_run": true,
+    "max_replies": 1
+  },
+  "R02": {
+    "id": "R02",
+    "required_fields": [
+      "focal_length_mm"
+    ],
+    "aliases": [
+      "焦距",
+      "focal_length"
+    ],
+    "reply": "已核实的参数如下：均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 600 nm，焦距 185 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 200 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。",
+    "origin": "SIMULATED_STATE_MACHINE_AUTHOR_FACT",
+    "must_ask_before_run": true,
+    "max_replies": 1
+  },
+  "R03": {
+    "id": "R03",
+    "required_fields": [
+      "waist_z_mm"
+    ],
+    "aliases": [
+      "束腰位置",
+      "waist_z"
+    ],
+    "reply": "已核实的参数如下：空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 780 nm，束腰的 1/e² 强度半径 550 μm，束腰位置 z=-35 mm，当前焦距 110 mm，屏幕位置 z=110 mm，束宽曲线绘制到 z=250.0 mm。",
+    "origin": "SIMULATED_STATE_MACHINE_AUTHOR_FACT",
+    "must_ask_before_run": true,
+    "max_replies": 1
+  }
+}

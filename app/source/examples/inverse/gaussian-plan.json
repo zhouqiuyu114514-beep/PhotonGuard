@@ -1,0 +1,15 @@
+{
+  "schema": "photonguard.offline-inverse.v1",
+  "settings": {
+    "model": "gaussian_caustic_m2fixed1_v1",
+    "fixed": {"wavelength_nm": 633.0, "m2": 1.0, "propagation": "FREE_SPACE"},
+    "bounds": {"waist_radius_um": [20.0, 180.0], "waist_z_mm": [-100.0, 180.0]},
+    "loss": "linear", "f_scale": 1.0, "registration": "SHARED_REGISTERED",
+    "weighting": "EQUAL_DATASET_TRAINING_COUNT", "scale": 0.5, "scale_source": "DECLARED_NUMERICAL_SCALE"
+  },
+  "source": {"source_kind": "SYNTHETIC_TEACHING", "source_name": "Public RC7 teaching example; disclosed generator, not a blind test", "license": "GPL-2.0-or-later"},
+  "constraints": {"max_abs_x_mm": 250.0, "points": 5, "min_step_mm": 1.0, "allow_extension": true, "stable_exposure_background": true, "registration_uncertainty_mm": 0.0},
+  "research_goal": {"target": "waist_position", "source": "USER_FORM", "tolerances": {"waist_z_mm": 5.0}},
+  "baseline": {"source": "USER_SPECIFIED", "positions_mm": [-150.0, -75.0, 0.0, 75.0, 150.0], "label": "Public five-position reference scan"},
+  "policy": "conservative"
+}

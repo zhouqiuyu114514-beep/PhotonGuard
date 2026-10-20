@@ -1,0 +1,40 @@
+{
+  "version": "missions-v1",
+  "missions": [
+    {
+      "id": "interference",
+      "title": "看懂与控制干涉",
+      "description": "观察图样 → 按周期选缝距 → 改相位 → 分析数据 → 探索新目标",
+      "cases": [
+        "D01",
+        "D02",
+        "D03"
+      ],
+      "data_step": true
+    },
+    {
+      "id": "focus",
+      "title": "选择聚焦方案",
+      "description": "理解光束半径 → 比较焦距目录 → 修改屏幕位置 → 解释目录无解",
+      "cases": [
+        "G01",
+        "G02",
+        "G03",
+        "G04"
+      ],
+      "data_step": false
+    },
+    {
+      "id": "film",
+      "title": "比较薄膜",
+      "description": "厚度扫描 → 层数与反射 → 改评价波长 → 有限目录选择",
+      "cases": [
+        "F01",
+        "F02",
+        "F03",
+        "F04"
+      ],
+      "data_step": false
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "id": "OBS01",
+    "version": "1.0.0",
+    "title": "合成教学：低噪声双缝数据",
+    "source_kind": "SYNTHETIC_TEACHING",
+    "license": "CC0-1.0",
+    "goal": "估计有限范围内的缝距，查看原始残差与多起点；条件不足先暂停。",
+    "fields": [
+      "position_mm 或 pixel",
+      "intensity_relative"
+    ],
+    "settings": {
+      "fixed": {
+        "wavelength_nm": 633.0,
+        "focal_length_mm": 200.0,
+        "slit_width_um": 20.0,
+        "relative_phase_rad": 0.0,
+        "measurement_plane": "FOURIER_FOCAL_PLANE"
+      },
+      "bounds": {
+        "slit_separation_um": [
+          90.0,
+          270.0
+        ],
+        "center_shift_mm": [
+          -0.3,
+          0.3
+        ],
+        "amplitude": [
+          0.01,
+          2.0
+        ],
+        "background": [
+          -0.1,
+          0.3
+        ]
+      },
+      "loss": "soft_l1",
+      "f_scale": 0.01
+    },
+    "next_steps": [
+      "核对数据与模型条件",
+      "批准有界拟合",
+      "检查原始残差",
+      "确认估计后正向核对",
+      "另建新目标"
+    ],
+    "scope": "同一理想物理假设生成的合成样例，不是真实仪器证据"
+  },
+  {
+    "id": "OBS02",
+    "version": "1.0.0",
+    "title": "合成教学：噪声与少量异常点",
+    "source_kind": "SYNTHETIC_TEACHING",
+    "license": "CC0-1.0",
+    "goal": "估计有限范围内的缝距，查看原始残差与多起点；条件不足先暂停。",
+    "fields": [
+      "position_mm 或 pixel",
+      "intensity_relative"
+    ],
+    "settings": {
+      "fixed": {
+        "wavelength_nm": 633.0,
+        "focal_length_mm": 200.0,
+        "slit_width_um": 20.0,
+        "relative_phase_rad": 0.0,
+        "measurement_plane": "FOURIER_FOCAL_PLANE"
+      },
+      "bounds": {
+        "slit_separation_um": [
+          90.0,
+          270.0
+        ],
+        "center_shift_mm": [
+          -0.3,
+          0.3
+        ],
+        "amplitude": [
+          0.01,
+          2.0
+        ],
+        "background": [
+          -0.1,
+          0.3
+        ]
+      },
+      "loss": "soft_l1",
+      "f_scale": 0.01
+    },
+    "next_steps": [
+      "核对数据与模型条件",
+      "批准有界拟合",
+      "检查原始残差",
+      "确认估计后正向核对",
+      "另建新目标"
+    ],
+    "scope": "同一理想物理假设生成的合成样例，不是真实仪器证据"
+  },
+  {
+    "id": "OBS03",
+    "version": "1.0.0",
+    "title": "合成反例：缺刻度与焦距",
+    "source_kind": "SYNTHETIC_TEACHING",
+    "license": "CC0-1.0",
+    "goal": "估计有限范围内的缝距，查看原始残差与多起点；条件不足先暂停。",
+    "fields": [
+      "position_mm 或 pixel",
+      "intensity_relative"
+    ],
+    "settings": {
+      "fixed": {
+        "wavelength_nm": 633.0,
+        "focal_length_mm": null,
+        "slit_width_um": 20.0,
+        "relative_phase_rad": 0.0,
+        "measurement_plane": "FOURIER_FOCAL_PLANE"
+      },
+      "bounds": {
+        "slit_separation_um": [
+          90.0,
+          270.0
+        ],
+        "center_shift_mm": [
+          -0.3,
+          0.3
+        ],
+        "amplitude": [
+          0.01,
+          2.0
+        ],
+        "background": [
+          -0.1,
+          0.3
+        ]
+      },
+      "loss": "soft_l1",
+      "f_scale": 0.01
+    },
+    "next_steps": [
+      "核对数据与模型条件",
+      "批准有界拟合",
+      "检查原始残差",
+      "确认估计后正向核对",
+      "另建新目标"
+    ],
+    "scope": "同一理想物理假设生成的合成样例，不是真实仪器证据"
+  }
+]

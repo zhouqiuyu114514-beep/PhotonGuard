@@ -1,0 +1,2 @@
+# Optional observation fitting; validated version. Base workbench remains usable without it.
+scipy==1.18.1

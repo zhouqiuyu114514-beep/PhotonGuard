@@ -1,0 +1,319 @@
+{
+  "checked_date": "2026-10-19",
+  "method": "Read existing original files; zero API calls and zero optical computation",
+  "source_commit": "176976938f9a6d0603c4799339623227aae35c90",
+  "initial_id": "f474570151ee44948763460eb6488d5d",
+  "followup_id": "6876a0c8fa0046a391dae8e41c868922",
+  "rows": [
+    {
+      "layers": 2,
+      "wavelengths_um": [
+        0.7000000000000001,
+        0.85,
+        0.9500000000000001
+      ],
+      "R": [
+        0.22806272281093126,
+        0.15092482737624552,
+        0.17363145464178056
+      ],
+      "initial_goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "value": 0.15092482737624552,
+        "unit": "fraction",
+        "target": 0.75,
+        "met": false,
+        "basis": "ACTUAL_SAMPLES_FINITE_CANDIDATES",
+        "optimization_only": false,
+        "source": {
+          "engine": "tmm.coh_tmm",
+          "field": "data.R[1]",
+          "kind": "TMM_SAMPLE",
+          "label": "TMM实际采样",
+          "wavelength_um": 0.85,
+          "interpolation_used": false
+        }
+      },
+      "followup_goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "value": 0.22806272281093126,
+        "unit": "fraction",
+        "target": 0.75,
+        "met": false,
+        "basis": "ACTUAL_SAMPLES_FINITE_CANDIDATES",
+        "optimization_only": false,
+        "source": {
+          "engine": "tmm.coh_tmm",
+          "field": "data.R[0]",
+          "kind": "TMM_SAMPLE",
+          "label": "TMM实际采样",
+          "wavelength_um": 0.7000000000000001,
+          "interpolation_used": false
+        }
+      },
+      "physical_layers": [
+        {
+          "n": 2.2,
+          "thickness_um": 0.09659090909090907
+        },
+        {
+          "n": 1.46,
+          "thickness_um": 0.14554794520547945
+        }
+      ],
+      "initial_source_hash": "ec62160f3fd90c3cb0f47abf10bd50b0d81cf41d35270a92ecdd00f69594db04"
+    },
+    {
+      "layers": 4,
+      "wavelengths_um": [
+        0.7000000000000001,
+        0.85,
+        0.9500000000000001
+      ],
+      "R": [
+        0.46510343036481916,
+        0.4557500887214819,
+        0.47075313916958433
+      ],
+      "initial_goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "value": 0.4557500887214819,
+        "unit": "fraction",
+        "target": 0.75,
+        "met": false,
+        "basis": "ACTUAL_SAMPLES_FINITE_CANDIDATES",
+        "optimization_only": false,
+        "source": {
+          "engine": "tmm.coh_tmm",
+          "field": "data.R[1]",
+          "kind": "TMM_SAMPLE",
+          "label": "TMM实际采样",
+          "wavelength_um": 0.85,
+          "interpolation_used": false
+        }
+      },
+      "followup_goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "value": 0.46510343036481916,
+        "unit": "fraction",
+        "target": 0.75,
+        "met": false,
+        "basis": "ACTUAL_SAMPLES_FINITE_CANDIDATES",
+        "optimization_only": false,
+        "source": {
+          "engine": "tmm.coh_tmm",
+          "field": "data.R[0]",
+          "kind": "TMM_SAMPLE",
+          "label": "TMM实际采样",
+          "wavelength_um": 0.7000000000000001,
+          "interpolation_used": false
+        }
+      },
+      "physical_layers": [
+        {
+          "n": 2.2,
+          "thickness_um": 0.09659090909090907
+        },
+        {
+          "n": 1.46,
+          "thickness_um": 0.14554794520547945
+        },
+        {
+          "n": 2.2,
+          "thickness_um": 0.09659090909090907
+        },
+        {
+          "n": 1.46,
+          "thickness_um": 0.14554794520547945
+        }
+      ],
+      "initial_source_hash": "a00f928b995d8b6b8465abb73136efdf9f64a49f047f47665c310457f63bb659"
+    },
+    {
+      "layers": 6,
+      "wavelengths_um": [
+        0.7000000000000001,
+        0.85,
+        0.9500000000000001
+      ],
+      "R": [
+        0.5272987123721635,
+        0.7099706024620507,
+        0.6871670982798105
+      ],
+      "initial_goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "value": 0.7099706024620507,
+        "unit": "fraction",
+        "target": 0.75,
+        "met": false,
+        "basis": "ACTUAL_SAMPLES_FINITE_CANDIDATES",
+        "optimization_only": false,
+        "source": {
+          "engine": "tmm.coh_tmm",
+          "field": "data.R[1]",
+          "kind": "TMM_SAMPLE",
+          "label": "TMM实际采样",
+          "wavelength_um": 0.85,
+          "interpolation_used": false
+        }
+      },
+      "followup_goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "value": 0.5272987123721635,
+        "unit": "fraction",
+        "target": 0.75,
+        "met": false,
+        "basis": "ACTUAL_SAMPLES_FINITE_CANDIDATES",
+        "optimization_only": false,
+        "source": {
+          "engine": "tmm.coh_tmm",
+          "field": "data.R[0]",
+          "kind": "TMM_SAMPLE",
+          "label": "TMM实际采样",
+          "wavelength_um": 0.7000000000000001,
+          "interpolation_used": false
+        }
+      },
+      "physical_layers": [
+        {
+          "n": 2.2,
+          "thickness_um": 0.09659090909090907
+        },
+        {
+          "n": 1.46,
+          "thickness_um": 0.14554794520547945
+        },
+        {
+          "n": 2.2,
+          "thickness_um": 0.09659090909090907
+        },
+        {
+          "n": 1.46,
+          "thickness_um": 0.14554794520547945
+        },
+        {
+          "n": 2.2,
+          "thickness_um": 0.09659090909090907
+        },
+        {
+          "n": 1.46,
+          "thickness_um": 0.14554794520547945
+        }
+      ],
+      "initial_source_hash": "9de8777c90e2f5a3dfab33ff6911c23563b3f5cb1caeb1a6193e098eca397f49"
+    },
+    {
+      "layers": 8,
+      "wavelengths_um": [
+        0.7000000000000001,
+        0.85,
+        0.9500000000000001
+      ],
+      "R": [
+        0.4361149098919403,
+        0.8602270654481502,
+        0.8160558317598049
+      ],
+      "initial_goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "value": 0.8602270654481502,
+        "unit": "fraction",
+        "target": 0.75,
+        "met": true,
+        "basis": "ACTUAL_SAMPLES_FINITE_CANDIDATES",
+        "optimization_only": false,
+        "source": {
+          "engine": "tmm.coh_tmm",
+          "field": "data.R[1]",
+          "kind": "TMM_SAMPLE",
+          "label": "TMM实际采样",
+          "wavelength_um": 0.85,
+          "interpolation_used": false
+        }
+      },
+      "followup_goal": {
+        "metric": "reflectance",
+        "operator": ">=",
+        "value": 0.4361149098919403,
+        "unit": "fraction",
+        "target": 0.75,
+        "met": false,
+        "basis": "ACTUAL_SAMPLES_FINITE_CANDIDATES",
+        "optimization_only": false,
+        "source": {
+          "engine": "tmm.coh_tmm",
+          "field": "data.R[0]",
+          "kind": "TMM_SAMPLE",
+          "label": "TMM实际采样",
+          "wavelength_um": 0.7000000000000001,
+          "interpolation_used": false
+        }
+      },
+      "physical_layers": [
+        {
+          "n": 2.2,
+          "thickness_um": 0.09659090909090907
+        },
+        {
+          "n": 1.46,
+          "thickness_um": 0.14554794520547945
+        },
+        {
+          "n": 2.2,
+          "thickness_um": 0.09659090909090907
+        },
+        {
+          "n": 1.46,
+          "thickness_um": 0.14554794520547945
+        },
+        {
+          "n": 2.2,
+          "thickness_um": 0.09659090909090907
+        },
+        {
+          "n": 1.46,
+          "thickness_um": 0.14554794520547945
+        },
+        {
+          "n": 2.2,
+          "thickness_um": 0.09659090909090907
+        },
+        {
+          "n": 1.46,
+          "thickness_um": 0.14554794520547945
+        }
+      ],
+      "initial_source_hash": "709bdbd52ca2aec8998d14d45e313b6dee9382989d16da7373c5910eeddeac9c"
+    }
+  ],
+  "physical_and_sample_arrays_unchanged": true,
+  "interpolation_used": false,
+  "historical_20261018_model_calls": {
+    "plan": 2,
+    "followup": 1,
+    "total": 3,
+    "basis": "Saved plan count 2 and campaign audit total 3; per-version model_calls is not the family total"
+  },
+  "historical_20261018_fast_evaluations": 4,
+  "followup_new_solver_calls": 0,
+  "new_20261019_model_calls": 0,
+  "new_20261019_solver_calls": 0,
+  "new_20261019_acquisitions": 0,
+  "new_20261019_human_trials": 0,
+  "source_files": {
+    "plan.json": "41c9b614352b220714dd4e2610b0b3d729f4d70a73f424632498221cc911942b",
+    "result.json": "8807d3c92855eb265b3519ecbb97af2b2ad8b85bc3e1b077adfd8de248ff17b1",
+    "followup.json": "38d0c7b707e1d9eb1c8bdd731676a4df2d373c379e04c78f64a4dc23298c11bf",
+    "checks.json": "a85d91e24abc46b533f634e39a63243ced7c1315044cce010985b5356aac879e"
+  },
+  "initial_text": "薄膜任务，目标850 nm反射率不低于75%。设计波长也是850 nm，高低折射率材料分别为2.2和1.46。四分之一波光学厚度，高低层交替从高层开始，总层数目录2、4、6、8。实际计算波长700、850、950 nm，正入射、两侧空气、无损无色散。只做快速计算，不做Meep。先出计划，等我确认才算。",
+  "followup_text": "目标波长改为700 nm，反射率仍不少于75%。材料、设计波长、实际膜厚、采样波长目录和层数目录都不变。利用已有结果，不要重新计算，保留旧结果。"
+}

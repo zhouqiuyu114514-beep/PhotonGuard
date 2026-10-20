@@ -1,0 +1,22 @@
+{
+  "scenario_id": "D06",
+  "split": "development",
+  "interaction_family": "real_LN_unknown_axes",
+  "actor_type": "SIMULATED",
+  "mode": "specified",
+  "known_material": "请检查我的真实铌酸锂波导，晶轴和膜厚都不知道。",
+  "unknown_facts": [
+    "晶轴",
+    "膜厚"
+  ],
+  "allowed_actions": [
+    "view",
+    "create_synthetic_case",
+    "save_provided_material",
+    "pause",
+    "resume"
+  ],
+  "new_fact_invention_allowed": false,
+  "model_calls_allowed": 0,
+  "physical_runs_allowed": 0
+}

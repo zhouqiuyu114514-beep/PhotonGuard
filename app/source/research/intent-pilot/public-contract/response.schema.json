@@ -1,0 +1,952 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:photonguard:semantic-intake-response:1",
+  "title": "Semantic intake response, not approval",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "input_sha256",
+    "review_status",
+    "fields",
+    "questions",
+    "conflicts",
+    "refusal"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "input_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "review_status": {
+      "enum": [
+        "REVIEW_REQUIRED",
+        "CLARIFICATION_REQUIRED",
+        "OUT_OF_SCOPE"
+      ]
+    },
+    "fields": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "spatial_dimension",
+        "incidence_angle",
+        "relative_permeability",
+        "lossless",
+        "isotropic",
+        "nondispersive",
+        "layer_count",
+        "incident_index",
+        "film_index",
+        "exit_index",
+        "film_thickness",
+        "wavelength_min",
+        "wavelength_max",
+        "wavelength_samples"
+      ],
+      "properties": {
+        "spatial_dimension": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "incidence_angle": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "relative_permeability": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "lossless": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "isotropic": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "nondispersive": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "layer_count": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "incident_index": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "film_index": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "exit_index": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "film_thickness": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "wavelength_min": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "wavelength_max": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "wavelength_samples": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value",
+            "unit",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "proposed",
+                "unknown",
+                "conflict",
+                "unsupported"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "document",
+                  "line",
+                  "quote"
+                ],
+                "properties": {
+                  "document": {
+                    "type": "string"
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "targets",
+          "text"
+        ],
+        "properties": {
+          "targets": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "spatial_dimension",
+                "incidence_angle",
+                "relative_permeability",
+                "lossless",
+                "isotropic",
+                "nondispersive",
+                "layer_count",
+                "incident_index",
+                "film_index",
+                "exit_index",
+                "film_thickness",
+                "wavelength_min",
+                "wavelength_max",
+                "wavelength_samples"
+              ]
+            }
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "spatial_dimension",
+          "incidence_angle",
+          "relative_permeability",
+          "lossless",
+          "isotropic",
+          "nondispersive",
+          "layer_count",
+          "incident_index",
+          "film_index",
+          "exit_index",
+          "film_thickness",
+          "wavelength_min",
+          "wavelength_max",
+          "wavelength_samples"
+        ]
+      }
+    },
+    "refusal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reason_codes",
+        "text"
+      ],
+      "properties": {
+        "reason_codes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  },
+  "$comment": "This schema is structural only. evaluate.py additionally enforces null unresolved values, exact physical types/units, available-source hashes, evidence, and status checks. No JSON Schema library is needed at runtime."
+}

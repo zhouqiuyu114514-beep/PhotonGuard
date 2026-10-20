@@ -1,0 +1,65 @@
+{
+  "id": "F04",
+  "version": "1.0.0",
+  "title": "有限膜厚目录选方案",
+  "domain": "film",
+  "scope": "空气两侧、正入射、1–8层无损无色散膜系；只比较有限候选和实际采样波长。",
+  "tags": [
+    "厚度目录",
+    "目标反射率",
+    "最接近",
+    "薄膜"
+  ],
+  "required_parameters": [
+    "film_n"
+  ],
+  "fixed_parameters": {},
+  "numeric_defaults": {
+    "scan_min_um": 0.5,
+    "scan_max_um": 0.8,
+    "scan_points": 31
+  },
+  "recipe": {
+    "method": "thickness_catalog",
+    "variable": "layers"
+  },
+  "teaching": {
+    "parameters": {
+      "film_n": 1.8
+    },
+    "goal": {
+      "metric": "reflectance",
+      "operator": "near",
+      "target": 0.2,
+      "tolerance": 0.01,
+      "wavelength_um": 0.633
+    },
+    "values": [
+      0.08,
+      0.12,
+      0.2
+    ]
+  },
+  "variables": [
+    "layers"
+  ],
+  "metrics": [
+    "reflectance"
+  ],
+  "sources": [
+    {
+      "url": "https://github.com/sbyrnes321/tmm",
+      "relation": "工具与传输矩阵背景；中文案例及参数为本项目自行编写",
+      "license": "MIT (upstream tmm)"
+    }
+  ],
+  "interpretation": [
+    "先核对事实和允许变量，再明确批准实际计算。",
+    "未达标仅表示这组候选未达到目标，不是全局无解。",
+    "解析提议、实际计算、独立检查分别标记。"
+  ],
+  "preview": {
+    "status": "NOT_COMPUTED",
+    "label": "尚未计算；选用后生成新计划，不展示固定答案。"
+  }
+}

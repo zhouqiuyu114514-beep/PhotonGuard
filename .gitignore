@@ -1,28 +1,21 @@
-# Local runtimes, caches, generated evidence and model exchanges
-.runtime/
-.library-helper/
-__pycache__/
-.pytest_cache/
-*.egg-info/
-artifacts/
-imports/
-inputs/
-*.log
-*.zip
-benchmark/*/
-runtime/logs/
-runtime/reproduction/
-# Local credentials, approval configurations and usage ledgers
+# Local data and credentials are not repository content.
+app/data/
+app/logs/
+**/.runtime/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/workspace-data/
+**/workflow-data/
+**/node_modules/
 .env
 .env.*
-!.env.example
-*.pem
+**/.env
+**/.env.*
 *.key
+*.pem
 *credentials*.json
 *secrets*.json
-*.config.json
-*.ledger.json
-patch.json
-repaired.json
-model-exchanges/
-model-audits/
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-19",
+  "source": "Existing product screenshots and saved records rendered read-only in unchanged product UI",
+  "captures": {
+    "method": "Current unmodified product UI renders saved 2026-10-18 plan / 2026-10-13 history through GET fixture. Offline server disables workers; all POST requests blocked. Not a new AI response.",
+    "calls": [],
+    "new_models": 0,
+    "new_solvers": 0
+  },
+  "new_ai_calls": 0,
+  "new_optics_calls": 0,
+  "new_acquisitions": 0,
+  "new_human_trials": 0
+}

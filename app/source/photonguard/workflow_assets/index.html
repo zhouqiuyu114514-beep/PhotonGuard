@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="PhotonGuard 本地薄膜仿真核对工作台：从已有材料出发，确认任务，再用真实 Meep 运行验证。">
+  <title>薄膜仿真核对 · PhotonGuard</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/intake.js" defer></script>
+  <script src="/assets/repair.js" defer></script>
+  <script src="/assets/mode.js" defer></script>
+  <script src="/assets/novice.js" defer></script>
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到当前步骤</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="工作台导航">
+      <a class="brand" href="#" aria-label="PhotonGuard 首页"><span class="brand-icon" aria-hidden="true">φ</span><span>PhotonGuard<small>AI 光学实验工作台</small></span></a>
+      <div class="sidebar-section-label">从材料到证据</div>
+      <a class="sidebar-button" href="/experiments">返回光学实验工作台</a>
+      <ol class="step-list" id="steps"></ol>
+      <section class="case-switcher">
+        <label for="workspace-select">工作区</label>
+        <select id="workspace-select" aria-label="切换工作区"></select>
+        <p id="workspace-capacity" role="status"></p>
+        <details><summary>新建工作区</summary>
+          <input id="workspace-name" aria-label="新工作区名称" maxlength="80" placeholder="例如：薄膜练习第二组">
+          <button id="new-workspace" class="sidebar-button" type="button">创建并切换工作区</button>
+          <p>每个工作区最多 32 份记录，总存储上限 1 GiB；计算和 AI 使用次数由各工作区共同累计。</p>
+        </details>
+        <label for="case-select">本机保存的工作</label>
+        <select id="case-select" aria-label="选择本机保存的工作"><option value="">选择工作记录</option></select>
+        <button class="sidebar-button" id="home-button" type="button">＋ 开始另一份工作</button>
+      </section>
+      <div class="sidebar-footer"><span class="connection-dot" aria-hidden="true"></span>只在本地运行<span>原始证据保留 · 每一步可核对</span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="topbar-path">工作台<span aria-hidden="true">/</span><strong id="topbar-label">开始</strong></div><div class="runtime-badge" id="runtime-badge">正在读取计算状态</div></header>
+      <main id="main" tabindex="-1">
+        <div class="error-banner" id="error" role="alert" hidden></div>
+        <div class="notice-banner" id="notice" role="status" hidden></div>
+        <div id="content"><div class="initial-loading">正在读取本机工作记录…</div></div>
+      </main>
+      <footer class="page-footer"><span>PhotonGuard · 薄膜仿真核对</span><span>适用范围：一维正入射薄膜；其他研究结果见档案</span></footer>
+    </div>
+  </div>
+  <noscript>此工作台需要 JavaScript 才能保存操作并显示真实运行状态。请启用 JavaScript 后重新打开。</noscript>
+</body>
+</html>

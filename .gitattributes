@@ -1,0 +1,2 @@
+# Preserve the verified package bytes, including shell scripts and source manifests.
+* -text

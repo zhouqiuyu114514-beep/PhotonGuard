@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "adapter": "mode-xcut-v1",
+  "task_id": "SYNTHETIC-XCUT-RIDGE-1550-775",
+  "requirements": {
+    "wavelengths_um": [1.55, 0.775],
+    "film_thickness_um": 0.6,
+    "slab_thickness_um": 0.3,
+    "ridge_width_um": 1.4,
+    "top_index": 1,
+    "bottom_index": 1.44,
+    "orientation": "xcut-yprop-v1",
+    "material_model": "zelmon1997-congruent-21C-v1",
+    "temperature_c": 21,
+    "composition": "undoped-congruent",
+    "length_unit": "um"
+  },
+  "numerics": {"resolution": 32, "domain_um": [4, 4]},
+  "provenance": {
+    "reference": "公开合成开发任务卡 research-plan-20261007-v1；不是用户已制造器件",
+    "synthetic": true,
+    "geometry_source": "教学假设：垂直侧壁、矩形脊、无限人工无色散下包层1.44，上包层空气",
+    "orientation_source": "教学假设：实验室x=晶体Z，y=晶体X，传播z=晶体Y",
+    "material_source": "Zelmon et al., JOSA B 14, 3319 (1997), Table 1; doi:10.1364/JOSAB.14.003319"
+  }
+}

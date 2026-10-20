@@ -1,0 +1,77 @@
+{
+  "status": "FROZEN_OFFLINE_PROTOCOL_NO_DISPATCH",
+  "frozen_at_utc": "2026-10-08T15:43:34.164245+00:00",
+  "baseline_commit": "a9a94f0a338515d13a3bbb1701b3dcce218da524",
+  "source_hashes": {
+    "photonguard/agent.py": "d1a4c5663e56a0ea1c2811f186a362a9a18125a21a51b7074f8fbe70c6ad3619",
+    "photonguard/exchange.py": "9de7133b9b5c5506842b51c26f4afe552c5a819b4eab0cf52ba06e508fd913c2",
+    "photonguard/repair_diagnosis.py": "8cf85caad65713c1261b674841d1811bf6a3f760d2f1f6c2b98d5f799444c5c8",
+    "photonguard/claims.py": "4223d97d5ae40f9c93d877a8ad13fb421092277fdff19f88a6afc688b97a8459",
+    "photonguard/core.py": "77e1703bfef6c547912e6b5e824a6171e4125362e85886c068d4027307ee8544",
+    "photonguard/checks.py": "ef37113c15df5e8d34f2966f593e612d073387b948966eb74330be83ff8007da",
+    "photonguard/runner.py": "56535fbc098da6c59202759948dcd39bb05dda43250091577e2a67c77698a5c5"
+  },
+  "action_catalog_sha256": "059273163d12ea193bb2466451463782d6128b58b14f591589290588832e5b71",
+  "stage": "numerical diagnosis only; natural-language intake excluded from repair denominator",
+  "arms": [
+    "R frozen rules",
+    "A same provider/model ordinary assistant using existing exchange prompt",
+    "G same provider/model with structured evidence claims"
+  ],
+  "common_information": [
+    "same locked task",
+    "same original candidate",
+    "same source locations",
+    "same verification checks/metrics",
+    "same legal action catalogue and numerical tools"
+  ],
+  "same_budget": {
+    "proposal_actions_per_round": 1,
+    "maximum_rounds": 2,
+    "model_requests_per_round_for_A_and_G": 1,
+    "physical_verification_per_action": "same frozen eight-FDTD cap if a future window authorizes it"
+  },
+  "task_generation": "Only after this protocol/source freeze, before any model call; separately freeze synthetic tasks, seed and hidden exhaustive-action outcome table. None generated here.",
+  "required_strata": [
+    "single cause",
+    "two-cause action competition",
+    "all legal one-step actions ineffective",
+    "insufficient information",
+    "initial PASS"
+  ],
+  "denominators": "Initial PASS is not repair success; every FAIL/parse rejection/abstention/timeout retained. Report per-stratum, no efficiency or significance claim from tiny samples.",
+  "scores": [
+    "protocol compliance",
+    "legal action",
+    "action correctness against isolated actual outcomes",
+    "actual reverification",
+    "appropriate abstention",
+    "grounded explanation",
+    "model and solver cost"
+  ],
+  "isolation": {
+    "public": "evaluation_inputs: raw task/candidate/observations only",
+    "private": "evaluation_private: labels, rule-selected actions, exhaustive-action outcomes, reports and this research material",
+    "forbidden_in_model_context": [
+      "research package",
+      "answer tables",
+      "reference solution",
+      "coordinator diagnosis",
+      "other arms results"
+    ]
+  },
+  "raw_vs_filtered": "Preserve first raw response, subsequent validation and execution separately. All arms share locked-task/action safety and actual numerical verifier; claims guard is measured as treatment, not hidden answer access.",
+  "dispatch_enabled": false,
+  "new_API_calls_authorized_by_this_protocol": 0,
+  "new_physical_solves_authorized_by_this_protocol": 0,
+  "auto_retry": false,
+  "current_ledger_requests": 37,
+  "current_reserved_cny": "4.422906000037",
+  "total_authorization_cny": "20",
+  "ledger_reset": false,
+  "next_dispatch_requires_separate_concrete_request_and_solver_window": true,
+  "active_action_catalog": "ACTION_CATALOG.v2.json",
+  "supersedes_without_dispatch": "48af83482a818db18d999b1c435a5be34ca7e1cef0690faf1426c737de152580",
+  "common_dispatch_scope": "Six advertised diagnosis templates for all three arms; legacy reference_time_factor must be excluded explicitly by future evaluation dispatcher. This boundary has not yet been executed or implemented as a dispatcher.",
+  "mandatory_pre_dispatch_check": "Verify all three arm adapters expose the same six templates and reject the legacy path; freeze dispatcher hash before generating held-out tasks."
+}

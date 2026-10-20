@@ -1,0 +1,577 @@
+{
+  "status": "NO_FEASIBLE_CANDIDATE_OBSERVED_IN_THIS_WINDOW",
+  "candidates": [
+    {
+      "id": "G-W",
+      "task_id": "SYNTHETIC-DESIGN-20261010-G-W",
+      "model_sha256": "3ca1b6f8b36388bdb483828aa77b83e22a29fcbe6a3df87604aa1919375e3413",
+      "d": 0.17543984926312373,
+      "residual": 0.13668984926312372,
+      "selected": {
+        "1.55": {
+          "band": 1,
+          "frequency_cycles_per_um": 0.6451612903052911,
+          "k_cycles_per_um": 1.2472105947080465,
+          "beta_rad_per_um": 7.836455283628312,
+          "neff": 1.933176421797472,
+          "electric_component_norm_fraction": [
+            0.9785900208554696,
+            0.0012491907455845887,
+            0.020160788398945775
+          ],
+          "core_electric_energy_fraction": 0.9476422847406485,
+          "outer_cell_energy_fraction": 0.00011116247869036415,
+          "field_shape": [
+            320,
+            320,
+            1,
+            3
+          ],
+          "fields_npz": "band-1-fields.npz",
+          "solver_iterations_last": 1,
+          "actual_grid": {
+            "backend_get_dims": [
+              320,
+              320
+            ],
+            "axis_order": [
+              "x",
+              "y",
+              "z"
+            ],
+            "shape_xyz": [
+              320,
+              320,
+              1
+            ],
+            "lattice_size_um": [
+              4,
+              4,
+              0
+            ],
+            "spacing_um": [
+              0.0125,
+              0.0125,
+              null
+            ],
+            "nominal_grid_before_optimization": [
+              320,
+              320,
+              1
+            ],
+            "optimize_grid_size": true,
+            "coordinates": "periodic cell centers from -S/2, no duplicated endpoint"
+          },
+          "raw_dpwr_audit": {
+            "finite": true,
+            "minimum": 4.5828547084396005e-12,
+            "maximum": 1.7809211825077942,
+            "negative_sample_count": 0,
+            "negative_absolute_sum": -0.0,
+            "raw_sum": 6400.000000000002,
+            "audited_before_display_clipping": true
+          },
+          "electric_component_fraction_kind": "unweighted E-component L2; not anisotropic electric energy",
+          "core_mask_kind": "ridge rectangle only; excludes residual slab outside ridge",
+          "fixed_material_df_dk_cycles_per_um_per_cycles_per_um": 0.4502457957359649,
+          "df_dk_is_not_material_dispersive_group_velocity": true,
+          "returned_root_cycles_per_um": 1.2472105947080465
+        },
+        "0.775": {
+          "band": 4,
+          "frequency_cycles_per_um": 1.2903225814879864,
+          "k_cycles_per_um": 2.7207951884652846,
+          "beta_rad_per_um": 17.09526035200999,
+          "neff": 2.108616271060596,
+          "electric_component_norm_fraction": [
+            0.9945844747742824,
+            0.0002945099034901287,
+            0.005121015322227469
+          ],
+          "core_electric_energy_fraction": 0.9898994871944348,
+          "outer_cell_energy_fraction": 1.0232862020181063e-06,
+          "field_shape": [
+            320,
+            320,
+            1,
+            3
+          ],
+          "fields_npz": "band-4-fields.npz",
+          "solver_iterations_last": 212,
+          "actual_grid": {
+            "backend_get_dims": [
+              320,
+              320
+            ],
+            "axis_order": [
+              "x",
+              "y",
+              "z"
+            ],
+            "shape_xyz": [
+              320,
+              320,
+              1
+            ],
+            "lattice_size_um": [
+              4,
+              4,
+              0
+            ],
+            "spacing_um": [
+              0.0125,
+              0.0125,
+              null
+            ],
+            "nominal_grid_before_optimization": [
+              320,
+              320,
+              1
+            ],
+            "optimize_grid_size": true,
+            "coordinates": "periodic cell centers from -S/2, no duplicated endpoint"
+          },
+          "raw_dpwr_audit": {
+            "finite": true,
+            "minimum": 9.330992445028246e-14,
+            "maximum": 2.295576969372873,
+            "negative_sample_count": 0,
+            "negative_absolute_sum": -0.0,
+            "raw_sum": 6399.9999999999945,
+            "audited_before_display_clipping": true
+          },
+          "electric_component_fraction_kind": "unweighted E-component L2; not anisotropic electric energy",
+          "core_mask_kind": "ridge rectangle only; excludes residual slab outside ridge",
+          "fixed_material_df_dk_cycles_per_um_per_cycles_per_um": 0.44956315429938415,
+          "df_dk_is_not_material_dispersive_group_velocity": true,
+          "returned_root_cycles_per_um": 2.7207951884652846
+        }
+      },
+      "eligible_both": true,
+      "strict_certificate": "NOT_STARTED",
+      "numerical_policy": "NOT_EVALUATED_BASE_ONLY"
+    },
+    {
+      "id": "G-S",
+      "task_id": "SYNTHETIC-DESIGN-20261010-G-S",
+      "model_sha256": "776e99706633cbc176ebb164f340d604f506a418cf0cc2d90dbf6627ddcf360a",
+      "d": 0.179884972852008,
+      "residual": 0.141134972852008,
+      "selected": {
+        "1.55": {
+          "band": 1,
+          "frequency_cycles_per_um": 0.6451612903018052,
+          "k_cycles_per_um": 1.242045897698249,
+          "beta_rad_per_um": 7.804004535260317,
+          "neff": 1.9251711414322858,
+          "electric_component_norm_fraction": [
+            0.9795149637968561,
+            0.0030488845597351627,
+            0.017436151643408775
+          ],
+          "core_electric_energy_fraction": 0.8073516649451364,
+          "outer_cell_energy_fraction": 0.0037010727401771276,
+          "field_shape": [
+            320,
+            320,
+            1,
+            3
+          ],
+          "fields_npz": "band-1-fields.npz",
+          "solver_iterations_last": 1,
+          "actual_grid": {
+            "backend_get_dims": [
+              320,
+              320
+            ],
+            "axis_order": [
+              "x",
+              "y",
+              "z"
+            ],
+            "shape_xyz": [
+              320,
+              320,
+              1
+            ],
+            "lattice_size_um": [
+              4,
+              4,
+              0
+            ],
+            "spacing_um": [
+              0.0125,
+              0.0125,
+              null
+            ],
+            "nominal_grid_before_optimization": [
+              320,
+              320,
+              1
+            ],
+            "optimize_grid_size": true,
+            "coordinates": "periodic cell centers from -S/2, no duplicated endpoint"
+          },
+          "raw_dpwr_audit": {
+            "finite": true,
+            "minimum": 1.0640791990506626e-11,
+            "maximum": 1.8762063776672353,
+            "negative_sample_count": 0,
+            "negative_absolute_sum": -0.0,
+            "raw_sum": 6399.999999999999,
+            "audited_before_display_clipping": true
+          },
+          "electric_component_fraction_kind": "unweighted E-component L2; not anisotropic electric energy",
+          "core_mask_kind": "ridge rectangle only; excludes residual slab outside ridge",
+          "fixed_material_df_dk_cycles_per_um_per_cycles_per_um": 0.45111011368179815,
+          "df_dk_is_not_material_dispersive_group_velocity": true,
+          "returned_root_cycles_per_um": 1.242045897698249
+        },
+        "0.775": {
+          "band": 4,
+          "frequency_cycles_per_um": 1.2903225836794203,
+          "k_cycles_per_um": 2.7162014377861854,
+          "beta_rad_per_um": 17.066396965238226,
+          "neff": 2.105056114284294,
+          "electric_component_norm_fraction": [
+            0.9925006990843793,
+            0.0008095346855350296,
+            0.006689766230085646
+          ],
+          "core_electric_energy_fraction": 0.9322349218829864,
+          "outer_cell_energy_fraction": 0.00017370998378968085,
+          "field_shape": [
+            320,
+            320,
+            1,
+            3
+          ],
+          "fields_npz": "band-4-fields.npz",
+          "solver_iterations_last": 312,
+          "actual_grid": {
+            "backend_get_dims": [
+              320,
+              320
+            ],
+            "axis_order": [
+              "x",
+              "y",
+              "z"
+            ],
+            "shape_xyz": [
+              320,
+              320,
+              1
+            ],
+            "lattice_size_um": [
+              4,
+              4,
+              0
+            ],
+            "spacing_um": [
+              0.0125,
+              0.0125,
+              null
+            ],
+            "nominal_grid_before_optimization": [
+              320,
+              320,
+              1
+            ],
+            "optimize_grid_size": true,
+            "coordinates": "periodic cell centers from -S/2, no duplicated endpoint"
+          },
+          "raw_dpwr_audit": {
+            "finite": true,
+            "minimum": 1.1188160650287241e-13,
+            "maximum": 2.7900308938113216,
+            "negative_sample_count": 0,
+            "negative_absolute_sum": -0.0,
+            "raw_sum": 6400.000000000005,
+            "audited_before_display_clipping": true
+          },
+          "electric_component_fraction_kind": "unweighted E-component L2; not anisotropic electric energy",
+          "core_mask_kind": "ridge rectangle only; excludes residual slab outside ridge",
+          "fixed_material_df_dk_cycles_per_um_per_cycles_per_um": 0.44911139740205847,
+          "df_dk_is_not_material_dispersive_group_velocity": true,
+          "returned_root_cycles_per_um": 2.7162014377861854
+        }
+      },
+      "eligible_both": true,
+      "strict_certificate": "NOT_STARTED",
+      "numerical_policy": "NOT_EVALUATED_BASE_ONLY"
+    },
+    {
+      "id": "G-H",
+      "task_id": "SYNTHETIC-DESIGN-20261010-G-H",
+      "model_sha256": "d32d21c8fa87dafc8e72304c9f96ae76eff95d894bf2884008530e2c0c70e52a",
+      "d": 0.15234435745247965,
+      "residual": 0.11359435745247964,
+      "selected": {
+        "1.55": {
+          "band": 2,
+          "frequency_cycles_per_um": 0.645161290375548,
+          "k_cycles_per_um": 1.276667256411716,
+          "beta_rad_per_um": 8.021536947643368,
+          "neff": 1.97883424743816,
+          "electric_component_norm_fraction": [
+            0.9485800476632438,
+            0.0028305988819643277,
+            0.04858935345479192
+          ],
+          "core_electric_energy_fraction": 0.9635151474394823,
+          "outer_cell_energy_fraction": 3.6566485410403315e-06,
+          "field_shape": [
+            320,
+            320,
+            1,
+            3
+          ],
+          "fields_npz": "band-2-fields.npz",
+          "solver_iterations_last": 46,
+          "actual_grid": {
+            "backend_get_dims": [
+              320,
+              320
+            ],
+            "axis_order": [
+              "x",
+              "y",
+              "z"
+            ],
+            "shape_xyz": [
+              320,
+              320,
+              1
+            ],
+            "lattice_size_um": [
+              4,
+              4,
+              0
+            ],
+            "spacing_um": [
+              0.0125,
+              0.0125,
+              null
+            ],
+            "nominal_grid_before_optimization": [
+              320,
+              320,
+              1
+            ],
+            "optimize_grid_size": true,
+            "coordinates": "periodic cell centers from -S/2, no duplicated endpoint"
+          },
+          "raw_dpwr_audit": {
+            "finite": true,
+            "minimum": 1.2892338027294374e-12,
+            "maximum": 2.026352492184015,
+            "negative_sample_count": 0,
+            "negative_absolute_sum": -0.0,
+            "raw_sum": 6400.000000000002,
+            "audited_before_display_clipping": true
+          },
+          "electric_component_fraction_kind": "unweighted E-component L2; not anisotropic electric energy",
+          "core_mask_kind": "ridge rectangle only; excludes residual slab outside ridge",
+          "fixed_material_df_dk_cycles_per_um_per_cycles_per_um": 0.44633741950032774,
+          "df_dk_is_not_material_dispersive_group_velocity": true,
+          "returned_root_cycles_per_um": 1.276667256411716
+        },
+        "0.775": {
+          "band": 3,
+          "frequency_cycles_per_um": 1.2903225806815128,
+          "k_cycles_per_um": 2.7499078772782446,
+          "beta_rad_per_um": 17.27818077061207,
+          "neff": 2.1311786048906396,
+          "electric_component_norm_fraction": [
+            0.9867077639049433,
+            0.00021937606478696387,
+            0.013072860030269648
+          ],
+          "core_electric_energy_fraction": 0.9940564341953421,
+          "outer_cell_energy_fraction": 3.846021010947537e-09,
+          "field_shape": [
+            320,
+            320,
+            1,
+            3
+          ],
+          "fields_npz": "band-3-fields.npz",
+          "solver_iterations_last": 147,
+          "actual_grid": {
+            "backend_get_dims": [
+              320,
+              320
+            ],
+            "axis_order": [
+              "x",
+              "y",
+              "z"
+            ],
+            "shape_xyz": [
+              320,
+              320,
+              1
+            ],
+            "lattice_size_um": [
+              4,
+              4,
+              0
+            ],
+            "spacing_um": [
+              0.0125,
+              0.0125,
+              null
+            ],
+            "nominal_grid_before_optimization": [
+              320,
+              320,
+              1
+            ],
+            "optimize_grid_size": true,
+            "coordinates": "periodic cell centers from -S/2, no duplicated endpoint"
+          },
+          "raw_dpwr_audit": {
+            "finite": true,
+            "minimum": 1.1176731007714281e-13,
+            "maximum": 2.572582731600971,
+            "negative_sample_count": 0,
+            "negative_absolute_sum": -0.0,
+            "raw_sum": 6400.0000000000055,
+            "audited_before_display_clipping": true
+          },
+          "electric_component_fraction_kind": "unweighted E-component L2; not anisotropic electric energy",
+          "core_mask_kind": "ridge rectangle only; excludes residual slab outside ridge",
+          "fixed_material_df_dk_cycles_per_um_per_cycles_per_um": 0.45119283545581834,
+          "df_dk_is_not_material_dispersive_group_velocity": true,
+          "returned_root_cycles_per_um": 2.7499078772782446
+        }
+      },
+      "eligible_both": true,
+      "strict_certificate": "NOT_STARTED",
+      "numerical_policy": "NOT_EVALUATED_BASE_ONLY"
+    }
+  ],
+  "gate": {
+    "near_target_candidates": [],
+    "bracket_confirmed": false,
+    "status": "NO_FEASIBLE_CANDIDATE_OBSERVED_IN_THIS_WINDOW"
+  },
+  "baseline_d": 0.19488324669241197,
+  "baseline_results": [
+    {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/iteration-20261008-release/reviewed-evidence-v1/production-cap-validation/mode-artifacts/20261008T040316Z-cff43b8a/base-1.55/result.json",
+      "bytes": 14855,
+      "sha256": "d20c72d8c065345f0ec7278df6bbcf5399ad7865b60e9205e6a9a86337bd1e78"
+    },
+    {
+      "path": "/home/zhou/projects/PhotonGuard-development/local-validation/iteration-20261008-release/reviewed-evidence-v1/production-cap-validation/mode-artifacts/20261008T040316Z-cff43b8a/base-0.775/result.json",
+      "bytes": 14844,
+      "sha256": "b708969d254721cb354e204635a683cdff8f03c83646a64d24fb457edba0bda7"
+    }
+  ],
+  "attempts": [
+    {
+      "id": "G-W",
+      "step": {
+        "variant": "base",
+        "resolution": 80,
+        "domain_um": [
+          4,
+          4
+        ],
+        "wavelength_um": 1.55
+      },
+      "start_time": 1791604617.0878322,
+      "returncode": 0,
+      "seconds": 26.14878886599999,
+      "automatic_retry": false
+    },
+    {
+      "id": "G-W",
+      "step": {
+        "variant": "base",
+        "resolution": 80,
+        "domain_um": [
+          4,
+          4
+        ],
+        "wavelength_um": 0.775
+      },
+      "start_time": 1791604643.2394826,
+      "returncode": 0,
+      "seconds": 35.090173762999996,
+      "automatic_retry": false
+    },
+    {
+      "id": "G-S",
+      "step": {
+        "variant": "base",
+        "resolution": 80,
+        "domain_um": [
+          4,
+          4
+        ],
+        "wavelength_um": 1.55
+      },
+      "start_time": 1791604678.3366237,
+      "returncode": 0,
+      "seconds": 31.47033332000001,
+      "automatic_retry": false
+    },
+    {
+      "id": "G-S",
+      "step": {
+        "variant": "base",
+        "resolution": 80,
+        "domain_um": [
+          4,
+          4
+        ],
+        "wavelength_um": 0.775
+      },
+      "start_time": 1791604709.8102264,
+      "returncode": 0,
+      "seconds": 43.686042004,
+      "automatic_retry": false
+    },
+    {
+      "id": "G-H",
+      "step": {
+        "variant": "base",
+        "resolution": 80,
+        "domain_um": [
+          4,
+          4
+        ],
+        "wavelength_um": 1.55
+      },
+      "start_time": 1791604753.5015454,
+      "returncode": 0,
+      "seconds": 23.08368933400004,
+      "automatic_retry": false
+    },
+    {
+      "id": "G-H",
+      "step": {
+        "variant": "base",
+        "resolution": 80,
+        "domain_um": [
+          4,
+          4
+        ],
+        "wavelength_um": 0.775
+      },
+      "start_time": 1791604776.589472,
+      "returncode": 0,
+      "seconds": 38.50820303900002,
+      "automatic_retry": false
+    }
+  ],
+  "actual_workers": 6,
+  "seconds": 198.026649259,
+  "paid_API_calls": 0,
+  "FDTD": 0,
+  "all_geometry_impossible_claimed": false,
+  "phase_factor_is_efficiency": false
+}

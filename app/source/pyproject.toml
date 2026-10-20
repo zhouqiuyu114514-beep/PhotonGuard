@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "photonguard"
+dynamic = ["version"]
+description = "AI optical experiment workbench with bounded film, diffraction and Gaussian models and continuous versioned experiments"
+requires-python = ">=3.10"
+license = {text = "GPL-2.0-or-later"}
+dependencies = ["numpy>=1.26", "tmm==0.2.0"]
+[project.optional-dependencies]
+experiments = ["LightPipes==2.1.5"]
+analysis = ["scipy==1.18.1"]
+[project.scripts]
+photonguard = "photonguard.cli:main"
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+[tool.setuptools.packages.find]
+include = ["photonguard*"]
+
+[tool.setuptools.package-data]
+photonguard = ["workflow_assets/*.html", "workflow_assets/*.js", "workflow_assets/*.css", "research_archive/*.json", "case_library/*.json", "case_library/*/*.json", "case_library/*/*.md", "observation_library/*.json", "observation_library/*.csv"]
+
+[tool.setuptools.dynamic]
+version = {attr = "photonguard.__version__"}

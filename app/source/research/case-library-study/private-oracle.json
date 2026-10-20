@@ -1,0 +1,308 @@
+{
+  "C01": {
+    "requests": [
+      {
+        "case_id": "D02",
+        "parameters": {
+          "wavelength_nm": 532,
+          "focal_length_mm": 180,
+          "slit_width_um": 24,
+          "slit_height_um": 96,
+          "relative_phase_rad": 0
+        },
+        "goal": {
+          "metric": "fringe_period_mm",
+          "operator": "near",
+          "target": 0.72,
+          "tolerance": 0.01
+        },
+        "bounds": {
+          "min": 110,
+          "max": 190
+        }
+      }
+    ],
+    "stop": null,
+    "restore": false,
+    "expected_run_count": 1,
+    "expected_result_reference": "last"
+  },
+  "C02": {
+    "requests": [
+      {
+        "case_id": "G02",
+        "parameters": {
+          "wavelength_nm": 780,
+          "waist_radius_um": 480,
+          "waist_z_mm": -30,
+          "screen_distance_mm": 120
+        },
+        "goal": {
+          "metric": "screen_radius_um",
+          "operator": "<=",
+          "target": 70
+        },
+        "values": [
+          100,
+          120,
+          160
+        ]
+      }
+    ],
+    "stop": null,
+    "restore": false,
+    "expected_run_count": 1,
+    "expected_result_reference": "last"
+  },
+  "C03": {
+    "requests": [
+      {
+        "case_id": "F02",
+        "parameters": {
+          "material_n_high": 2.2,
+          "material_n_low": 1.5,
+          "design_wavelength_um": 0.68
+        },
+        "goal": {
+          "metric": "reflectance",
+          "operator": ">=",
+          "target": 0.6,
+          "wavelength_um": 0.68
+        },
+        "values": [
+          2,
+          4,
+          6
+        ]
+      }
+    ],
+    "stop": null,
+    "restore": false,
+    "expected_run_count": 1,
+    "expected_result_reference": "last"
+  },
+  "C04": {
+    "requests": [
+      {
+        "case_id": "F01",
+        "parameters": {
+          "film_n": 1.7
+        },
+        "goal": {
+          "metric": "reflectance",
+          "operator": "maximize",
+          "wavelength_um": 0.61
+        },
+        "values": [
+          0.09,
+          0.13,
+          0.17
+        ]
+      }
+    ],
+    "stop": null,
+    "restore": false,
+    "expected_run_count": 1,
+    "expected_result_reference": "last"
+  },
+  "C05": {
+    "requests": [
+      {
+        "case_id": "D02",
+        "parameters": {
+          "wavelength_nm": 594,
+          "focal_length_mm": 170,
+          "slit_width_um": 24,
+          "slit_height_um": 96,
+          "relative_phase_rad": 0
+        },
+        "goal": {
+          "metric": "fringe_period_mm",
+          "operator": "near",
+          "target": 0.7,
+          "tolerance": 0.015
+        },
+        "bounds": {
+          "min": 100,
+          "max": 200
+        }
+      },
+      {
+        "case_id": "D02",
+        "goal": {
+          "metric": "fringe_period_mm",
+          "operator": "near",
+          "target": 0.85,
+          "tolerance": 0.015
+        },
+        "bounds": {
+          "min": 100,
+          "max": 200
+        }
+      }
+    ],
+    "stop": null,
+    "restore": false,
+    "expected_run_count": 2,
+    "expected_result_reference": "last"
+  },
+  "C06": {
+    "requests": [
+      {
+        "case_id": "D02",
+        "parameters": {
+          "wavelength_nm": 650,
+          "focal_length_mm": 160,
+          "slit_width_um": 24,
+          "slit_height_um": 96,
+          "relative_phase_rad": 0
+        },
+        "goal": {
+          "metric": "fringe_period_mm",
+          "operator": "near",
+          "target": 0.8,
+          "tolerance": 0.015
+        },
+        "bounds": {
+          "min": 100,
+          "max": 200
+        }
+      },
+      {
+        "case_id": "D03",
+        "goal": {
+          "metric": "central_intensity_ratio",
+          "operator": "<=",
+          "target": 0.01
+        }
+      }
+    ],
+    "stop": null,
+    "restore": false,
+    "expected_run_count": 2,
+    "expected_result_reference": "last"
+  },
+  "C07": {
+    "requests": [
+      {
+        "case_id": "G02",
+        "parameters": {
+          "wavelength_nm": 700,
+          "waist_radius_um": 520,
+          "waist_z_mm": -20,
+          "screen_distance_mm": 110
+        },
+        "goal": {
+          "metric": "screen_radius_um",
+          "operator": "<=",
+          "target": 60
+        },
+        "values": [
+          90,
+          110,
+          140
+        ]
+      },
+      {
+        "case_id": "G04",
+        "goal": {
+          "metric": "screen_radius_um",
+          "operator": "<=",
+          "target": 20
+        },
+        "values": [
+          90,
+          110,
+          140
+        ]
+      }
+    ],
+    "stop": null,
+    "restore": false,
+    "expected_run_count": 2,
+    "expected_result_reference": "last"
+  },
+  "C08": {
+    "requests": [
+      {
+        "case_id": "F02",
+        "parameters": {
+          "material_n_high": 2.1,
+          "material_n_low": 1.45,
+          "design_wavelength_um": 0.66
+        },
+        "goal": {
+          "metric": "reflectance",
+          "operator": ">=",
+          "target": 0.5,
+          "wavelength_um": 0.66
+        },
+        "values": [
+          2,
+          4,
+          6
+        ]
+      },
+      {
+        "case_id": "F03",
+        "goal": {
+          "metric": "reflectance",
+          "operator": ">=",
+          "target": 0.4,
+          "wavelength_um": 0.73
+        }
+      }
+    ],
+    "stop": null,
+    "restore": false,
+    "expected_run_count": 2,
+    "expected_result_reference": "last"
+  },
+  "C09": {
+    "requests": [],
+    "stop": "missing_waist_z",
+    "restore": false,
+    "expected_run_count": 0,
+    "expected_result_reference": "last"
+  },
+  "C10": {
+    "requests": [],
+    "stop": "unsupported_model",
+    "restore": false,
+    "expected_run_count": 0,
+    "expected_result_reference": "last"
+  },
+  "C11": {
+    "requests": [
+      {
+        "case_id": "G02",
+        "parameters": {
+          "wavelength_nm": 650,
+          "waist_radius_um": 460,
+          "waist_z_mm": -25,
+          "screen_distance_mm": 115
+        },
+        "goal": {
+          "metric": "screen_radius_um",
+          "operator": "minimize"
+        },
+        "values": [
+          90,
+          115,
+          150
+        ]
+      }
+    ],
+    "stop": null,
+    "restore": true,
+    "expected_run_count": 1,
+    "expected_result_reference": "last"
+  },
+  "C12": {
+    "requests": [],
+    "stop": null,
+    "restore": true,
+    "expected_run_count": 0,
+    "expected_result_reference": "previous"
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "calibration": {
+    "worker": "yee_reference_v2.py",
+    "cases": [
+      {
+        "id": "slab-iso-512",
+        "geometry": "slab",
+        "grid": [
+          512,
+          1
+        ],
+        "domain_um": [
+          8.0,
+          1.0
+        ],
+        "grid_phase_cells": [
+          0,
+          0
+        ],
+        "wavelength_um": 1.55,
+        "core_epsilon": [
+          4.840000000000001,
+          4.840000000000001,
+          4.840000000000001
+        ]
+      },
+      {
+        "id": "slab-aniso-256",
+        "geometry": "slab",
+        "grid": [
+          256,
+          1
+        ],
+        "domain_um": [
+          8.0,
+          1.0
+        ],
+        "grid_phase_cells": [
+          0,
+          0
+        ],
+        "wavelength_um": 1.55,
+        "core_epsilon": [
+          4.8,
+          4.4,
+          5.2
+        ]
+      },
+      {
+        "id": "slab-aniso-512",
+        "geometry": "slab",
+        "grid": [
+          512,
+          1
+        ],
+        "domain_um": [
+          8.0,
+          1.0
+        ],
+        "grid_phase_cells": [
+          0,
+          0
+        ],
+        "wavelength_um": 1.55,
+        "core_epsilon": [
+          4.8,
+          4.4,
+          5.2
+        ]
+      },
+      {
+        "id": "slab-aniso-512-half",
+        "geometry": "slab",
+        "grid": [
+          512,
+          1
+        ],
+        "domain_um": [
+          8.0,
+          1.0
+        ],
+        "grid_phase_cells": [
+          0.5,
+          0
+        ],
+        "wavelength_um": 1.55,
+        "core_epsilon": [
+          4.8,
+          4.4,
+          5.2
+        ]
+      }
+    ],
+    "max_worker_attempts": 12,
+    "max_registered_attempts": 4,
+    "max_eigensolver_calls": 4,
+    "per_worker_address_space_bytes": 1073741824,
+    "max_output_bytes": 125829120,
+    "per_worker_wall_seconds": 60,
+    "original_plan_path": "interface-v2/plan.json",
+    "original_plan_sha256": "333fdffbcbc1080f7154821c0a80a557b6fdf3f8dfcdc3966c2b73e9eddb3134"
+  },
+  "ridge": {
+    "worker": "yee_reference_v2.py",
+    "cases": [
+      {
+        "id": "ridge-1.55-base128",
+        "geometry": "ridge",
+        "grid": [
+          128,
+          128
+        ],
+        "domain_um": [
+          4.0,
+          4.0
+        ],
+        "grid_phase_cells": [
+          0,
+          0
+        ],
+        "wavelength_um": 1.55
+      },
+      {
+        "id": "ridge-1.55-base256",
+        "geometry": "ridge",
+        "grid": [
+          256,
+          256
+        ],
+        "domain_um": [
+          4.0,
+          4.0
+        ],
+        "grid_phase_cells": [
+          0,
+          0
+        ],
+        "wavelength_um": 1.55
+      },
+      {
+        "id": "ridge-1.55-half256",
+        "geometry": "ridge",
+        "grid": [
+          256,
+          256
+        ],
+        "domain_um": [
+          4.0,
+          4.0
+        ],
+        "grid_phase_cells": [
+          0.5,
+          0.5
+        ],
+        "wavelength_um": 1.55
+      },
+      {
+        "id": "ridge-1.55-domain192",
+        "geometry": "ridge",
+        "grid": [
+          192,
+          192
+        ],
+        "domain_um": [
+          6.0,
+          6.0
+        ],
+        "grid_phase_cells": [
+          0,
+          0
+        ],
+        "wavelength_um": 1.55
+      },
+      {
+        "id": "ridge-0.775-base128",
+        "geometry": "ridge",
+        "grid": [
+          128,
+          128
+        ],
+        "domain_um": [
+          4.0,
+          4.0
+        ],
+        "grid_phase_cells": [
+          0,
+          0
+        ],
+        "wavelength_um": 0.775
+      },
+      {
+        "id": "ridge-0.775-base256",
+        "geometry": "ridge",
+        "grid": [
+          256,
+          256
+        ],
+        "domain_um": [
+          4.0,
+          4.0
+        ],
+        "grid_phase_cells": [
+          0,
+          0
+        ],
+        "wavelength_um": 0.775
+      },
+      {
+        "id": "ridge-0.775-half256",
+        "geometry": "ridge",
+        "grid": [
+          256,
+          256
+        ],
+        "domain_um": [
+          4.0,
+          4.0
+        ],
+        "grid_phase_cells": [
+          0.5,
+          0.5
+        ],
+        "wavelength_um": 0.775
+      },
+      {
+        "id": "ridge-0.775-domain192",
+        "geometry": "ridge",
+        "grid": [
+          192,
+          192
+        ],
+        "domain_um": [
+          6.0,
+          6.0
+        ],
+        "grid_phase_cells": [
+          0,
+          0
+        ],
+        "wavelength_um": 0.775
+      }
+    ],
+    "max_worker_attempts": 12,
+    "max_registered_attempts": 8,
+    "max_eigensolver_calls": 8,
+    "per_worker_address_space_bytes": 1073741824,
+    "max_output_bytes": 125829120,
+    "per_worker_wall_seconds": 60,
+    "original_plan_path": "interface-v2/plan.json",
+    "original_plan_sha256": "333fdffbcbc1080f7154821c0a80a557b6fdf3f8dfcdc3966c2b73e9eddb3134"
+  },
+  "ridge80": {
+    "worker": "yee_reference_r80_v4.py",
+    "cases": [
+      {
+        "id": "ridge-1.55-base320",
+        "geometry": "ridge",
+        "grid": [
+          320,
+          320
+        ],
+        "domain_um": [
+          4.0,
+          4.0
+        ],
+        "grid_phase_cells": [
+          0,
+          0
+        ],
+        "wavelength_um": 1.55
+      },
+      {
+        "id": "ridge-0.775-base320",
+        "geometry": "ridge",
+        "grid": [
+          320,
+          320
+        ],
+        "domain_um": [
+          4.0,
+          4.0
+        ],
+        "grid_phase_cells": [
+          0,
+          0
+        ],
+        "wavelength_um": 0.775
+      },
+      {
+        "id": "ridge-1.55-half320",
+        "geometry": "ridge",
+        "grid": [
+          320,
+          320
+        ],
+        "domain_um": [
+          4.0,
+          4.0
+        ],
+        "grid_phase_cells": [
+          0.5,
+          0.5
+        ],
+        "wavelength_um": 1.55
+      },
+      {
+        "id": "ridge-0.775-half320",
+        "geometry": "ridge",
+        "grid": [
+          320,
+          320
+        ],
+        "domain_um": [
+          4.0,
+          4.0
+        ],
+        "grid_phase_cells": [
+          0.5,
+          0.5
+        ],
+        "wavelength_um": 0.775
+      }
+    ],
+    "max_worker_attempts": 4,
+    "max_registered_attempts": 4,
+    "max_eigensolver_calls": 4,
+    "per_worker_address_space_bytes": 2147483648,
+    "max_output_bytes": 67108864,
+    "per_worker_wall_seconds": 60,
+    "original_plan_path": "r80-v4/plan.json",
+    "original_plan_sha256": "81da64377b0838c6dc3d17ee9fce9d90e8563b9960209d6830350301d0a4d999"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": "pg-semantic-intake-1",
+  "synthetic": true,
+  "mapping_status": "UNMAPPED_TO_IMPLEMENTATION",
+  "description": "独立语义接口；尚未声称与 PhotonGuard 的 14 个实现字段一一对应。",
+  "fields": [
+    {
+      "key": "spatial_dimension",
+      "type": "enum",
+      "canonical_unit_or_enum": "1D",
+      "meaning_zh": "空间模型维度"
+    },
+    {
+      "key": "incidence_angle",
+      "type": "quantity",
+      "canonical_unit_or_enum": "deg",
+      "meaning_zh": "相对界面法线的入射角"
+    },
+    {
+      "key": "relative_permeability",
+      "type": "number",
+      "canonical_unit_or_enum": "dimensionless",
+      "meaning_zh": "所有介质的相对磁导率"
+    },
+    {
+      "key": "lossless",
+      "type": "boolean",
+      "canonical_unit_or_enum": null,
+      "meaning_zh": "所有介质是否无损"
+    },
+    {
+      "key": "isotropic",
+      "type": "boolean",
+      "canonical_unit_or_enum": null,
+      "meaning_zh": "所有介质是否各向同性"
+    },
+    {
+      "key": "nondispersive",
+      "type": "boolean",
+      "canonical_unit_or_enum": null,
+      "meaning_zh": "所有介质在请求波段内是否无色散"
+    },
+    {
+      "key": "layer_count",
+      "type": "integer",
+      "canonical_unit_or_enum": null,
+      "meaning_zh": "有限厚度膜层数量"
+    },
+    {
+      "key": "incident_index",
+      "type": "number",
+      "canonical_unit_or_enum": "dimensionless",
+      "meaning_zh": "入射半空间的实折射率"
+    },
+    {
+      "key": "film_index",
+      "type": "number",
+      "canonical_unit_or_enum": "dimensionless",
+      "meaning_zh": "膜层的实折射率"
+    },
+    {
+      "key": "exit_index",
+      "type": "number",
+      "canonical_unit_or_enum": "dimensionless",
+      "meaning_zh": "出射半空间的实折射率"
+    },
+    {
+      "key": "film_thickness",
+      "type": "quantity",
+      "canonical_unit_or_enum": "nm",
+      "meaning_zh": "膜层物理厚度"
+    },
+    {
+      "key": "wavelength_min",
+      "type": "quantity",
+      "canonical_unit_or_enum": "nm",
+      "meaning_zh": "真空波长下界"
+    },
+    {
+      "key": "wavelength_max",
+      "type": "quantity",
+      "canonical_unit_or_enum": "nm",
+      "meaning_zh": "真空波长上界"
+    },
+    {
+      "key": "wavelength_samples",
+      "type": "integer",
+      "canonical_unit_or_enum": null,
+      "meaning_zh": "闭区间等距波长采样点总数"
+    }
+  ],
+  "scope": {
+    "spatial_dimension": "1D",
+    "incidence_angle_deg": 0,
+    "relative_permeability": 1,
+    "lossless": true,
+    "isotropic": true,
+    "nondispersive": true,
+    "layer_count": 1
+  },
+  "goal": "录入请求的单膜功率反射率/透射率扫描意图，不求解，不执行，不批准。边界半空间均为半无限。",
+  "conversion_policy": {
+    "accepted_length_units": {
+      "nm": "1",
+      "um": "1000",
+      "µm": "1000",
+      "μm": "1000",
+      "m": "1000000000"
+    },
+    "accepted_angle_units": {
+      "deg": "1",
+      "°": "1"
+    },
+    "numeric_representation": "JSON number or finite decimal string; bool is never a number; exact decimal arithmetic; no tolerance matching",
+    "derived_physics": "禁止从 epsilon、脚本、材料名或算法默认值反推缺失意图；仅允许精确单位换算",
+    "decimal_limits": {
+      "maximum_text_characters": 256,
+      "maximum_coefficient_digits": 128,
+      "maximum_absolute_decimal_exponent": 1000
+    }
+  },
+  "field_statuses": [
+    "proposed",
+    "unknown",
+    "conflict",
+    "unsupported"
+  ],
+  "review_statuses": [
+    "REVIEW_REQUIRED",
+    "CLARIFICATION_REQUIRED",
+    "OUT_OF_SCOPE"
+  ],
+  "permission_boundary": "输出仅为待审提案。永远不代表用户批准、任务锁或运行许可。"
+}

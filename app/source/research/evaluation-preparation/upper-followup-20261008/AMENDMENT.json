@@ -1,0 +1,8 @@
+{
+  "reason": "Read-only source audit found material n-squared conversion and an unadvertised legacy validator path. Preserve initial draft, make common-scope prerequisite explicit before any task generation or dispatch.",
+  "old_plan_sha256": "48af83482a818db18d999b1c435a5be34ca7e1cef0690faf1426c737de152580",
+  "active_plan_sha256": "02869be6945e92818bb54874849a65b39a18bce970cb276c6c456a52f2a61847",
+  "actual_tasks_generated": 0,
+  "actual_requests": 0,
+  "active": "FROZEN_PROTOCOL.v2.json"
+}

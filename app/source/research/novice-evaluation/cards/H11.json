@@ -1,0 +1,19 @@
+{
+  "scenario_id": "H11",
+  "split": "holdout",
+  "interaction_family": "LN_missing_geometry",
+  "actor_type": "SIMULATED",
+  "mode": "specified",
+  "known_material": "我的实际LN波导只知道材料名称，晶轴、刻蚀高度、宽度都没有资料。",
+  "unknown_facts": [],
+  "allowed_actions": [
+    "view",
+    "create_synthetic_case",
+    "save_provided_material",
+    "pause",
+    "resume"
+  ],
+  "new_fact_invention_allowed": false,
+  "model_calls_allowed": 0,
+  "physical_runs_allowed": 0
+}

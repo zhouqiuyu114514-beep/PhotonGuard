@@ -1,0 +1,140 @@
+[
+  {
+    "id": "DEV01",
+    "domain": "film",
+    "category": "complete",
+    "text": "空气两侧、正入射、无损无色散单膜。折射率 1.8，厚度 0.105 μm。实际采样波长（μm）：0.5, 0.58, 0.68。所有物理参数固定，不进行候选扫描。目标是在 0.58 μm 反射率至少 0.10。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。",
+    "resource_budget": {
+      "max_candidates": 1,
+      "max_fast_evaluations": 1,
+      "max_meep_validations": 1,
+      "max_fdtd": 8
+    },
+    "participant_kind": "SIMULATED_STATE_MACHINE"
+  },
+  {
+    "id": "DEV02",
+    "domain": "diffraction",
+    "category": "comparison",
+    "text": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"slit_separation_um\": [128.0, 160.0]}。其他参数不得改变。选择条纹周期接近 0.455 mm 的候选，绝对容差 0.025 mm。",
+    "resource_budget": {
+      "max_candidates": 2,
+      "max_fast_evaluations": 4,
+      "max_meep_validations": 0,
+      "max_fdtd": 0
+    },
+    "participant_kind": "SIMULATED_STATE_MACHINE"
+  },
+  {
+    "id": "DEV03",
+    "domain": "gaussian",
+    "category": "comparison",
+    "text": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 660 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=0 mm，当前焦距 110 mm，屏幕位置 z=110 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100.0, 110.0, 130.0]}。其他参数不得改变。选择目录中屏上半径最小的焦距。",
+    "resource_budget": {
+      "max_candidates": 3,
+      "max_fast_evaluations": 3,
+      "max_meep_validations": 0,
+      "max_fdtd": 0
+    },
+    "participant_kind": "SIMULATED_STATE_MACHINE"
+  },
+  {
+    "id": "DEV04",
+    "domain": "diffraction",
+    "category": "revision",
+    "text": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。",
+    "resource_budget": {
+      "max_candidates": 2,
+      "max_fast_evaluations": 4,
+      "max_meep_validations": 0,
+      "max_fdtd": 0
+    },
+    "participant_kind": "SIMULATED_STATE_MACHINE",
+    "parent": {
+      "id": "DEV04-parent",
+      "spec": {
+        "schema_version": 1,
+        "domain": "diffraction",
+        "context_kind": "specified",
+        "known_parameters": {
+          "aperture": "double_slit",
+          "wavelength_nm": 520,
+          "focal_length_mm": 140,
+          "slit_width_um": 32,
+          "slit_height_um": 128.0,
+          "grid_size": 256,
+          "window_mm": 0.32,
+          "slit_separation_um": 160,
+          "relative_phase_rad": 0.0
+        },
+        "parameter_sources": {
+          "aperture": {
+            "unit": "enum",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+          },
+          "wavelength_nm": {
+            "unit": "nm",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+          },
+          "focal_length_mm": {
+            "unit": "mm",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+          },
+          "slit_width_um": {
+            "unit": "um",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+          },
+          "slit_height_um": {
+            "unit": "um",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+          },
+          "grid_size": {
+            "unit": "samples",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+          },
+          "window_mm": {
+            "unit": "mm",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+          },
+          "slit_separation_um": {
+            "unit": "um",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+          },
+          "relative_phase_rad": {
+            "unit": "rad",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 520 nm，焦距 140 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 160 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"relative_phase_rad\": [0.0, 3.141592653589793]}。其他参数不得改变。改目标：只改相位，把中心相对强度降到 0.01 以下，全部几何保留。"
+          }
+        },
+        "assumptions": [],
+        "locked_parameters": [
+          "aperture",
+          "focal_length_mm",
+          "grid_size",
+          "slit_height_um",
+          "slit_separation_um",
+          "slit_width_um",
+          "wavelength_nm",
+          "window_mm"
+        ],
+        "allowed_variables": {
+          "relative_phase_rad": [
+            0.0,
+            3.141592653589793
+          ]
+        },
+        "goal": {
+          "metric": "central_intensity_ratio",
+          "operator": "maximize"
+        },
+        "resource_budget": {
+          "max_candidates": 2,
+          "max_fast_evaluations": 4,
+          "max_meep_validations": 0,
+          "max_fdtd": 0
+        },
+        "parent_task_id": null
+      },
+      "description": "先前用户确认的规格，作为修订约束上下文；不是声称已经运行过的结果。"
+    }
+  }
+]

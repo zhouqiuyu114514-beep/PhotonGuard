@@ -1,0 +1,186 @@
+{
+  "D01": {
+    "must_appear": [
+      "无需准备Python脚本",
+      "300"
+    ],
+    "must_not_appear": [],
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "D02": {
+    "must_appear": [
+      "可以确认运行",
+      "0.3"
+    ],
+    "must_not_appear": [],
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "D03": {
+    "must_appear": [
+      "膜厚",
+      "尚缺"
+    ],
+    "must_not_appear": [
+      "可以确认运行"
+    ],
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "D04": {
+    "must_appear": [
+      "膜厚",
+      "冲突"
+    ],
+    "must_not_appear": [
+      "可以确认运行"
+    ],
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "D05": {
+    "must_appear": [
+      "超出支持范围"
+    ],
+    "must_not_appear": [
+      "可以确认运行"
+    ],
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "D06": {
+    "must_appear": [
+      "真实波导",
+      "资料"
+    ],
+    "must_not_appear": [
+      "可以确认运行"
+    ],
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "D07": {
+    "must_appear": [
+      "INCONCLUSIVE",
+      "NOT_EVALUATED",
+      "保存实跑"
+    ],
+    "must_not_appear": [],
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "D08": {
+    "must_appear": [
+      "本次评测禁止新求解",
+      "SIMULATED"
+    ],
+    "must_not_appear": [],
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H01": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H02": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H03": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H04": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H05": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H06": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H07": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H08": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H09": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H10": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H11": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H12": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H13": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H14": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H15": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  },
+  "H16": {
+    "execution_status": "FROZEN_NOT_EXECUTED",
+    "maximum_new_physical_runs": 0,
+    "maximum_model_calls": 0,
+    "new_physics_success_scored": false
+  }
+}

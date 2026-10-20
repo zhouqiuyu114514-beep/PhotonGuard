@@ -1,0 +1,19 @@
+{
+  "scenario_id": "H12",
+  "split": "holdout",
+  "interaction_family": "explicit_separate_LN_example",
+  "actor_type": "SIMULATED",
+  "mode": "ln_teaching",
+  "known_material": "",
+  "unknown_facts": [],
+  "allowed_actions": [
+    "view",
+    "create_synthetic_case",
+    "save_provided_material",
+    "pause",
+    "resume"
+  ],
+  "new_fact_invention_allowed": false,
+  "model_calls_allowed": 0,
+  "physical_runs_allowed": 0
+}

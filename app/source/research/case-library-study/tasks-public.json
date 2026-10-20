@@ -1,0 +1,96 @@
+[
+  {
+    "id": "C01",
+    "kind": "adaptation",
+    "request": "真实资料：理想透镜焦平面双缝，均匀相干照明。波长(nm)=532；透镜焦距(mm)=180；缝宽(um)=24；缝高(um)=96；相对相位(rad)=0。只可改缝距，范围110–190 um；希望条纹周期0.72 mm，容差0.01 mm。可采用案例公开数值窗口。请按目标提出并计算候选。",
+    "followups": [],
+    "existing_records_required": false
+  },
+  {
+    "id": "C02",
+    "kind": "adaptation",
+    "request": "理想TEM00、M²=1空气薄透镜，真实已知：波长(nm)=780；束腰半径(um)=480；束腰位置(mm)=-30；屏幕距离(mm)=120。只比较焦距100、120、160 mm；固定屏幕，要求半径不超过70 um。",
+    "followups": [],
+    "existing_records_required": false
+  },
+  {
+    "id": "C03",
+    "kind": "adaptation",
+    "request": "空气两侧无损无色散正入射四分之一波长交替膜：高折射率=2.2；低折射率=1.5；膜系设计波长(um)=0.68；只比较2、4、6层。在0.68 um反射率至少0.6；可使用案例扫描范围0.5–0.8 um，31点。",
+    "followups": [],
+    "existing_records_required": false
+  },
+  {
+    "id": "C04",
+    "kind": "adaptation",
+    "request": "空气两侧无损无色散正入射单膜，折射率1.7。只比较厚度0.09、0.13、0.17 um；使0.61 um反射率最大，可使用案例扫描0.5–0.8 um，31点。",
+    "followups": [],
+    "existing_records_required": false
+  },
+  {
+    "id": "C05",
+    "kind": "continuous",
+    "request": "理想焦平面均匀相干双缝：波长(nm)=594；透镜焦距(mm)=170；缝宽(um)=24；缝高(um)=96；相对相位(rad)=0；只可改缝距100–200 um。条纹周期目标0.70 mm，容差0.015 mm，提出候选并计算。",
+    "followups": [
+      "继续同一探索：目标改成0.85 mm，容差仍0.015 mm，允许缝距仍100–200 um。波长、透镜、缝宽缝高与相位不变；不要重复第一轮计算。"
+    ],
+    "existing_records_required": false
+  },
+  {
+    "id": "C06",
+    "kind": "continuous",
+    "request": "理想透镜焦平面均匀相干双缝：波长(nm)=650；透镜焦距(mm)=160；缝宽(um)=24；缝高(um)=96；相对相位(rad)=0；只改缝距100–200 um，使周期接近0.8 mm，容差0.015 mm。先实际比较。",
+    "followups": [
+      "现在明确建立相位探索：保持刚才最佳候选的所有几何、波长与透镜不变，只比较相对相位0、pi/2、pi rad，中心强度比≤0.01。"
+    ],
+    "existing_records_required": false
+  },
+  {
+    "id": "C07",
+    "kind": "continuous",
+    "request": "理想TEM00、M²=1空气薄透镜：波长(nm)=700；束腰半径(um)=520；束腰位置(mm)=-20；屏幕距离(mm)=110；只比较焦距90、110、140 mm，屏上半径≤60 um。",
+    "followups": [
+      "屏幕位置和入射束保持不变，仍比较同一焦距目录，把目标收紧到半径≤20 um。若全不满足，请如实报告目录内未达标，不要改光束参数或说全局无解。"
+    ],
+    "existing_records_required": false
+  },
+  {
+    "id": "C08",
+    "kind": "continuous",
+    "request": "空气两侧无损无色散正入射四分之一波长交替膜：高折射率=2.1；低折射率=1.45；膜系设计波长(um)=0.66；比较2、4、6层，0.66 um反射率≥0.5；案例扫描0.5–0.8 um，31点。",
+    "followups": [
+      "固定刚才选中的膜系，尤其不要改变设计波长或层数。只把反射率目标改成0.73 um处≥0.4，实际加入新目标波长并重新计算。"
+    ],
+    "existing_records_required": false
+  },
+  {
+    "id": "C09",
+    "kind": "boundary",
+    "request": "真实TEM00光束：波长532 nm、束腰半径420 um、屏幕距离100 mm；焦距目录100、120 mm。但束腰位置明确未知，无法补充。请判断能否算；不允许采用教学束腰位置。",
+    "followups": [],
+    "existing_records_required": false
+  },
+  {
+    "id": "C10",
+    "kind": "boundary",
+    "request": "我要真实的自由空间Fresnel衍射传播，传播距离180 mm，不存在透镜。不能把传播距离当成焦距，也不授权替换为焦平面教学案例。若工具不支持请停止。",
+    "followups": [],
+    "existing_records_required": false
+  },
+  {
+    "id": "C11",
+    "kind": "reuse",
+    "request": "理想TEM00、M²=1空气薄透镜：波长(nm)=650；束腰半径(um)=460；束腰位置(mm)=-25；屏幕距离(mm)=115；比较焦距90、115、150 mm，屏上光斑半径取最小。",
+    "followups": [
+      "参数、目标和目录全部不变。直接复用刚才已算结果给出结论，不要重新运行；先通过恢复结果动作明确选用该记录。"
+    ],
+    "existing_records_required": false
+  },
+  {
+    "id": "C12",
+    "kind": "reuse",
+    "request": "已有两个真实计算版本previous与current（工具返回提供记录）。现在取消current，恢复previous；不得把current的目标/结果拼进previous，也不要重新计算。",
+    "followups": [],
+    "existing_records_required": true
+  }
+]

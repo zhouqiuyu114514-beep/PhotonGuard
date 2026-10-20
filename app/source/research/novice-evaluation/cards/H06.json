@@ -1,0 +1,19 @@
+{
+  "scenario_id": "H06",
+  "split": "holdout",
+  "interaction_family": "missing_band",
+  "actor_type": "SIMULATED",
+  "mode": "specified",
+  "known_material": "空间维度为1D。\n入射角为0 deg。\n相对磁导率为1。\n所有介质无损。\n所有介质各向同性。\n所有介质无色散。\n膜层数量为1。\n入射折射率为1。\n膜层折射率为2。\n出射折射率为1。\n膜厚为300 nm。\n真空波长下界为1300 nm。\n波长上界未知。\n等波长采样点数为41。\n线性介质，正入射Ex；1 Meep单位=1微米。",
+  "unknown_facts": [],
+  "allowed_actions": [
+    "view",
+    "create_synthetic_case",
+    "save_provided_material",
+    "pause",
+    "resume"
+  ],
+  "new_fact_invention_allowed": false,
+  "model_calls_allowed": 0,
+  "physical_runs_allowed": 0
+}

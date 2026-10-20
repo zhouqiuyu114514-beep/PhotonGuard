@@ -1,114 +1,133 @@
-# PhotonGuard · 光子仿真智检助手
+# PhotonGuard
 
-一个已经运行真实 Meep FDTD 的本地研究原型：把确认的薄膜任务、待检参数、独立 tmm 参考、数值敏感性检查和原始证据分开。
+**让光学实验从一句需求开始，也能带着结果继续。**
 
-**当前是 rules-only 开发版。没有调用运行时 LLM，没有完成 AI 增益实验，也不是任意 Meep 脚本的正确性认证工具。** 代码开发过程中使用 GPT，不等同于产品运行时的 AI 实验。
+AI 连续实验工作台 · 薄膜 / 高斯光束 / 双缝 · `0.2.0rc9` · GPL-2.0-or-later
 
-## 已支持
+PhotonGuard 将自然语言目标、实验条件、数值计算和后续分析组织在同一个任务中。使用者可以描述目标、导入 CSV、比较候选，再带着已保存的结果修改目标或安排下一次观测。
 
-- 一维 z 方向、Ex 正入射；空气入射/出射
-- 线性、无损、非色散、各向同性、非磁性薄膜，最多 8 层
-- 受约束 JSON 参数适配器；新增窄范围只读 Meep AST 导入预览，不执行输入 Python、shell 或模型生成代码
-- 独立确认与哈希锁定任务；参考只从任务生成，不跟随待检材料错误
-- 四组真实 Meep 参考/目标配对：原设置、网格 ×1.5、运行时间 ×2、PML ×1.5
-- 全请求频点的 tmm 对照、能量/物理边界、信号覆盖、敏感性检查
-- 明确区分 PASS / FAIL / INCONCLUSIVE / UNSUPPORTED
-- 每次最多一个受限修改、最多两轮；原证据不覆写，修改后全量重验
-- HTML / JSON / CSV、原始通量/日志与 SHA-256 清单；只读本地浏览器界面
+[下载完整项目](https://github.com/zhouqiuyu114514-beep/aic/archive/refs/heads/main.zip) · [快速开始](#快速开始) · [实际案例](#实际案例) · [视频制作](#视频制作) · [技术报告](materials/PhotonGuard_技术报告.pdf) · [展示稿](materials/PhotonGuard_项目展示.pdf)
 
-## 一分钟开始
+![PhotonGuard 工作台](materials/视频素材/首页.png)
 
-已安装环境：Linux x86_64，Meep 1.34.0 / Python 3.12.14 / tmm 0.2.0。
+## PhotonGuard 能做什么
 
-新机器先运行：
+- **从一句需求形成计算计划。** AI 整理条件与单位，工作台核对原文来源、缺项和范围，用户确认后进入计算。
+- **修改目标时保留实验条件。** 条件、计划、结果按版本保存；已有数值满足新评价要求时直接复用。
+- **让下一步建议接上工具。** AI 在允许范围内提出后续观测建议，用户批准后执行并联合分析。
+- **从已有案例或自己的数据开始。** 提供12个本地案例，支持CSV输入、结果查看与导出。
 
-```sh
-bash runtime/bootstrap.sh
+| 场景 | 设计与比较 | 数据分析 |
+|---|---|---|
+| 薄膜 | 比较层数与反射、透射结果 | 根据校准反射率和已知折射率筛选膜厚候选 |
+| 高斯光束 | 比较透镜条件与屏幕光斑 | 根据纵向光斑半径数据估计束腰参数 |
+| 双缝 | 查看几何条件与强度、条纹的关系 | 根据强度数据估计受限几何参数 |
+
+## AI 与开源工具怎样配合
+
+```mermaid
+flowchart LR
+    A[自然语言目标或CSV] --> B[AI理解条件与提出建议]
+    B --> C[PhotonGuard核对来源、约束和版本]
+    C --> D[用户确认计划]
+    D --> E[tmm / NumPy / SciPy计算]
+    E --> F[结果与下一轮实验]
+    F --> B
 ```
 
-真实薄膜基线：
+AI 通过使用者自己的 DeepSeek API 账户接入，负责理解与建议；PhotonGuard 自主实现条件核对、计划绑定、执行管理和跨轮结果复用；开源数值工具产生实际计算结果。第三方库及其职责见[资源清单](materials/开源与第三方资源使用清单.md)。
 
-```sh
-.runtime/run-python -m photonguard confirm examples/film_n2/task.json --lock examples/film_n2/task.lock.json --approve
-.runtime/run-python -m photonguard run examples/film_n2/task.json examples/film_n2/candidate.json --lock examples/film_n2/task.lock.json
-.runtime/run-python -m photonguard ui --root . --port 8765
+## 快速开始
+
+### 1. 下载完整项目
+
+在仓库上方点击 **Code → Download ZIP**，右键“全部解压”。进入解压后包含本README的目录，保留 `app/` 和 `materials/` 的完整结构。
+
+### 2. 先看已有成果
+
+双击 **打开视频素材.html**，直接浏览两份保存结果、报告和截图。这个入口无需API Key，也不会自动请求模型或计算。HTML应下载后在本机浏览器打开。
+
+### 3. 启动工作台
+
+启动器支持 **Windows x64 + Ubuntu WSL**。
+
+1. 未安装Ubuntu WSL时，双击 **首次准备环境.bat**，按提示安装、重启，再打开Ubuntu完成用户名与密码设置。
+2. 双击 **启动工作台.bat**。首次需要联网下载锁定的运行环境，后续启动复用缓存。
+3. 等待启动窗口显示成功，浏览器会自动打开工作台。真实AI在页面“连接AI”中填写自己的DeepSeek API Key。
+4. 核对计算计划并批准后执行新计算。使用结束时双击 **停止工作台.bat**。
+
+本入口目前以Windows x64与Ubuntu WSL交付；macOS、ARM Windows与无WSL的原生Windows Python不在该启动器验证范围内。已有Linux环境的使用者可参考 [源码说明](app/source/README.md) 与 `app/source/START_PORTABLE.sh`。
+
+首次依赖下载失败可检查网络后重新启动。若浏览器拒绝连接，先查看启动窗口是否成功，使用窗口给出的实际地址。更完整的说明见 [同学使用与视频指南](docs/同学使用与视频指南.md)。
+
+## 实际案例
+
+### 连续修改：850 nm达标，换到700 nm后重新判断
+
+四种薄膜候选的计算结果已经保存。用户只修改评价波长，材料、实际层厚、候选和采样点保持不变。
+
+| 评价目标 | 保存的结果 | 后续处理 |
+|---|---|---|
+| 850 nm，反射率至少75% | 8层反射率86.02%，达到目标 | 首次计算4个候选 |
+| 改为700 nm，仍至少75% | 四候选均未达标，6层最高52.73% | 复用原数值，新保存判定，新增求解0次 |
+
+下载后打开 [850 nm保存结果](materials/film-initial.html) 与 [700 nm后续结果](materials/film-followup.html)。这是同一实验的目标修改与结果复用，不是把8层器件优化成6层。原任务完成于2026-10-18，数字及调用阶段见 [主案例记录](materials/主案例采样与调用阶段核对.json)。
+
+### 安排下一次观测：膜厚候选12组收窄至1组
+
+历史教学合成任务在0–1000 nm搜索范围内，利用633 nm观测得到12组候选。AI选择后续850 nm观测，经批准取得教学数据，与原数据联合分析，保留1组约208.19 nm的候选。
+
+该案例体现补充观测与工具接续，来源为教学合成数据。详见 [历史案例记录](materials/历史12到1案例核对.json) 与技术报告第10页。
+
+## 视频制作
+
+- [4分钟分镜、旁白与来源](materials/视频制作流程.md)
+- [队友下载、启动与录制指南](docs/同学使用与视频指南.md)
+- [可编辑PPT](materials/PhotonGuard_项目展示.pptx)
+- [真实截图](materials/视频素材/) 与 [矢量流程图](materials/原创矢量图/)
+
+既定视频可使用保存结果制作，无需为录制重新付费跑旧案例。画面保留“保存记录”和“教学合成数据”等对应来源标注；真实新操作另行保存记录。录屏不展示API Key、账户资料或个人通知。正式MP4由团队完成后另行发布。
+
+## 代码与复用
+
+```text
+PhotonGuard/
+├─ README.md
+├─ LICENSE
+├─ 启动工作台.bat
+├─ 首次准备环境.bat
+├─ 停止工作台.bat
+├─ 打开视频素材.html
+├─ app/
+│  ├─ launcher/              WSL启动与环境准备
+│  └─ source/
+│     ├─ photonguard/        产品代码、页面与本地案例
+│     ├─ tests/             软件测试
+│     └─ pyproject.toml     项目依赖与入口
+├─ materials/               报告、展示、只读结果与视频资料
+└─ docs/                    使用指南与交付来源
 ```
 
-在运行机器的浏览器打开 http://127.0.0.1:8765 。界面仅绑定本机回环地址；不部署公网，不接收代码上传。使用自己的机器时需先复制项目并安装环境。
+工作台的个人任务保存在 `app/data/`，日志位于 `app/logs/`，两者均从Git上传范围排除。Key通过页面连接，不要写入代码或提交到仓库。
 
-任务确认表示操作者确认该 JSON 正确描述其意图；这不是数字签名或身份认证。示例中的确认是开发案例确认，不是假造真实用户试用。
+`app/`保留已核验运行包原字节，启动器会检查源码清单。要研究或修改代码，请在独立开发副本中按源码说明运行；不要直接修改面向试用的校验清单来绕过检查。
 
-## Meep 脚本只读导入（后续开发检查点）
+本仓库是 `0.2.0rc9` 的交付快照，源码来源提交为 `176976938f9a6d0603c4799339623227aae35c90`，材料更新于2026-10-20。本次更新接续本仓库10月5日的已有提交，维护源码来源提交记录仍单独保留。文件映射见 [交付来源](docs/交付来源.md)；保存证据的范围与软件测试批次见技术报告。
 
-```sh
-.runtime/run-python -m photonguard import-script examples/script_import/film_n2.py --out imports/film_n2
-```
+## 许可证与第三方资源
 
-这会保存原脚本字节、SHA-256、源码位置和提取预览。仅明确支持的顺序式参考/目标通量采集模板会生成 candidate.json；未知分支、调用、导入、动态数据或超范围布局直接停止。仍需独立填写并确认任务、物理单位与波段，再用现有 run 命令验证提取的规范化配方。
+项目代码采用 **GPL-2.0-or-later**，见 [LICENSE](LICENSE)。Python、NumPy、SciPy、tmm等依赖沿用各自许可；DeepSeek使用远程API服务。完整列表见 [第三方资源清单](materials/开源与第三方资源使用清单.md) 与 [第三方说明](THIRD_PARTY_NOTICE.md)。
 
-**EXTRACTED 不等于 PASS。原始 Python 从未执行；后续 PASS 只属于记录的规范化配方，修复后的 PASS 不表示原脚本通过。** 这是确定性解析器，不是 AI 意图理解或 AI 增益实验。完整支持语法、拒绝条件与来源规则见 `docs/IMPORT_LIMITATIONS.md`。既有 JSON-only v0.1 交付包及证据保持冻结。
+报告中的官方模板标识、字体及其他第三方素材按各自授权处理；代码许可证不替代这些素材的权利声明。安装环境、模型权重、个人密钥和私人实验记录不随仓库分发。
 
-## 故障 → 建议 → 确认 → 重验收
+## 团队与反馈
 
-```sh
-.runtime/run-python -m photonguard confirm examples/epsilon_mismatch/task.json --lock examples/epsilon_mismatch/task.lock.json --approve
-.runtime/run-python -m photonguard run examples/epsilon_mismatch/task.json examples/epsilon_mismatch/candidate.json --lock examples/epsilon_mismatch/task.lock.json
-# 将 RUN_ID 替换为刚才输出的实际运行编号
-.runtime/run-python -m photonguard propose artifacts/RUN_ID --out patch.json
-# 先阅读 patch.json，确认修改只恢复你要求的物理任务或数值流程
-.runtime/run-python -m photonguard apply examples/epsilon_mismatch/task.json examples/epsilon_mismatch/candidate.json patch.json --lock examples/epsilon_mismatch/task.lock.json --out repaired.json --approve
-.runtime/run-python -m photonguard run examples/epsilon_mismatch/task.json repaired.json --lock examples/epsilon_mismatch/task.lock.json
-.runtime/run-python -m photonguard verify-evidence artifacts/RUN_ID
-.runtime/run-python -m photonguard export artifacts/RUN_ID --out evidence.zip
-```
+**PhotonGuard · AIC-2026-26849458**
 
-CLI 返回码：PASS=0，FAIL=2，INCONCLUSIVE/输入错误=3，UNSUPPORTED=4。故障示例的非零退出是预期结果。
+| 成员 | 分工 |
+|---|---|
+| 周秋宇 | 需求决策、制作统筹与试用反馈 |
+| 谢烨新 | 操作测试 |
+| 曾海达 | 数据与结果核对 |
 
-## 复现全部开发案例
-
-```sh
-.runtime/run-python -m pytest -q
-.runtime/run-python -m pytest -q runtime/test_runtime.py
-.runtime/run-python benchmark/run_development.py
-```
-
-开发矩阵包含正常真空/单层/多层、合法不同停止时间、n/epsilon 错配、参考幅度错配、缺失入射场扣除、真实欠采样数值问题、意图缺失和超范围角度。全部是**公开开发案例**，不是冻结盲测集，不把频点或重复运行计作独立案例。
-
-## DeepSeek 接入状态
-
-`diagnose-api` 支持 DeepSeek 的 OpenAI 格式 JSON 输出，要求明确模型、数据/费用批准、最坏价格与预算、持久化调用账本和安全注入的密钥。默认配置 `examples/deepseek.config.template.json` 明确未批准、预算0，所以不能调用。
-
-接口及失败处理使用模拟传输测试，不是 DeepSeek 实际效果验证。目前真实 API 调用数仍为0。不要在聊天、配置文件或命令行参数里粘贴密钥。见 `docs/DEEPSEEK_BACKEND.md`。
-
-另有 `export-model` / `import-model` 辅助式模型交换接口。它保留真实请求/回答与来源，和程序 API 调用分别记账；输入不含案例名称、故障标签或标准答案。模型建议仍需批准并经过真实 Meep 重验收。
-
-## 当前仓库快照
-
-这是用于私有仓库继续开发的源码快照，包含当前只读 AST 导入器、模型适配接口、公开开发案例与必要测试。已安装运行时、历史原始日志、运行结果、模型交换记录和已有交付 ZIP 不在仓库内。依赖安装锁保持原样；在新环境中运行 `bash runtime/bootstrap.sh` 后再执行上面的测试与基线命令。
-
-此前同云主机全新目录的重装结果仅说明同主机复现，不等同于独立机器验证。历史交付包保持冻结；此仓库不把那些历史记录当作新环境已通过的证据。当前快照及检查范围见 `docs/SOURCE_SNAPSHOT.md`。
-
-## 文件与证据
-
-- `photonguard/`：任务边界、固定验收器、真实 Meep 子进程、受限修改与 CLI/UI
-- `examples/`：人工注入/正常开发案例及明确标签
-- `artifacts/<run_id>/`：每次运行单独保留原任务/候选、原始 Meep 数据、日志、报告及哈希
-- `benchmark/`：可复跑的公开开发矩阵脚本；运行后本地产生冻结清单和结果
-- `runtime/`：安装脚本、124 个包的精确 Linux 锁和运行时测试
-- `docs/`：范围、安全、第三方来源、模型接口和源码快照说明
-
-证据由应用只追加，结束后设置只读权限，清单可检测意外改动。拥有文件系统管理权限的人仍可修改文件和清单；这不是外部签名、不可篡改存储或第三方审计。
-
-## 重要限制
-
-- PASS 仅覆盖记录的离散频点、假设和容差；不保证连续整个波段或真实器件预测
-- 两档数值设置相近只说明本次敏感性较小，不证明渐近收敛
-- 当前 R/T 最大绝对误差 0.01，敏感性 0.005，是公开开发阈值，未在独立盲测集标定
-- 无吸收、色散、各向异性、斜入射、基底、二维波导或任意 Python 导入
-- 不自动寻找现有凭证；只有明确批准 API 调用后才读取专用安全环境变量，求解器子进程环境不传递凭证。DeepSeek 的 JSON API 适配、限额账本和结构化动作验收已实现；当前只做离线传输测试，尚无真实 API 调用
-- 实际 AI 调用、同模型 A0/A1 对照、真实用户试用、另一独立机器重装仍未完成
-- 提供的参考 ZIP 因下载服务 HTTP 502 未取得字节，没有检查或复用其中代码；本实现根据已完整读到的方案独立编写
-
-## 许可证与来源
-
-本项目源代码选择 GPL-2.0-or-later。Meep 是 GPL-2.0-or-later，tmm 是 MIT；项目不宣称求解器、数值方法或上游包为原创。源代码包不包含已安装运行时二进制。见 `LICENSE`、`docs/THIRD_PARTY.md` 与 `runtime/conda-linux-64.lock`。
+AI辅助研发与材料制作在技术报告中披露。反馈问题可在仓库Issues提供系统版本、操作步骤与错误信息，并先去除Key和个人数据。当前功能定型，后续以使用修整、兼容性和文档维护为主。

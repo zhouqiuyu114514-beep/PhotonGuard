@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "kind": "handwritten_mock",
+  "bundle_sha256": "43d49d677049a38b94b4285a72c67da4b2f68fc0795c79b1e59fcd8d3726ef92",
+  "fields": [
+    {
+      "path": "physics.dimensions",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-01"
+      ]
+    },
+    {
+      "path": "physics.angle_deg",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-02"
+      ]
+    },
+    {
+      "path": "physics.lossless",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-03"
+      ]
+    },
+    {
+      "path": "physics.dispersive",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-04"
+      ]
+    },
+    {
+      "path": "physics.isotropic",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-05"
+      ]
+    },
+    {
+      "path": "physics.mu",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-06"
+      ]
+    },
+    {
+      "path": "physics.n_incident",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-07"
+      ]
+    },
+    {
+      "path": "physics.n_exit",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-08"
+      ]
+    },
+    {
+      "path": "units_um",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-09"
+      ]
+    },
+    {
+      "path": "layers.0.n",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-10"
+      ]
+    },
+    {
+      "path": "layers.0.thickness_um",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-11"
+      ]
+    },
+    {
+      "path": "wavelength_um.0",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-12"
+      ]
+    },
+    {
+      "path": "wavelength_um.1",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-13"
+      ]
+    },
+    {
+      "path": "nfreq",
+      "state": "proposed",
+      "evidence_ids": [
+        "spec-14"
+      ]
+    }
+  ]
+}

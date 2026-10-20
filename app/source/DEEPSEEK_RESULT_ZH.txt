@@ -1,0 +1,61 @@
+PhotonGuard 本机 DeepSeek 首次小额联调 — 2026-10-06
+
+结果
+已完成真实API联调与经离线审阅后的独立数值复验。
+认证GET /models：HTTP 200；请求及返回模型：deepseek-flash。
+付费诊断：仅1次，HTTP 200，finish_reason=stop，耗时2.181秒。
+completion ID：b9a1c177-6100-415b-b1fc-e0648fc7833c。
+输入2155 tokens，输出216 tokens，合计2371；缓存命中0。
+按已核对的官方峰值/缓存未命中价估算：0.006038元（约0.6分），不是账户实际账单。
+当前授权上限0.28元；持久账本保留0.278528000001元预留，attempts=1。
+无重试、模型切换或追加API调用。同一启动器再次启动会在读密钥前停止。
+
+格式拒绝与审阅
+模型正确建议把第一层epsilon从2恢复到4，对应独立任务要求n=2。
+但返回JSON多了顶层type="json_object"，原严格校验器拒绝，未自动应用。
+原始返回、summary.json中的ACTION_REJECTED和账本均保留原样。
+Codex随后离线审阅，另存reviewed.action.json，仅删去type字段；
+decision、changes、rationale、evidence_ids四项内容未改。
+模型理由首句声称仅task_parameters失败不准确：4项独立TMM对照也失败；
+后文提及约0.153的TMM误差并引用这些检查。该措辞缺陷已记录，理由保留原文。
+审阅结果不是真人实验记录，不计入人工审核耗时或AI收益。
+
+受限修复与真实复验
+通过原有任务绑定、严格动作格式、引用证据、受限补丁校验，再明确批准合成案例修改。
+仅对新候选副本执行layers[0].material_value：2→4；无任务、政策、阈值或数值设置修改。
+新增8次Meep FDTD；复验结果PASS，run：20261006T020605Z-d87c87a0。
+独立TMM最大误差0.0008715755569460581，既定容差0.01。
+原FAIL run：20261006T013700Z-3f0bd552。两份证据均VERIFIED。
+原输入脚本、脚本副本、任务、task lock、原候选、API原始审计与账本哈希核验未变。
+任务哈希：760551a8b0d4a9a0844312e8680392a417a04202fa2fcefcba9fc560699eabf3。
+政策哈希：289c883ef4f0c1a2fac02ab54c92e1c76d445bcdaca9706774c167c005be9fde。
+本次属于“格式经离线审阅后的联调与修复”，不能记为完全自动修复成功或AI增益证明。
+PASS只覆盖新规范化配方、固定任务、离散频点和既定开发容差；未执行原Python脚本。
+
+本地查看
+http://127.0.0.1:8765/compare?original=20261006T013700Z-3f0bd552&repaired=20261006T020605Z-d87c87a0
+若服务已停止，在Windows运行START_LOCAL.ps1。
+Windows交付目录：C:\Users\zhou\Documents\Codex\2026-10-06\j-ji\outputs\PhotonGuard。
+WSL工作目录：/home/zhou/projects/PhotonGuard。
+
+证据
+local-validation/deepseek-live-20261006/authentication.json
+local-validation/deepseek-live-20261006/plan.json
+local-validation/deepseek-live-20261006/provider.audit.json
+local-validation/deepseek-live-20261006/response.action.json
+local-validation/deepseek-live-20261006/summary.json
+local-validation/deepseek-live-20261006/offline-review/review.json
+local-validation/deepseek-live-20261006/offline-review/result.json
+local-validation/deepseek-live-20261006/offline-review/operations.json
+local-validation/deepseek-budget.ledger.json
+local-validation/deepseek-preflight-full-tests.log（340项及13个子测试通过）
+artifacts/20261006T020605Z-d87c87a0/report.html
+
+密钥由你在交互窗口自行输入，getpass不回显；仅供该进程内存使用。
+未写入文件、环境变量、命令参数、聊天或求解器进程；输出使用脱敏审计。
+本机Git仅本地提交，无远端推送；已冻结的新交付清单与ZIP不包含.runtime或.git。
+原WSL检查点ZIP与两个附件ZIP均未改动。
+
+官方价表快照（采集时间2026-10-06，保留HTML与哈希）
+https://api-docs.deepseek.com/zh-cn/quick_start/pricing/
+https://api-docs.deepseek.com/quick_start/pricing/

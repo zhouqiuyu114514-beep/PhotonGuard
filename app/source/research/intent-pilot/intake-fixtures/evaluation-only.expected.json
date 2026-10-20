@@ -1,0 +1,31 @@
+{
+  "kind": "evaluation_only_Codex_authored_development_not_independent_holdout",
+  "complete": {
+    "all_14_fields_expected": "proposed",
+    "units_um": "1",
+    "layer_n": "2.35",
+    "thickness_um": "0.2",
+    "wavelength_um": [
+      "0.65",
+      "1.1"
+    ],
+    "nfreq": 41
+  },
+  "missing-conflict": {
+    "unknown": [
+      "layers.0.n",
+      "layers.0.thickness_um"
+    ],
+    "conflict": [
+      "wavelength_um.1"
+    ],
+    "questions_required": [
+      "layers.0.n",
+      "layers.0.thickness_um",
+      "wavelength_um.1"
+    ],
+    "script_fallback_allowed": false
+  },
+  "human_review_seconds": null,
+  "human_edit_count": null
+}

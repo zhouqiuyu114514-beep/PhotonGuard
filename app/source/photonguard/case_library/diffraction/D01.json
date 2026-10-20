@@ -1,0 +1,74 @@
+{
+  "id": "D01",
+  "version": "1.0.0",
+  "title": "单缝宽度与衍射包络",
+  "domain": "diffraction",
+  "scope": "均匀相干照明、标量近轴、理想薄透镜傅里叶焦平面；不是自由空间Fresnel传播。",
+  "tags": [
+    "单缝",
+    "中央亮区",
+    "包络",
+    "衍射"
+  ],
+  "required_parameters": [
+    "wavelength_nm",
+    "focal_length_mm",
+    "slit_height_um"
+  ],
+  "fixed_parameters": {
+    "aperture": "single_slit"
+  },
+  "numeric_defaults": {
+    "grid_size": 256,
+    "window_mm": 0.4
+  },
+  "recipe": {
+    "method": "catalog",
+    "variable": "slit_width_um"
+  },
+  "teaching": {
+    "parameters": {
+      "wavelength_nm": 633,
+      "focal_length_mm": 200,
+      "slit_width_um": 20,
+      "slit_height_um": 100
+    },
+    "goal": {
+      "metric": "first_zero_mm",
+      "operator": "near",
+      "target": 6.33,
+      "tolerance": 0.05
+    },
+    "values": [
+      16,
+      20,
+      24
+    ]
+  },
+  "variables": [
+    "slit_width_um"
+  ],
+  "metrics": [
+    "first_zero_mm"
+  ],
+  "sources": [
+    {
+      "url": "https://opticspy.github.io/lightpipes/examples.html",
+      "relation": "示例选题与工具背景；没有复制上游图像或结果",
+      "license": "BSD-3-Clause (upstream LightPipes)"
+    },
+    {
+      "url": "https://opticspy.github.io/lightpipes/YoungsExperiment.html",
+      "relation": "范围对照：该上游示例用Fresnel，本案例使用理想透镜焦平面，不宣称原例复现"
+    }
+  ],
+  "interpretation": [
+    "先核对事实和允许变量，再明确批准实际计算。",
+    "未达标仅表示这组候选未达到目标，不是全局无解。",
+    "解析提议、实际计算、独立检查分别标记。"
+  ],
+  "preview": {
+    "status": "NOT_COMPUTED",
+    "label": "尚未计算；选用后生成新计划，不展示固定答案。"
+  }
+}

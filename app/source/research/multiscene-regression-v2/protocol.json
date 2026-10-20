@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "status": "PREDECLARED_REGRESSION_V2",
+  "created_date": "2026-10-11",
+  "formal_order": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06"
+  ],
+  "budget_fallback_order": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06"
+  ],
+  "development_order": [],
+  "arms": [
+    "A",
+    "G"
+  ],
+  "alternate_arm_order": true,
+  "model": "deepseek-flash",
+  "temperature": 0,
+  "max_output_tokens": 4096,
+  "max_calls_per_formal_task_arm": 3,
+  "max_calls_per_development_task_arm": 2,
+  "max_formal_calls": 36,
+  "max_development_calls": 0,
+  "automatic_provider_retry": false,
+  "replace_failed_tasks": false,
+  "tune_on_frozen_formal_results": false,
+  "participant_kind": "SIMULATED_STATE_MACHINE",
+  "new_human_participants": 0,
+  "historical_guided_owner_participants": 1,
+  "primary_metric": "end_to_end_goal_completed",
+  "secondary_metrics": [
+    "task_judgment_completed",
+    "routing_correct",
+    "facts_preserved",
+    "constraints_preserved",
+    "clarification_correct",
+    "numeric_checks_passed",
+    "goal_metric_correct",
+    "report_consistent",
+    "design_goal_met",
+    "model_calls",
+    "physical_resources"
+  ],
+  "baseline_difference": "G receives parent-version constraint enforcement and internal feedback; A receives the same public tools, facts, goal results and common numeric/resource errors. A is audited for constraints after execution.",
+  "task_origin": "Six known-family regression cases after explicit issue diagnosis; not evidence of unseen generalization or superiority.",
+  "oracle_origin": "Separate textbook formulas in build_fixtures.py; same ideal physical theory, not independent scientific certification.",
+  "financial_rule": "Existing cumulative authorization and append-only ledger including held unknown costs govern; protocol limits are not new authorization.",
+  "stop_rule": "Budget decision made before formal batch; choose fixed 12 or fixed first 6. Mid-batch resource/provider stops remain in denominator; no replacement or automatic retry.",
+  "original_formal_scores_preserved": true
+}

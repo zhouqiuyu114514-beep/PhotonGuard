@@ -1,0 +1,46 @@
+# Local runtimes, caches, generated evidence and model exchanges
+.runtime/
+.library-helper/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+artifacts/
+imports/
+inputs/
+inputs-demo-*/
+*.log
+*.zip
+benchmark/*/
+runtime/logs/
+runtime/reproduction/
+# Local credentials, approval configurations and usage ledgers
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*secrets*.json
+*.config.json
+*.ledger.json
+patch.json
+repaired.json
+model-exchanges/
+model-audits/
+# Local verification records are delivered separately from source history
+local-validation/
+LOCAL_PROGRESS_ZH.txt
+LOCAL_CONTINUATION_MANIFEST.sha256
+DEEPSEEK_CHECKPOINT_MANIFEST.sha256
+SAFETY_CHECKPOINT_MANIFEST.sha256
+SAFETY_INTAKE_OFFLINE_MANIFEST.sha256
+INTERFACE_SOURCE_MANIFEST.sha256
+SAFETY_REMEDIATION_ZH.txt
+
+# Local graphical workflow state and verification outputs
+workflow-data/
+workflow-verification/
+
+# One authoritative development workspace and backups
+workspace-data/
+backups/

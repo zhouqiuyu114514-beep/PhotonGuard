@@ -1,0 +1,69 @@
+PhotonGuard 公共语义接口与最新版实现核对 — 2026-10-06
+
+结论
+两边都为14项，但不能直接复用旧requirements_intake.py的输入/返回格式。
+新增semantic_intake.py作为独立、仅依赖公共合同和本次可见视图的离线适配器。
+公共字段、状态、引用、合并问题、conflicts/refusal和精确十进制已对齐；
+稳定task转换仍明确blocked，不自动批准、写锁、调用模型或求解。
+本轮属于协调方的接口开发/核对，不是受测条件。今后盲测不能使用本聊天作为受测上下文。
+
+隔离与完整性
+inputs-only和coordinator-only分别解压到work下不同目录，没有把协调资产挂入项目。
+输入包SHA256：13d0ac0e9a4643889079d42a69353a46c9d6dc7487fa728d6bad9ca37db1c103。
+协调包SHA256：3e1d118c8b495a4f22beaf01fe1da085ccad4f179a2f6a769eaab87fda61a29c。
+输入清单18项、协调清单50项及清单回执均验证；两包共享的公共inputs字节一致。
+源码只加入原样公共semantic_contract.json与response.schema.json；
+没有复制评分器、labels、未发布澄清、arm提示或协调评分模板。
+协调评分器只用其schema_errors函数核对自造DEV候选返回结构，没有调用标签查询或evaluate。
+P01-P06只核验并导出原初始视图；没有为它们生成提案、标准答案、澄清或得分。
+源码/证据ZIP均交给协调审阅；其中存在历史开发测试材料，不能交给受测代理当盲测目录。
+将来受测方仅见批准的inputs-only视图与已释放澄清，需新空上下文和实际文件访问隔离。
+本轮没有建立或声称已经完成受测运行隔离。
+
+关键不兼容
+公共layer_count无旧14路径对应；保留显式sidecar，不丢弃、不由第一层推断。
+旧units_um不在公共14键内；不从支持范围或脚本默认为1。它是待冻结的实现尺度配置，
+不是自动新增给受测方的独立物理意图问题，也不改写公共格式。
+nondispersive与physics.dispersive布尔方向相反，仅在明确proposed时逻辑取反；未知仍null。
+公共wavelength_samples表示闭区间等距波长；native nfreq是等距频率点数。
+点数相同不意味着同一扫描，nfreq投影只记录count-only且标记网格不兼容。
+公共nm/um/µm/μm/m与旧nm/um/mm集合不同；新规范化精确换算，不把mm扩入公共合同。
+公共允许数值字符串和128位有效系数；旧提案数值/float与Decimal默认精度不足以无损承接。
+新适配器采用系数/指数位移，不做float转换或容差比较；规范化碰到声明的指数边界时保留原单位。
+公共提问可合并多个targets、允许整体OUT_OF_SCOPE保留其他已知事实；
+旧接口逐path提问且拒绝超范围proposed值，不能照搬。
+公共documents无旧kind字段，不能把所有文档强行标成independent_spec。
+新接口只验证引用确实位于本次可见视图；意图来源、修订覆盖权和文本蕴含仍待独立语义审核。
+native只接受空气半空间、有限n/厚度/谱段与3..201频点；公共合同未逐项声明同样数值边界。
+完整逐项表和旧字段定义见interface_mapping.json。
+
+新接口行为
+只接受公共合同的封闭schema，不接受approved、task_lock、命令或旧字段别名。
+proposed要求可见引用和正确类型/单位；unknown/conflict/unsupported必须value/unit均为null。
+冲突须保留双方引用和conflicts声明；问题targets允许合并，拒绝遗漏必要追问。
+OUT_OF_SCOPE保留其他已知提案与拒绝理由，不把超范围要求改为支持范围。
+调用方必须单独提供协调发布的expected-input-sha256；不能采用候选自报的新hash来接纳伪澄清。
+哈希证明视图一致性，不认证调用方身份；协调方批准视图和文件访问隔离仍是运行门槛。
+输出为规范化公共响应和只读的partial projection，不是旧提案、原始供应商响应或可执行task。
+新适配器没有API客户端、真实密钥入口、评分答案入口、任务批准/确认和求解入口。
+
+离线验证
+新增14项测试；研究接口合计44项通过。覆盖布尔反向映射、未知保留、合并追问、冲突双方、
+封闭键、伪批准、引用与未发布文档、过期hash、精确长小数、指数边界、单位别名及旧格式拒绝。
+6份初始视图导出与原输入对象完全相同。自造DEV候选导入后通过协调评分器的公共schema检查；
+伪批准候选以退出码3拒绝且未创建输出目录。DEV候选仅结构构造，不能记为模型结果或题目答案。
+稳定photonguard/源码、政策、账本与原模型/物理证据未改动；没有重跑仿真。
+原375项应用/运行时测试与13个子测试记录属于前一版，本轮没有冒充重新运行。
+新增模型调用0、API费用0、求解器调用0。无AI收益、模型表现或真人工时结论。
+
+协调方下一门槛
+核对并冻结本次映射和工具版本，明确比较是公共语义录入任务还是还包含稳定task转换。
+前者仍需原文语义、修订权与澄清评分冻结；后者先解决尺度配置、扫描网格、范围与数值表示。
+R0继续使用完整现有规则工具，不能以自然语言解析缺失为由强行将其结果设为0。
+模型/参数/次数/费用/发送许可、arm运行顺序、真人记录和受测隔离尚未冻结，本轮不开测。
+
+离线命令（Ubuntu，expected hash必须由协调方独立发布）
+cd /home/zhou/projects/PhotonGuard/research/intent-pilot
+../../.runtime/run-python -B semantic_intake.py export --view VISIBLE_VIEW.json --expected-input-sha256 TRUSTED_HASH --out NEW_EXPORT_DIR
+../../.runtime/run-python -B semantic_intake.py import --view VISIBLE_VIEW.json --expected-input-sha256 TRUSTED_HASH --candidate CANDIDATE.json --out NEW_RECEIPT_DIR
+../../.runtime/run-python -B -m unittest -v test_intent_pilot test_export_task_draft test_requirements_intake test_semantic_intake

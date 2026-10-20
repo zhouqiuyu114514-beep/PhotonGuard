@@ -1,0 +1,19 @@
+{
+  "scenario_id": "D07",
+  "split": "development",
+  "interaction_family": "saved_mode_not_design_pass",
+  "actor_type": "SIMULATED",
+  "mode": "replay_mode",
+  "known_material": "",
+  "unknown_facts": [],
+  "allowed_actions": [
+    "view",
+    "create_synthetic_case",
+    "save_provided_material",
+    "pause",
+    "resume"
+  ],
+  "new_fact_invention_allowed": false,
+  "model_calls_allowed": 0,
+  "physical_runs_allowed": 0
+}

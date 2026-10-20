@@ -1,0 +1,43 @@
+下一轮：独立需求录入与缺项追问（离线接口已实现，模型测试未执行）
+
+按用户选择，已使用两份新合成材料跑通真实离线CLI工作流：
+完整材料导入14项手写模拟建议，状态REVIEW_REQUIRED；
+缺值/单位/冲突材料保留3项null并输出3条具体追问，状态CLARIFICATION_REQUIRED。
+脚本值回填和过期哈希均受控拒绝，且不创建结果目录。
+操作日志、回执及输入SHA256见local-validation/intake-offline-20261006。
+两份*.handwritten-offline-mock.json由Codex手写，并非模型输出；模型/求解器调用均为0。
+
+输入改为独立需求原文和行号，不提供作者预先标注的facts、期望字段状态、标准补丁或参考谱。
+新增requirements_intake.py可导出待发送请求，或导入已取得的结构化提案进行离线审核。
+其自身无网络、密钥、账本、模型调用、批准、任务锁或Meep入口。
+不要把该提案塞入旧故障diagnose-api；需专门的需求录入适配器和新调用授权。
+
+两个准备材料
+intake-fixtures/complete.input.json：散落在原文中的完整单层需求，含显式单位换算。
+intake-fixtures/missing-conflict.input.json：缺折射率、厚度缺单位、波段上限两份资料冲突，
+并含不同脚本观察和“直接采用脚本值”的资料内指令。正确行为是留空并提出具体追问。
+使用n=2.35、厚度200nm等新需求，不重复epsilon=2故障诊断。
+这些是Codex编写的开发材料，不是独立作者的盲测集；不能据此声称AI增益。
+输入中没有隐藏答案；评分所需预期路径另保存在evaluation-only.expected.json，不得发送。
+素材及预期哈希需在看模型输出之前冻结。引用匹配只证明原文位置存在，不能证明提取值正确。
+
+离线用法（Ubuntu项目目录）
+cd research/intent-pilot
+../../.runtime/run-python -B requirements_intake.py export intake-fixtures/complete.input.json --out ../../local-validation/intake-complete-NEW
+../../.runtime/run-python -B requirements_intake.py export intake-fixtures/missing-conflict.input.json --out ../../local-validation/intake-missing-NEW
+../../.runtime/run-python -B requirements_intake.py import intake-fixtures/missing-conflict.input.json --response MODEL_RESPONSE.json --out ../../local-validation/intake-review-NEW
+../../.runtime/run-python -B -m unittest -v test_requirements_intake
+
+对照与评分（真实试验尚待开展）
+R：现有完整规则工具、任务模板、AST观察、中文确认说明；M：同工具同原文加模型建议。
+两组必须获得相同澄清资料，不能隐藏规则已有功能；不能将R的自动提取量强行记为0。
+先冻结独立作者的新输入、标准答案、问题及回答、模型/提示、次数/费用/时间上限。
+先分别记录原始提案字段正确率、遗漏缺项/冲突数、无独立来源填值数、追问覆盖与语义质量。
+再记录实际人工修改/审核/确认；耗时与编辑数只有真人参与时才填，否则为null。
+错误批准、拒答、超时和格式拒绝都计入分母；安全停顿单列，不删除失败题、不改答案。
+两项只能检验接口和发现问题，不证明统计显著提升。独立作者材料和真人记录仍待取得。
+
+追加调用边界
+既有0.28元/1次授权已消耗，账本和旧session原样保留；本次修复新增模型调用0、费用0。
+历史20元记录不扩大授权。取得新的明确次数/人民币上限与数据发送授权后，才准备
+专用有界传输、隐藏密钥输入和新授权的预算记录；不得重置旧账本或换路径绕过旧上限。

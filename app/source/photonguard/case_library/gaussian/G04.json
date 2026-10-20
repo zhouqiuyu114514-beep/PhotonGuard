@@ -1,0 +1,69 @@
+{
+  "id": "G04",
+  "version": "1.0.0",
+  "title": "目标更严格，目录内没有方案",
+  "domain": "gaussian",
+  "scope": "空气、TEM00、M²=1、一片理想薄透镜；已知束腰半径和位置，半径为1/e²强度半径。",
+  "tags": [
+    "更严格",
+    "未达标",
+    "无方案",
+    "不能达到",
+    "高斯"
+  ],
+  "required_parameters": [
+    "wavelength_nm",
+    "waist_radius_um",
+    "waist_z_mm",
+    "screen_distance_mm"
+  ],
+  "fixed_parameters": {},
+  "numeric_defaults": {
+    "z_max_mm": 250
+  },
+  "recipe": {
+    "method": "catalog",
+    "variable": "focal_length_mm"
+  },
+  "teaching": {
+    "parameters": {
+      "wavelength_nm": 633,
+      "waist_radius_um": 500,
+      "waist_z_mm": 0,
+      "focal_length_mm": 100,
+      "screen_distance_mm": 100
+    },
+    "goal": {
+      "metric": "screen_radius_um",
+      "operator": "<=",
+      "target": 20
+    },
+    "values": [
+      100,
+      150,
+      200
+    ]
+  },
+  "variables": [
+    "focal_length_mm"
+  ],
+  "metrics": [
+    "screen_radius_um"
+  ],
+  "sources": [
+    {
+      "url": "https://opticspy.github.io/lightpipes/examples.html",
+      "relation": "示例选题与工具背景；没有复制上游图像或结果",
+      "license": "BSD-3-Clause (upstream LightPipes)"
+    }
+  ],
+  "interpretation": [
+    "先核对事实和允许变量，再明确批准实际计算。",
+    "未达标仅表示这组候选未达到目标，不是全局无解。",
+    "解析提议、实际计算、独立检查分别标记。"
+  ],
+  "preview": {
+    "status": "NOT_COMPUTED",
+    "label": "尚未计算；选用后生成新计划，不展示固定答案。"
+  }
+}

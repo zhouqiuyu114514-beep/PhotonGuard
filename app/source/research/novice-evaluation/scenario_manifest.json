@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "record_type": "SIMULATED_STATE_MACHINE_PROTOCOL",
+  "baseline_source": "2242725fa445631e9784fb90bb405146c8f96e3a",
+  "scenario_count": 24,
+  "development_count": 8,
+  "holdout_count": 16,
+  "independent_human_samples": 0,
+  "independent_physical_cases_claimed": false,
+  "scoring_scope": "UI and state regression only; no new solver, no model",
+  "holdout_execution": "NOT_AUTHORIZED_BY_THIS_FREEZE; leave frozen until designated evaluation phase",
+  "items": [
+    {
+      "scenario_id": "D01",
+      "split": "development",
+      "family": "teaching_no_script",
+      "card_sha256": "ec594b28d624934f34060443849403c66efa67375ecfc8c8a57e382482c839ee"
+    },
+    {
+      "scenario_id": "D02",
+      "split": "development",
+      "family": "specified_mixed_units",
+      "card_sha256": "368b4d5d2d95d7538e496de560710009748300bad6c839cde7df7d4b4b4d45bc"
+    },
+    {
+      "scenario_id": "D03",
+      "split": "development",
+      "family": "missing_thickness",
+      "card_sha256": "77a86f72930150772218ed2432e0b612489fd88605a4c5652cd0c6153fff57bf"
+    },
+    {
+      "scenario_id": "D04",
+      "split": "development",
+      "family": "conflicting_thickness",
+      "card_sha256": "f24c9f819b5b54e8185cf896aa528ea63ed211a7c09a217eb2bf5f812a952bbb"
+    },
+    {
+      "scenario_id": "D05",
+      "split": "development",
+      "family": "unsupported_absolute_efficiency",
+      "card_sha256": "98c0a4caa3229fd0e9c28b5a87af5b84670f802782bf9bd84cba9fe70209a0fc"
+    },
+    {
+      "scenario_id": "D06",
+      "split": "development",
+      "family": "real_LN_unknown_axes",
+      "card_sha256": "f5f482fcf1b90f6f88810cc037c9539d7c6634a1804b5942c6c6a520bae49c8d"
+    },
+    {
+      "scenario_id": "D07",
+      "split": "development",
+      "family": "saved_mode_not_design_pass",
+      "card_sha256": "424a3f9f0807491c1e45f087bc76f7851a35eb1017151d1f542b2afaa6934256"
+    },
+    {
+      "scenario_id": "D08",
+      "split": "development",
+      "family": "offline_approval_and_repeat",
+      "card_sha256": "c3264721d3f8897c5eccdc9f3936601f9f535f6ed0a12f2694eff519e47c7929"
+    },
+    {
+      "scenario_id": "H01",
+      "split": "holdout",
+      "family": "teaching_pause_resume",
+      "card_sha256": "a29316d40974360a7b372432888c8815708fa7350e59ec24816556441aa86129"
+    },
+    {
+      "scenario_id": "H02",
+      "split": "holdout",
+      "family": "saved_film_export",
+      "card_sha256": "60e860e06c23eda40c6ba5d6948ef92eaabc2497012f4466327abefdc3d5e352"
+    },
+    {
+      "scenario_id": "H03",
+      "split": "holdout",
+      "family": "specified_distinct_model",
+      "card_sha256": "1a127369d1e3c1359fad42e0701a6a1abaf08c4775cbb6467e10a3a410aefae0"
+    },
+    {
+      "scenario_id": "H04",
+      "split": "holdout",
+      "family": "reversed_complete_model",
+      "card_sha256": "8bafb66042b8065b4c1c5d4bccb2b6c47e30dfe3e763e2034731b40be87251c4"
+    },
+    {
+      "scenario_id": "H05",
+      "split": "holdout",
+      "family": "missing_index",
+      "card_sha256": "f09316fae181e60af3231dfb48747a1eddf0ffef14f1d41e32a24fa598922fc0"
+    },
+    {
+      "scenario_id": "H06",
+      "split": "holdout",
+      "family": "missing_band",
+      "card_sha256": "de8dd5538bc3d41b376a497cd31235512df21012b1d792dc0f512f6080c514cb"
+    },
+    {
+      "scenario_id": "H07",
+      "split": "holdout",
+      "family": "conflicting_index",
+      "card_sha256": "6f8abe41967f870a661e66f15d2df1fc66f919835fef60e8d1593aab96ae9ec1"
+    },
+    {
+      "scenario_id": "H08",
+      "split": "holdout",
+      "family": "conflicting_sampling",
+      "card_sha256": "9acf59f36647e1b13e32b81b48cbafdd5edf9d72fe9dd27d3e7c283e3e13bc1f"
+    },
+    {
+      "scenario_id": "H09",
+      "split": "holdout",
+      "family": "unsupported_angle",
+      "card_sha256": "bc725f8e35853afcb445f3e59d62f3ef1a1ba8ce14c75d26faba6edf6ac6a853"
+    },
+    {
+      "scenario_id": "H10",
+      "split": "holdout",
+      "family": "unsupported_loss",
+      "card_sha256": "4d363b54e9a00b048e562b168a0bccd42e963af556002343f59af93650842f1d"
+    },
+    {
+      "scenario_id": "H11",
+      "split": "holdout",
+      "family": "LN_missing_geometry",
+      "card_sha256": "504bc69008ee18f9aba03c2a36e46d248b00a9b804aa37501fe4f44531ef6cca"
+    },
+    {
+      "scenario_id": "H12",
+      "split": "holdout",
+      "family": "explicit_separate_LN_example",
+      "card_sha256": "fbb6e62a62d8a1e130aba239f04b84842dc08d95d13522f10d6cbafd11f5495f"
+    },
+    {
+      "scenario_id": "H13",
+      "split": "holdout",
+      "family": "mode_pass_scope",
+      "card_sha256": "7482e4371292e967f3d63ae4a4cc9b27cdf08c9f040e405c791ca1d6e32124bc"
+    },
+    {
+      "scenario_id": "H14",
+      "split": "holdout",
+      "family": "archived_runtime_label",
+      "card_sha256": "379d4251b9551e2baa6ca7de5a9b30db823dec25926798fddf628364294a55b7"
+    },
+    {
+      "scenario_id": "H15",
+      "split": "holdout",
+      "family": "stale_approval",
+      "card_sha256": "c23192276af6abdc94484fb2e832ef0bb26ae65ab6a63e6cf16b9060f550f728"
+    },
+    {
+      "scenario_id": "H16",
+      "split": "holdout",
+      "family": "wrong_service_mode",
+      "card_sha256": "04b60b8ab60ea5d67d2b99a5bf4837be9baa113e2583fa612a50534d2a8feb00"
+    }
+  ],
+  "private_truth_sha256": "79d150c6a054f0c464f6aad51f86339158fab7dbbeaa9cf8d7ad2786f53c7973",
+  "information_boundary": "Simulator receives only its card and visible DOM. Product receives only submitted material. Scorer runs separately after trajectories."
+}

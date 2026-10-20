@@ -1,0 +1,12 @@
+{
+  "schema": "photonguard.offline-inverse.v1",
+  "settings": {
+    "model": "single_film_known_index_v1",
+    "fixed": {"film_index": 2.0, "incident_index": 1.0, "substrate_index": 1.0, "incidence_deg": 0.0, "lossless": true, "layer_order": "incident/film/substrate", "calibrated_reflectance": true},
+    "bounds": {"thickness_nm": [0.0, 1000.0]},
+    "loss": "linear", "f_scale": 1.0, "registration": "SHARED_REGISTERED",
+    "weighting": "EQUAL_DATASET_TRAINING_COUNT", "scale": 0.001, "scale_source": "DECLARED_NUMERICAL_SCALE"
+  },
+  "source": {"source_kind": "SYNTHETIC_TEACHING", "source_name": "Public RC7 teaching example; disclosed generator, not a blind test", "license": "GPL-2.0-or-later"},
+  "constraints": {"wavelengths_nm": [633.0, 660.0, 780.0]}
+}

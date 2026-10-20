@@ -1,0 +1,350 @@
+{
+  "version": "0.2.0rc9",
+  "status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
+  "claims": [
+    {
+      "id": "user_task_integration",
+      "user_function": "目标/数据/教学入口，主建议、结果优先和显式连续补采分析计划",
+      "own_implementation": "可解释任务路由、模型短编号选主建议、纯摘要、组合已有操作的有限计划和变更失效",
+      "upstream": [
+        "DeepSeek API optional",
+        "existing NumPy/SciPy/tmm tools"
+      ],
+      "evidence": [
+        "photonguard/experiments/task_entry.py",
+        "photonguard/experiments/task_flow.py",
+        "photonguard/experiments/task_view.py",
+        "tests/test_user_tasks.py"
+      ],
+      "evidence_kind": "product_task_integration_with_explicit_plan_approval",
+      "scope": "三类有界光学任务；教学补采仅限已明确选择的冻结对象",
+      "prohibited_inference": "跨领域自主科研、自动真实测量、模拟操作者等于真人、提示改进后覆盖先前失败或宣称普遍AI优势"
+    },
+    {
+      "id": "host_bound_partial_research_advice",
+      "user_function": "AI 整理研究条件、引用证据并准备可核对的下一步计划",
+      "own_implementation": "单一类型合同、不可覆盖请求记录、原子条件补丁、逐建议验证、主机依赖门和步骤回执",
+      "upstream": [
+        "DeepSeek API optional",
+        "existing optical tools"
+      ],
+      "evidence": [
+        "photonguard/experiments/advice_contract.py",
+        "photonguard/experiments/research_advice.py",
+        "photonguard/experiments/research_steps.py",
+        "tests/test_research_advice.py"
+      ],
+      "evidence_kind": "product_receiver_and_independent_execution_approval",
+      "scope": "部分可用单独记录；模型提议、程序核对、操作者批准分开",
+      "prohibited_inference": "局部通过等于整条研究成功、开发操作者等同真人、离线复核替换原始成绩"
+    },
+    {
+      "id": "finite_paired_tradeoffs",
+      "user_function": "表达关注项、保护项与移动成本，查看基础方案和条件备选",
+      "own_implementation": "同候选同假设配对、保护项检查、净收益门槛和硬成本限制",
+      "upstream": [
+        "NumPy",
+        "existing goal_design information"
+      ],
+      "evidence": [
+        "photonguard/experiments/decision_preferences.py",
+        "tests/test_decision_preferences.py"
+      ],
+      "evidence_kind": "bounded_policy_implementation_and_rule_tests",
+      "scope": "局部预测代理；缺少独立噪声依据时保留基础方案",
+      "prohibited_inference": "保证真实误差不增加或普遍优于固定扫描"
+    },
+    {
+      "id": "single_frequency_contrast_calibration",
+      "user_function": "已知单频参照加独立暗场，估计该频率的对比传递",
+      "own_implementation": "输入适用性检查、小型线性拟合、原始资料绑定、根任务累计额度和非唯一性教学",
+      "upstream": [
+        "NumPy linear algebra"
+      ],
+      "evidence": [
+        "photonguard/experiments/contrast_calibration.py",
+        "tests/test_contrast_calibration.py",
+        "examples/inverse/single_frequency_calibration.py"
+      ],
+      "evidence_kind": "bounded_synthetic_reference_and_product_integration",
+      "scope": "CONTRAST_AT_FREQUENCY；共同配置和线性响应来自输入声明",
+      "prohibited_inference": "完整PSF、任意模糊核、缝宽认证、置信区间或真人仪器校准"
+    },
+    {
+      "id": "three_domains_twelve_cases",
+      "user_function": "三场景十二案例入口 /experiments",
+      "own_implementation": "案例检索、适配、计划与结果连接",
+      "upstream": [
+        "tmm",
+        "LightPipes / NumPy",
+        "Meep optional"
+      ],
+      "evidence": [
+        "photonguard/case_library",
+        "photonguard/experiments/case_catalog.py"
+      ],
+      "evidence_kind": "executable_product",
+      "scope": "受限理想模型",
+      "prohibited_inference": "任意器件设计"
+    },
+    {
+      "id": "continuous_v4",
+      "user_function": "双缝和高斯真实连续实验",
+      "own_implementation": "事实、约束、版本、公开回执与独立批准",
+      "upstream": [
+        "DeepSeek API",
+        "optical tools"
+      ],
+      "evidence": [
+        "evidence/v4-integration/event-audit.json",
+        "examples/saved/diffraction",
+        "examples/saved/gaussian"
+      ],
+      "evidence_kind": "real_api_and_real_solver_with_fixed_synthetic_user",
+      "scope": "两已知任务族；R/S 最终均2/2，提前compute拦截R2/S0",
+      "prohibited_inference": "普遍准确率、成本、求解量优势；共有能力称S独有"
+    },
+    {
+      "id": "rescore_restore",
+      "user_function": "零新增求解重评与精确恢复",
+      "own_implementation": "同采样结果复用、版本和哈希绑定",
+      "upstream": [
+        "saved numerical arrays"
+      ],
+      "evidence": [
+        "photonguard/experiments/result_reuse.py",
+        "examples/saved/diffraction"
+      ],
+      "evidence_kind": "saved_real_results",
+      "scope": "同配置同采样判据变更；两臂共用",
+      "prohibited_inference": "将阈值调整说成物理改善"
+    },
+    {
+      "id": "specific_brief",
+      "user_function": "针对当前结果的五类说明和只读HTML",
+      "own_implementation": "result_brief、同源摘要、确定性数值与焦点",
+      "upstream": [
+        "saved result data"
+      ],
+      "evidence": [
+        "photonguard/experiments/report.py",
+        "photonguard/experiments/summary_html.py"
+      ],
+      "evidence_kind": "deterministic_readonly_derivation",
+      "scope": "当前有限候选与版本",
+      "prohibited_inference": "自由光学问答准确率或新增求解"
+    },
+    {
+      "id": "guided_trial",
+      "user_function": "历史所有者引导使用",
+      "own_implementation": "界面与操作反馈",
+      "upstream": [
+        "project owner"
+      ],
+      "evidence": [
+        "evidence/history-index.json"
+      ],
+      "evidence_kind": "one_owner_guided_trial",
+      "scope": "1人，未新增",
+      "prohibited_inference": "人群研究或代理录屏当真人"
+    },
+    {
+      "id": "ln_archive",
+      "user_function": "历史固定模型证书只读入口 /research-certificate",
+      "own_implementation": "特定模型排除证书与独立复核",
+      "upstream": [
+        "MPB",
+        "numerical/math tools"
+      ],
+      "evidence": [
+        "photonguard/research_archive",
+        "docs/COMPETITION_ROUTE_ZH.md"
+      ],
+      "evidence_kind": "historical_research",
+      "scope": "特定周期模型，相位因子",
+      "prohibited_inference": "转换效率或全部器件验证"
+    },
+    {
+      "id": "denominators",
+      "user_function": "独立记录模型、求解与回归资源",
+      "own_implementation": "请求收据、执行资源与软件检查",
+      "upstream": [
+        "provider usage",
+        "test runner"
+      ],
+      "evidence": [
+        "evidence/v4-integration/event-audit.json",
+        "evidence/rc1-checks.json"
+      ],
+      "evidence_kind": "measured_separate_populations",
+      "scope": "不合并批次；无自由解释准确率",
+      "prohibited_inference": "测试条数等同AI成绩"
+    },
+    {
+      "id": "schema_audit",
+      "user_function": "旁注schema统计更正",
+      "own_implementation": "独立读取原响应判定，保留旧文档",
+      "upstream": [
+        "V4 frozen artifacts"
+      ],
+      "evidence": [
+        "evidence/commentary-count-addendum.json"
+      ],
+      "evidence_kind": "posthoc_readonly_audit",
+      "scope": "每条响应schema_errors非空；10/20，值标记0",
+      "prohibited_inference": "10次物理错误或篡改历史计数"
+    },
+    {
+      "id": "bounded_observation_journey",
+      "user_function": "一维双缝 CSV → 有界估计 → 明确采用估计 → 正向核对与新目标 → 全任务链导出",
+      "own_implementation": "原始数据/单位/来源与计划绑定、累计拟合额度、诊断呈现、MODEL_ESTIMATE 来源和现有版本衔接",
+      "upstream": [
+        "SciPy least_squares",
+        "NumPy",
+        "existing FFT tools",
+        "DeepSeek optional"
+      ],
+      "evidence": [
+        "photonguard/experiments/observations.py",
+        "photonguard/experiments/inference.py",
+        "photonguard/experiments/observation_workflow.py",
+        "photonguard/observation_library",
+        "tests/test_observation_analysis.py"
+      ],
+      "evidence_kind": "bounded_numerical_and_workflow_validation_with_synthetic_observations",
+      "scope": "已知波长/焦距/缝宽、相位0、等宽双缝理想傅里叶焦平面；仅4个未知量",
+      "prohibited_inference": "实测精度、全局唯一、通用反演、LLM 拟合算法原创或相较普通 AI 的普遍优势"
+    },
+    {
+      "id": "source_bound_data_wizard",
+      "user_function": "原话形成拟合草稿、数值建议来源分离、当前结果解释、计划阶段输出预算和明确选候选",
+      "own_implementation": "窄字段与原话来源适配、单配方训练点配置、版本与累计预算衔接；模型只提字段与焦点",
+      "upstream": [
+        "DeepSeek API",
+        "existing SciPy and FFT tools"
+      ],
+      "evidence": [
+        "photonguard/experiments/observation_dialogue.py",
+        "photonguard/experiments/inference_report.py",
+        "tests/test_observation_wizard.py",
+        "research/observation-review-20261012/SOURCE.json"
+      ],
+      "evidence_kind": "real_provider_developer_journeys_and_known_offline_regressions",
+      "scope": "有限双缝观测字段；已知合成资料，自动操作者",
+      "prohibited_inference": "普遍自然语言理解、真实仪器精度、自由故障诊断、6次ACCEPTED等于AI增益"
+    },
+    {
+      "id": "bounded_inverse_acquisition",
+      "user_function": "宽距联合反演、参数候选、有限补采、联合数据与高斯束腰反演",
+      "own_implementation": "参数角色/来源与计划绑定、独立教学对象、共享预算、局部候选呈现和现有正向工具衔接",
+      "upstream": [
+        "SciPy least_squares",
+        "NumPy",
+        "existing Gaussian ABCD / FFT",
+        "DeepSeek API optional"
+      ],
+      "evidence": [
+        "photonguard/experiments/inverse_models.py",
+        "photonguard/experiments/observation_group.py",
+        "tests/test_inverse_journeys.py",
+        "research/inverse-study-20261012/run.py"
+      ],
+      "evidence_kind": "bounded_numerical_comparison_and_real_provider_developer_integration",
+      "scope": "两个明确理想模型；最多三次扫描、有限网格与候选；教学和合成研究",
+      "prohibited_inference": "全局唯一、严格置信区间、实测精度、普遍最优采集或LLM优势"
+    },
+    {
+      "id": "goal_directed_acquisition",
+      "user_function": "按研究目标比较双缝/高斯有限补采模板，以及已知折射率单层膜的补测波长",
+      "own_implementation": "研究目标与原话绑定、有限候选与局部灵敏度、成本与风险呈现、冻结教学对象、联合观测和累计限额",
+      "upstream": [
+        "SciPy least_squares/minimize_scalar",
+        "NumPy SVD",
+        "tmm",
+        "DeepSeek optional"
+      ],
+      "evidence": [
+        "photonguard/experiments/goal_design.py",
+        "photonguard/experiments/film_inverse.py",
+        "tests/test_goal_design.py",
+        "tests/test_film_inverse.py",
+        "research/goal-design-20261012/run.py"
+      ],
+      "evidence_kind": "frozen_small_numerical_development_comparison_and_real_provider_integration",
+      "scope": "有限理想模型和模板；目标预测尺度不是置信区间；单层膜仅厚度待估",
+      "prohibited_inference": "优于固定基线、全局唯一、实测精度、模型失配必被发现或LLM数值增益"
+    },
+    {
+      "id": "baseline_and_stability_comparison",
+      "user_function": "比较有来源的基础方案与有限局部方案，说明选择原因和公开假设下的稳定性",
+      "own_implementation": "基线约束核对、逐参数指标、三种公开规划假设、保守选择规则和可选局部探索",
+      "upstream": [
+        "existing NumPy/SciPy inverse models"
+      ],
+      "evidence": [
+        "photonguard/experiments/baseline_design.py",
+        "tests/test_baseline_design.py",
+        "research/rc7-design-20261013/run.py"
+      ],
+      "evidence_kind": "executable_product_and_bounded_numerical_development",
+      "scope": "有限合法候选与声明条件；旧四例追加固定菜单仍选medium，保留负面证据",
+      "prohibited_inference": "严格保证不劣、普遍优于固定方案、将预测尺度当实际误差或混合重复当独立任务"
+    },
+    {
+      "id": "declared_observation_and_residual_contracts",
+      "user_function": "声明观测方式与噪声协议，使用有来源的已知强度平均核，保留需要校准的判断",
+      "own_implementation": "物理坐标有限核计算、均方误差与独立噪声协议分离、采集ID和重复/分片检查、适用性说明",
+      "upstream": [
+        "NumPy",
+        "SciPy least_squares"
+      ],
+      "evidence": [
+        "photonguard/experiments/observation_contract.py",
+        "photonguard/experiments/inverse_models.py",
+        "photonguard/experiments/inverse_profiles.py",
+        "tests/test_observation_contract.py",
+        "research/rc7-observation-20261013/run.py"
+      ],
+      "evidence_kind": "contract_regression_and_bounded_synthetic_observation_research",
+      "scope": "有限已校准强度平均核；保留旧权重和输出；单频局部A/B混淆允许无法判别",
+      "prohibited_inference": "由低残差排除模糊、自由识别PSF、任意相干像差反演、未知实测数据自动具有真实sigma或置信区间"
+    },
+    {
+      "id": "source_bound_research_actions",
+      "user_function": "建议澄清、基础方案、补采、校准、继续分析或停止，并整理受限单膜原话条件",
+      "own_implementation": "公开状态绑定的研究动作合同、版本/事实/结果引用、动作前置条件验证和独立批准",
+      "upstream": [
+        "DeepSeek API optional",
+        "existing bounded optical tools"
+      ],
+      "evidence": [
+        "photonguard/experiments/research_actions.py",
+        "photonguard/experiments/inverse_report.py",
+        "tests/test_research_actions.py"
+      ],
+      "evidence_kind": "implemented_source_bound_suggestions_and_contract_tests",
+      "scope": "现有三类受限反向任务；模型不负责数值评分，不替用户批准计算，不增加未允许波长",
+      "prohibited_inference": "新增AI比较成绩或普遍组织能力优势、自动诊断真实仪器问题、模型批准等同用户批准"
+    },
+    {
+      "id": "offline_inverse_reuse",
+      "user_function": "三个无UI无Key脚本：双缝方案比较、高斯5点补采联合估计、允许波长目录内的膜厚消歧",
+      "own_implementation": "薄稳定调用入口、公开状态策略接口、统一坐标验证、累计额度、原始输入和结果哈希",
+      "upstream": [
+        "NumPy",
+        "SciPy",
+        "tmm"
+      ],
+      "evidence": [
+        "photonguard/experiments/reuse.py",
+        "photonguard/experiments/reuse_cli.py",
+        "examples/inverse/README.md",
+        "examples/inverse/data",
+        "tests/test_inverse_reuse.py"
+      ],
+      "evidence_kind": "three_actual_offline_public_teaching_workflows_and_contract_tests",
+      "scope": "Linux/WSL；公开教学数据；实际5拟合1剖面、0模型请求；读取已有结果不需新计算",
+      "prohibited_inference": "盲测成绩、真人效率、实测精度、新光学求解器、将单个剩余膜厚候选当全局唯一"
+    }
+  ]
+}

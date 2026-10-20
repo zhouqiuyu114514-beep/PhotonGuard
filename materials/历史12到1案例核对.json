@@ -1,0 +1,195 @@
+{
+  "source": "historical-film.json",
+  "source_sha256": "adff46f3d866f5a516f84d6df1b41b83cc409b38ed1b94cfbc99e75b86cc631c",
+  "before_id": "908188816d1f4647a5100e25c58f6ecb",
+  "after_id": "4aa157cc92a54da9ad9f0af490700c0d",
+  "initial_wavelength_nm": 633,
+  "added_wavelength_nm": 850,
+  "allowed_wavelengths_nm": [
+    633,
+    700,
+    850
+  ],
+  "search_nm": [
+    0,
+    1000
+  ],
+  "before_modes_nm": [
+    366.40964050781264,
+    208.15964050022168,
+    49.90964049936662,
+    108.34035925156978,
+    266.59035924189664,
+    424.84035918243615,
+    524.6596409835079,
+    583.0903575834361,
+    682.909643336956,
+    741.3403556624005,
+    841.159646073221,
+    899.590353410738
+  ],
+  "after_modes_nm": [
+    208.18706686377598
+  ],
+  "model_selected_proposal": "wavelength-850",
+  "primary_selection_source": "MODEL_EXPLICIT_SELECTION",
+  "model_reason": "当前 12 组厚度候选主要受单波长周期歧义限制，已保存方案中 wavelength-850 的候选谱分歧分数最高（0.0163），且 850 nm 在已确认可用波长目录内、单点单设置，资源开销最小。这只是建议，实际补测反射率后需与现有 633 nm 数据联合重算，候选谱差异不构成唯一性或精度保证。",
+  "before_groups": [
+    {
+      "dataset": {
+        "schema": "photonguard.reflectance-observations.v1",
+        "raw_sha256": "69a9d7a3401e62a9e9a59a0353901545cb0395a7d64c4ec9a18c9e195d12cfa0",
+        "rows": 1,
+        "columns": [
+          "wavelength_nm",
+          "reflectance_calibrated"
+        ],
+        "x_nm": [
+          633
+        ],
+        "reflectance": [
+          0.28241933338949365
+        ],
+        "source_kind": "SYNTHETIC_TEACHING",
+        "source_name": "独立冻结教学对象 · 初始采集",
+        "license": "CC0-1.0",
+        "questions": [],
+        "cleaning": "NONE",
+        "coordinate_unit": "nm",
+        "data_kind": "CALIBRATED_REFLECTANCE_NOT_ARBITRARY_BRIGHTNESS",
+        "sha256": "013cd9842d53296787160a7d92e84cda66530728b6354be70d1405c667143f5e"
+      },
+      "conditions": {
+        "film_index": 2,
+        "incident_index": 1,
+        "substrate_index": 1,
+        "incidence_deg": 0,
+        "lossless": true,
+        "layer_order": "incident/film/substrate",
+        "calibrated_reflectance": true
+      },
+      "scale": 0.002,
+      "scale_source": "DECLARED_NUMERICAL_SCALE",
+      "approved": true,
+      "observation": {
+        "kind": "POINT_SAMPLE"
+      }
+    }
+  ],
+  "after_groups": [
+    {
+      "dataset": {
+        "schema": "photonguard.reflectance-observations.v1",
+        "raw_sha256": "69a9d7a3401e62a9e9a59a0353901545cb0395a7d64c4ec9a18c9e195d12cfa0",
+        "rows": 1,
+        "columns": [
+          "wavelength_nm",
+          "reflectance_calibrated"
+        ],
+        "x_nm": [
+          633
+        ],
+        "reflectance": [
+          0.28241933338949365
+        ],
+        "source_kind": "SYNTHETIC_TEACHING",
+        "source_name": "独立冻结教学对象 · 初始采集",
+        "license": "CC0-1.0",
+        "questions": [],
+        "cleaning": "NONE",
+        "coordinate_unit": "nm",
+        "data_kind": "CALIBRATED_REFLECTANCE_NOT_ARBITRARY_BRIGHTNESS",
+        "sha256": "013cd9842d53296787160a7d92e84cda66530728b6354be70d1405c667143f5e"
+      },
+      "conditions": {
+        "film_index": 2,
+        "incident_index": 1,
+        "substrate_index": 1,
+        "incidence_deg": 0,
+        "lossless": true,
+        "layer_order": "incident/film/substrate",
+        "calibrated_reflectance": true
+      },
+      "scale": 0.002,
+      "scale_source": "DECLARED_NUMERICAL_SCALE",
+      "approved": true,
+      "observation": {
+        "kind": "POINT_SAMPLE"
+      }
+    },
+    {
+      "dataset": {
+        "schema": "photonguard.reflectance-observations.v1",
+        "raw_sha256": "7b084f1ce9fa5410380fdb96d7fe2c70a65003f714675491516709c03568b43f",
+        "rows": 1,
+        "columns": [
+          "wavelength_nm",
+          "reflectance_calibrated"
+        ],
+        "x_nm": [
+          850
+        ],
+        "reflectance": [
+          0.0015556217932843693
+        ],
+        "source_kind": "SYNTHETIC_TEACHING",
+        "source_name": "独立教学补采 1 · wavelength-850",
+        "license": "CC0-1.0",
+        "questions": [],
+        "cleaning": "NONE",
+        "coordinate_unit": "nm",
+        "data_kind": "CALIBRATED_REFLECTANCE_NOT_ARBITRARY_BRIGHTNESS",
+        "sha256": "dad2bfe214fbafb06ec588b7f184b5c91cbd18c7ffa85b057710260da1efaf94"
+      },
+      "conditions": {
+        "film_index": 2,
+        "incident_index": 1,
+        "substrate_index": 1,
+        "incidence_deg": 0,
+        "lossless": true,
+        "layer_order": "incident/film/substrate",
+        "calibrated_reflectance": true
+      },
+      "scale": 0.002,
+      "scale_source": "DECLARED_NUMERICAL_SCALE",
+      "approved": true,
+      "observation": {
+        "kind": "POINT_SAMPLE"
+      }
+    }
+  ],
+  "execution_steps": [
+    {
+      "id": "acquire",
+      "status": "COMPLETED",
+      "dataset_sha256": "dad2bfe214fbafb06ec588b7f184b5c91cbd18c7ffa85b057710260da1efaf94"
+    },
+    {
+      "id": "review",
+      "status": "COMPLETED",
+      "inverse_plan_sha256": "58b130dba942930040087eb6883eb283e340503523a8f080c632ec1f85d6e240"
+    },
+    {
+      "id": "fit",
+      "status": "COMPLETED",
+      "result_id": "5ec168561b0cbbbc6821b5d747455bab7e14414828745e29afb260c0e697c8fd",
+      "resources": {
+        "actual_residual_calls": 311,
+        "local_optimizations": 8,
+        "tmm_evaluations": 624,
+        "elapsed_seconds": 0.07962618899910012,
+        "model_calls": 0,
+        "fft_calls": 0,
+        "fdtd_calls": 0
+      }
+    },
+    {
+      "id": "receipt",
+      "status": "COMPLETED",
+      "source": "SAVED_PROGRAM_RESULT",
+      "model_calls": 0
+    }
+  ],
+  "new_models": 0,
+  "new_solvers": 0
+}

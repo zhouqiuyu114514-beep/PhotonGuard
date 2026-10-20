@@ -1,0 +1,48 @@
+{
+  "M04": {
+    "id": "M04",
+    "required_fields": [
+      "layers"
+    ],
+    "aliases": [
+      "厚度",
+      "thickness",
+      "layers"
+    ],
+    "reply": "确认这层实际厚度为 0.135 μm，折射率仍为 1.9。",
+    "origin": "SIMULATED_STATE_MACHINE_AUTHOR_FACT",
+    "must_ask_before_run": true,
+    "max_replies": 1
+  },
+  "M05": {
+    "id": "M05",
+    "required_fields": [
+      "focal_length_mm"
+    ],
+    "aliases": [
+      "焦距",
+      "focal_length",
+      "透镜"
+    ],
+    "reply": "确认理想透镜焦距为 180 mm；这里是后焦面，不是自由传播屏距。",
+    "origin": "SIMULATED_STATE_MACHINE_AUTHOR_FACT",
+    "must_ask_before_run": true,
+    "max_replies": 1
+  },
+  "M06": {
+    "id": "M06",
+    "required_fields": [
+      "waist_z_mm"
+    ],
+    "aliases": [
+      "束腰位置",
+      "waist_z",
+      "位置",
+      "波前"
+    ],
+    "reply": "确认束腰在透镜前 40 mm，即束腰位置 z=-40 mm。",
+    "origin": "SIMULATED_STATE_MACHINE_AUTHOR_FACT",
+    "must_ask_before_run": true,
+    "max_replies": 1
+  }
+}

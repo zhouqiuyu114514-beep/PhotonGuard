@@ -1,0 +1,79 @@
+{
+  "id": "D03",
+  "version": "1.0.0",
+  "title": "保持几何，中心亮纹变暗",
+  "domain": "diffraction",
+  "scope": "均匀相干照明、标量近轴、理想薄透镜傅里叶焦平面；不是自由空间Fresnel传播。",
+  "tags": [
+    "相位",
+    "亮变暗",
+    "中心",
+    "暗纹",
+    "保持几何",
+    "衍射"
+  ],
+  "required_parameters": [
+    "wavelength_nm",
+    "focal_length_mm",
+    "slit_width_um",
+    "slit_height_um",
+    "slit_separation_um"
+  ],
+  "fixed_parameters": {
+    "aperture": "double_slit"
+  },
+  "numeric_defaults": {
+    "grid_size": 256,
+    "window_mm": 0.4
+  },
+  "recipe": {
+    "method": "phase",
+    "variable": "relative_phase_rad"
+  },
+  "teaching": {
+    "parameters": {
+      "wavelength_nm": 633,
+      "focal_length_mm": 200,
+      "slit_width_um": 20,
+      "slit_height_um": 100,
+      "slit_separation_um": 126.6,
+      "relative_phase_rad": 0
+    },
+    "goal": {
+      "metric": "central_intensity_ratio",
+      "operator": "<=",
+      "target": 0.01
+    },
+    "values": [
+      0,
+      1.5707963267948966,
+      3.141592653589793
+    ]
+  },
+  "variables": [
+    "relative_phase_rad"
+  ],
+  "metrics": [
+    "central_intensity_ratio"
+  ],
+  "sources": [
+    {
+      "url": "https://opticspy.github.io/lightpipes/examples.html",
+      "relation": "示例选题与工具背景；没有复制上游图像或结果",
+      "license": "BSD-3-Clause (upstream LightPipes)"
+    },
+    {
+      "url": "https://opticspy.github.io/lightpipes/YoungsExperiment.html",
+      "relation": "范围对照：该上游示例用Fresnel，本案例使用理想透镜焦平面，不宣称原例复现"
+    }
+  ],
+  "interpretation": [
+    "先核对事实和允许变量，再明确批准实际计算。",
+    "未达标仅表示这组候选未达到目标，不是全局无解。",
+    "解析提议、实际计算、独立检查分别标记。"
+  ],
+  "preview": {
+    "status": "NOT_COMPUTED",
+    "label": "尚未计算；选用后生成新计划，不展示固定答案。"
+  }
+}

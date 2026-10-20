@@ -1,0 +1,312 @@
+[
+  {
+    "id": "R01",
+    "domain": "film",
+    "category": "missing",
+    "text": "空气两侧、正入射、无损无色散单膜。折射率 2.0，膜厚尚未提供，请先核实膜厚。实际采样波长（μm）：0.54, 0.66, 0.78。所有物理参数固定，不进行候选扫描。实际判断0.66 μm反射率是否至少0.10。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。",
+    "resource_budget": {
+      "max_candidates": 1,
+      "max_fast_evaluations": 1,
+      "max_meep_validations": 1,
+      "max_fdtd": 8
+    },
+    "participant_kind": "SIMULATED_STATE_MACHINE",
+    "evaluation_scope": "PREDECLARED_INTERNAL_REGRESSION_NOT_UNSEEN_HOLDOUT"
+  },
+  {
+    "id": "R02",
+    "domain": "diffraction",
+    "category": "missing",
+    "text": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 600 nm，透镜焦距尚未提供，请先核实焦距，缝宽 32 μm，缝高 128.0 μm，中心缝距 200 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。所有物理参数固定，不进行候选扫描。判断条纹周期是否接近0.555 mm，绝对容差0.02 mm。",
+    "resource_budget": {
+      "max_candidates": 1,
+      "max_fast_evaluations": 2,
+      "max_meep_validations": 0,
+      "max_fdtd": 0
+    },
+    "participant_kind": "SIMULATED_STATE_MACHINE",
+    "evaluation_scope": "PREDECLARED_INTERNAL_REGRESSION_NOT_UNSEEN_HOLDOUT"
+  },
+  {
+    "id": "R03",
+    "domain": "gaussian",
+    "category": "missing",
+    "text": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 780 nm，束腰的 1/e² 强度半径 550 μm，输入束腰位置尚未提供，请先核实束腰位置，当前焦距 110 mm，屏幕位置 z=110 mm，束宽曲线绘制到 z=250.0 mm。所有物理参数固定，不进行候选扫描。判断指定屏幕的1/e²强度半径是否不超过60 μm。",
+    "resource_budget": {
+      "max_candidates": 1,
+      "max_fast_evaluations": 1,
+      "max_meep_validations": 0,
+      "max_fdtd": 0
+    },
+    "participant_kind": "SIMULATED_STATE_MACHINE",
+    "evaluation_scope": "PREDECLARED_INTERNAL_REGRESSION_NOT_UNSEEN_HOLDOUT"
+  },
+  {
+    "id": "R04",
+    "domain": "film",
+    "category": "revision",
+    "text": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.25，nL=1.5，设计波长 0.68 μm，当前层数 2。实际采样波长（μm）：0.6, 0.65, 0.7, 0.75, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。新目标为0.71 μm反射率至少0.40；设计波长仍为0.68 μm，只能选择原层数目录。报告将TMM主指标与独立Meep值分列。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。",
+    "resource_budget": {
+      "max_candidates": 3,
+      "max_fast_evaluations": 3,
+      "max_meep_validations": 1,
+      "max_fdtd": 8
+    },
+    "participant_kind": "SIMULATED_STATE_MACHINE",
+    "parent": {
+      "id": "R04-parent",
+      "spec": {
+        "schema_version": 1,
+        "domain": "film",
+        "context_kind": "specified",
+        "known_parameters": {
+          "material_n_high": 2.25,
+          "material_n_low": 1.5,
+          "layer_count": 2,
+          "design_wavelength_um": 0.68,
+          "wavelengths_um": [
+            0.6,
+            0.65,
+            0.7,
+            0.75,
+            0.8
+          ]
+        },
+        "parameter_sources": {
+          "material_n_high": {
+            "unit": "dimensionless",
+            "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.25，nL=1.5，设计波长 0.68 μm，当前层数 2。实际采样波长（μm）：0.6, 0.65, 0.7, 0.75, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。新目标为0.71 μm反射率至少0.40；设计波长仍为0.68 μm，只能选择原层数目录。报告将TMM主指标与独立Meep值分列。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+          },
+          "material_n_low": {
+            "unit": "dimensionless",
+            "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.25，nL=1.5，设计波长 0.68 μm，当前层数 2。实际采样波长（μm）：0.6, 0.65, 0.7, 0.75, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。新目标为0.71 μm反射率至少0.40；设计波长仍为0.68 μm，只能选择原层数目录。报告将TMM主指标与独立Meep值分列。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+          },
+          "layer_count": {
+            "unit": "count",
+            "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.25，nL=1.5，设计波长 0.68 μm，当前层数 2。实际采样波长（μm）：0.6, 0.65, 0.7, 0.75, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。新目标为0.71 μm反射率至少0.40；设计波长仍为0.68 μm，只能选择原层数目录。报告将TMM主指标与独立Meep值分列。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+          },
+          "design_wavelength_um": {
+            "unit": "um",
+            "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.25，nL=1.5，设计波长 0.68 μm，当前层数 2。实际采样波长（μm）：0.6, 0.65, 0.7, 0.75, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。新目标为0.71 μm反射率至少0.40；设计波长仍为0.68 μm，只能选择原层数目录。报告将TMM主指标与独立Meep值分列。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+          },
+          "wavelengths_um": {
+            "unit": "um",
+            "quote": "空气两侧、正入射、无损无色散交替 H/L 四分之一波膜系，从 H 开始。nH=2.25，nL=1.5，设计波长 0.68 μm，当前层数 2。实际采样波长（μm）：0.6, 0.65, 0.7, 0.75, 0.8。只允许扫描这些有限候选：{\"layer_count\": [2, 4, 6]}。其他参数不得改变。新目标为0.71 μm反射率至少0.40；设计波长仍为0.68 μm，只能选择原层数目录。报告将TMM主指标与独立Meep值分列。最多一个推荐候选进行现有 Meep 完整验证，最多 8 次 FDTD；快速计算不能冒充独立验证。"
+          }
+        },
+        "assumptions": [],
+        "locked_parameters": [
+          "design_wavelength_um",
+          "material_n_high",
+          "material_n_low",
+          "wavelengths_um"
+        ],
+        "allowed_variables": {
+          "layer_count": [
+            2,
+            4,
+            6
+          ]
+        },
+        "goal": {
+          "metric": "reflectance",
+          "operator": "maximize",
+          "wavelength_um": 0.68
+        },
+        "resource_budget": {
+          "max_candidates": 3,
+          "max_fast_evaluations": 3,
+          "max_meep_validations": 1,
+          "max_fdtd": 8
+        },
+        "parent_task_id": null
+      },
+      "description": "先前用户确认的规格，作为修订约束上下文；不是声称已经运行过的结果。"
+    },
+    "evaluation_scope": "PREDECLARED_INTERNAL_REGRESSION_NOT_UNSEEN_HOLDOUT"
+  },
+  {
+    "id": "R05",
+    "domain": "diffraction",
+    "category": "revision",
+    "text": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 600 nm，焦距 180 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 180 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"wavelength_nm\": [500, 600, 700]}。其他参数不得改变。新目标为条纹周期0.6 mm，绝对容差0.015 mm；只比较给定波长目录，所有缝几何、相位、焦距固定。",
+    "resource_budget": {
+      "max_candidates": 3,
+      "max_fast_evaluations": 6,
+      "max_meep_validations": 0,
+      "max_fdtd": 0
+    },
+    "participant_kind": "SIMULATED_STATE_MACHINE",
+    "parent": {
+      "id": "R05-parent",
+      "spec": {
+        "schema_version": 1,
+        "domain": "diffraction",
+        "context_kind": "specified",
+        "known_parameters": {
+          "aperture": "double_slit",
+          "wavelength_nm": 600,
+          "focal_length_mm": 180,
+          "slit_width_um": 32,
+          "slit_height_um": 128.0,
+          "grid_size": 256,
+          "window_mm": 0.32,
+          "slit_separation_um": 180,
+          "relative_phase_rad": 0.0
+        },
+        "parameter_sources": {
+          "aperture": {
+            "unit": "enum",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 600 nm，焦距 180 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 180 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"wavelength_nm\": [500, 600, 700]}。其他参数不得改变。新目标为条纹周期0.6 mm，绝对容差0.015 mm；只比较给定波长目录，所有缝几何、相位、焦距固定。"
+          },
+          "wavelength_nm": {
+            "unit": "nm",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 600 nm，焦距 180 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 180 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"wavelength_nm\": [500, 600, 700]}。其他参数不得改变。新目标为条纹周期0.6 mm，绝对容差0.015 mm；只比较给定波长目录，所有缝几何、相位、焦距固定。"
+          },
+          "focal_length_mm": {
+            "unit": "mm",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 600 nm，焦距 180 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 180 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"wavelength_nm\": [500, 600, 700]}。其他参数不得改变。新目标为条纹周期0.6 mm，绝对容差0.015 mm；只比较给定波长目录，所有缝几何、相位、焦距固定。"
+          },
+          "slit_width_um": {
+            "unit": "um",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 600 nm，焦距 180 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 180 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"wavelength_nm\": [500, 600, 700]}。其他参数不得改变。新目标为条纹周期0.6 mm，绝对容差0.015 mm；只比较给定波长目录，所有缝几何、相位、焦距固定。"
+          },
+          "slit_height_um": {
+            "unit": "um",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 600 nm，焦距 180 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 180 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"wavelength_nm\": [500, 600, 700]}。其他参数不得改变。新目标为条纹周期0.6 mm，绝对容差0.015 mm；只比较给定波长目录，所有缝几何、相位、焦距固定。"
+          },
+          "grid_size": {
+            "unit": "samples",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 600 nm，焦距 180 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 180 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"wavelength_nm\": [500, 600, 700]}。其他参数不得改变。新目标为条纹周期0.6 mm，绝对容差0.015 mm；只比较给定波长目录，所有缝几何、相位、焦距固定。"
+          },
+          "window_mm": {
+            "unit": "mm",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 600 nm，焦距 180 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 180 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"wavelength_nm\": [500, 600, 700]}。其他参数不得改变。新目标为条纹周期0.6 mm，绝对容差0.015 mm；只比较给定波长目录，所有缝几何、相位、焦距固定。"
+          },
+          "slit_separation_um": {
+            "unit": "um",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 600 nm，焦距 180 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 180 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"wavelength_nm\": [500, 600, 700]}。其他参数不得改变。新目标为条纹周期0.6 mm，绝对容差0.015 mm；只比较给定波长目录，所有缝几何、相位、焦距固定。"
+          },
+          "relative_phase_rad": {
+            "unit": "rad",
+            "quote": "均匀相干照明，标量近轴模型，双缝后的理想薄透镜后焦面；波长 600 nm，焦距 180 mm，缝宽 32 μm，缝高 128.0 μm，中心缝距 180 μm，相对相位 0.0 rad。数值网格 256，输入平面窗口 0.32 mm。只允许扫描这些有限候选：{\"wavelength_nm\": [500, 600, 700]}。其他参数不得改变。新目标为条纹周期0.6 mm，绝对容差0.015 mm；只比较给定波长目录，所有缝几何、相位、焦距固定。"
+          }
+        },
+        "assumptions": [],
+        "locked_parameters": [
+          "aperture",
+          "focal_length_mm",
+          "grid_size",
+          "relative_phase_rad",
+          "slit_height_um",
+          "slit_separation_um",
+          "slit_width_um",
+          "window_mm"
+        ],
+        "allowed_variables": {
+          "wavelength_nm": [
+            500,
+            600,
+            700
+          ]
+        },
+        "goal": {
+          "metric": "fringe_period_mm",
+          "operator": "minimize"
+        },
+        "resource_budget": {
+          "max_candidates": 3,
+          "max_fast_evaluations": 6,
+          "max_meep_validations": 0,
+          "max_fdtd": 0
+        },
+        "parent_task_id": null
+      },
+      "description": "先前用户确认的规格，作为修订约束上下文；不是声称已经运行过的结果。"
+    },
+    "evaluation_scope": "PREDECLARED_INTERNAL_REGRESSION_NOT_UNSEEN_HOLDOUT"
+  },
+  {
+    "id": "R06",
+    "domain": "gaussian",
+    "category": "revision",
+    "text": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=-25 mm，当前焦距 100 mm，屏幕位置 z=120 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100, 120, 140]}。其他参数不得改变。新目标为原固定屏幕上的1/e²强度半径不超过55 μm。只可选原焦距目录，保留原波长、束腰半径和位置、屏幕位置。",
+    "resource_budget": {
+      "max_candidates": 3,
+      "max_fast_evaluations": 3,
+      "max_meep_validations": 0,
+      "max_fdtd": 0
+    },
+    "participant_kind": "SIMULATED_STATE_MACHINE",
+    "parent": {
+      "id": "R06-parent",
+      "spec": {
+        "schema_version": 1,
+        "domain": "gaussian",
+        "context_kind": "specified",
+        "known_parameters": {
+          "wavelength_nm": 650,
+          "waist_radius_um": 480,
+          "waist_z_mm": -25,
+          "focal_length_mm": 100,
+          "screen_distance_mm": 120,
+          "z_max_mm": 250.0
+        },
+        "parameter_sources": {
+          "wavelength_nm": {
+            "unit": "nm",
+            "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=-25 mm，当前焦距 100 mm，屏幕位置 z=120 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100, 120, 140]}。其他参数不得改变。新目标为原固定屏幕上的1/e²强度半径不超过55 μm。只可选原焦距目录，保留原波长、束腰半径和位置、屏幕位置。"
+          },
+          "waist_radius_um": {
+            "unit": "um",
+            "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=-25 mm，当前焦距 100 mm，屏幕位置 z=120 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100, 120, 140]}。其他参数不得改变。新目标为原固定屏幕上的1/e²强度半径不超过55 μm。只可选原焦距目录，保留原波长、束腰半径和位置、屏幕位置。"
+          },
+          "waist_z_mm": {
+            "unit": "mm",
+            "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=-25 mm，当前焦距 100 mm，屏幕位置 z=120 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100, 120, 140]}。其他参数不得改变。新目标为原固定屏幕上的1/e²强度半径不超过55 μm。只可选原焦距目录，保留原波长、束腰半径和位置、屏幕位置。"
+          },
+          "focal_length_mm": {
+            "unit": "mm",
+            "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=-25 mm，当前焦距 100 mm，屏幕位置 z=120 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100, 120, 140]}。其他参数不得改变。新目标为原固定屏幕上的1/e²强度半径不超过55 μm。只可选原焦距目录，保留原波长、束腰半径和位置、屏幕位置。"
+          },
+          "screen_distance_mm": {
+            "unit": "mm",
+            "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=-25 mm，当前焦距 100 mm，屏幕位置 z=120 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100, 120, 140]}。其他参数不得改变。新目标为原固定屏幕上的1/e²强度半径不超过55 μm。只可选原焦距目录，保留原波长、束腰半径和位置、屏幕位置。"
+          },
+          "z_max_mm": {
+            "unit": "mm",
+            "quote": "空气中的理想 TEM00 高斯束，M²=1，理想薄透镜在 z=0。波长 650 nm，束腰的 1/e² 强度半径 480 μm，束腰位置 z=-25 mm，当前焦距 100 mm，屏幕位置 z=120 mm，束宽曲线绘制到 z=250.0 mm。只允许扫描这些有限候选：{\"focal_length_mm\": [100, 120, 140]}。其他参数不得改变。新目标为原固定屏幕上的1/e²强度半径不超过55 μm。只可选原焦距目录，保留原波长、束腰半径和位置、屏幕位置。"
+          }
+        },
+        "assumptions": [],
+        "locked_parameters": [
+          "screen_distance_mm",
+          "waist_radius_um",
+          "waist_z_mm",
+          "wavelength_nm",
+          "z_max_mm"
+        ],
+        "allowed_variables": {
+          "focal_length_mm": [
+            100,
+            120,
+            140
+          ]
+        },
+        "goal": {
+          "metric": "screen_radius_um",
+          "operator": "minimize"
+        },
+        "resource_budget": {
+          "max_candidates": 3,
+          "max_fast_evaluations": 3,
+          "max_meep_validations": 0,
+          "max_fdtd": 0
+        },
+        "parent_task_id": null
+      },
+      "description": "先前用户确认的规格，作为修订约束上下文；不是声称已经运行过的结果。"
+    },
+    "evaluation_scope": "PREDECLARED_INTERNAL_REGRESSION_NOT_UNSEEN_HOLDOUT"
+  }
+]

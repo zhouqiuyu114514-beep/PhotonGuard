@@ -1,0 +1,43 @@
+{
+  "source": "User supplied PhotonGuard_RC3审阅与数据向导下一版方案_20261012.zip",
+  "archive_sha256": "117a32d703807cb3f333f2397905adb95c739e102aae55dbe13225f7568df3d2",
+  "scope": "Previously seen development regression, synthetic same-physics probes; not unseen AI benchmark; preserve source filenames and script",
+  "files": {
+    "P04_in_model.csv": {
+      "sha256": "71f273098e576ac40bf5beadacb295dc5a53661cb4c3920a31c63fa004464fc2",
+      "bytes": 13519
+    },
+    "rc3_readonly_probe.py": {
+      "sha256": "1127af01170762b7970f777cbff32e0676b1036af8a36a6c0b8126e90fac6323",
+      "bytes": 3701
+    },
+    "readonly_probe_results.json": {
+      "sha256": "3100754c6a6741790a56808f03540fb6bd459f73d37e8785fae468136fd16d0e",
+      "bytes": 5115
+    },
+    "P03_in_model.csv": {
+      "sha256": "8b2a33ffd02135327e9907a0f54a57a07e457848e0d7751d0966e0e4d037c70c",
+      "bytes": 13459
+    },
+    "P01_in_model.csv": {
+      "sha256": "583153a31850a6adb4b7b947922970183b04b6411c816129dee0739809ad784b",
+      "bytes": 13502
+    },
+    "P02_in_model.csv": {
+      "sha256": "46f372d089f5e095171cb6be69d8f8c06a406633fb9d0ed172fbddb6685583c1",
+      "bytes": 13464
+    },
+    "P05_narrow_scan.csv": {
+      "sha256": "cbc6d490b10f3c1ebec2c475c384543487a52732614c771183161a6b87a0bf3d",
+      "bytes": 14522
+    },
+    "03_下一版验收条件.json": {
+      "sha256": "0911fe615e54ed54b7253cc5985fa633e1628c9efc0299391f81e00e8894777f",
+      "bytes": 1997
+    },
+    "P06_flat.csv": {
+      "sha256": "dffd2a04a76b03edc66f2a28f90eeaa626d61f5569ddfa69c546371974c3923c",
+      "bytes": 7305
+    }
+  }
+}

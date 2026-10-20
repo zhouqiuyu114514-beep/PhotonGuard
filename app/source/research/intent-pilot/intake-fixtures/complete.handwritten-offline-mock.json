@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "input_sha256": "527fd4ec24dc5ab65d64f907e996d80ddc2280aee0f3a805e370c8b0bdef5094",
+  "fields": [
+    {
+      "path": "physics.dimensions",
+      "state": "proposed",
+      "value": 1,
+      "unit": "count",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 1,
+          "quote": "使用一维正入射模型，入射角0度。"
+        }
+      ]
+    },
+    {
+      "path": "physics.angle_deg",
+      "state": "proposed",
+      "value": 0,
+      "unit": "deg",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 1,
+          "quote": "使用一维正入射模型，入射角0度。"
+        }
+      ]
+    },
+    {
+      "path": "physics.lossless",
+      "state": "proposed",
+      "value": true,
+      "unit": "bool",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 2,
+          "quote": "膜为无损、无色散、各向同性，相对磁导率为1。"
+        }
+      ]
+    },
+    {
+      "path": "physics.dispersive",
+      "state": "proposed",
+      "value": false,
+      "unit": "bool",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 2,
+          "quote": "膜为无损、无色散、各向同性，相对磁导率为1。"
+        }
+      ]
+    },
+    {
+      "path": "physics.isotropic",
+      "state": "proposed",
+      "value": true,
+      "unit": "bool",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 2,
+          "quote": "膜为无损、无色散、各向同性，相对磁导率为1。"
+        }
+      ]
+    },
+    {
+      "path": "physics.mu",
+      "state": "proposed",
+      "value": 1,
+      "unit": "1",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 2,
+          "quote": "膜为无损、无色散、各向同性，相对磁导率为1。"
+        }
+      ]
+    },
+    {
+      "path": "physics.n_incident",
+      "state": "proposed",
+      "value": 1,
+      "unit": "1",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 3,
+          "quote": "入射和出射介质折射率都为1。"
+        }
+      ]
+    },
+    {
+      "path": "physics.n_exit",
+      "state": "proposed",
+      "value": 1,
+      "unit": "1",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 3,
+          "quote": "入射和出射介质折射率都为1。"
+        }
+      ]
+    },
+    {
+      "path": "units_um",
+      "state": "proposed",
+      "value": 1000,
+      "unit": "nm",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 4,
+          "quote": "每个Meep长度单位对应1000 nm。"
+        }
+      ]
+    },
+    {
+      "path": "layers.0.n",
+      "state": "proposed",
+      "value": 2.35,
+      "unit": "1",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 5,
+          "quote": "薄膜折射率为2.35，厚度为0.0002 mm。"
+        }
+      ]
+    },
+    {
+      "path": "layers.0.thickness_um",
+      "state": "proposed",
+      "value": 0.0002,
+      "unit": "mm",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 5,
+          "quote": "薄膜折射率为2.35，厚度为0.0002 mm。"
+        }
+      ]
+    },
+    {
+      "path": "wavelength_um.0",
+      "state": "proposed",
+      "value": 650,
+      "unit": "nm",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 6,
+          "quote": "扫描650 nm到1.1 um，共41个频点。"
+        }
+      ]
+    },
+    {
+      "path": "wavelength_um.1",
+      "state": "proposed",
+      "value": 1.1,
+      "unit": "um",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 6,
+          "quote": "扫描650 nm到1.1 um，共41个频点。"
+        }
+      ]
+    },
+    {
+      "path": "nfreq",
+      "state": "proposed",
+      "value": 41,
+      "unit": "count",
+      "evidence": [
+        {
+          "document_id": "spec",
+          "line": 6,
+          "quote": "扫描650 nm到1.1 um，共41个频点。"
+        }
+      ]
+    }
+  ],
+  "questions": []
+}

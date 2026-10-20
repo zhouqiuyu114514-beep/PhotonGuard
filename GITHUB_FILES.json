@@ -45,7 +45,7 @@
     {
       "path": "app/MANIFEST.json",
       "bytes": 77230,
-      "sha256": "cb79df51d58b5db1ad8300588ad95cce6c14a7dd0927fe5c5a5d621db256e8e2"
+      "sha256": "ede32d283dfbf5a600ddaa46d29035d9e3d66ecf2c45623a5d4b31a447db1338"
     },
     {
       "path": "app/source/.gitignore",
@@ -1414,8 +1414,8 @@
     },
     {
       "path": "app/source/photonguard/workflow_assets/experiments.js",
-      "bytes": 158704,
-      "sha256": "c5671fec0baffe81cf0fa2f1a3ea9de012ad0ee6a15e5476321ac471045296fc"
+      "bytes": 158687,
+      "sha256": "65600a4861968bedcdd96e0ca775e60bc01df620aa457583d53e9654c53e069d"
     },
     {
       "path": "app/source/photonguard/workflow_assets/index.html",
@@ -3180,7 +3180,7 @@
     {
       "path": "app/SOURCE_MANIFEST.json",
       "bytes": 71841,
-      "sha256": "eea94525cca8820d73d691b9a12e8e4b49390406ce4efd0d30ce10ae9cbf749f"
+      "sha256": "baa06b3216008c0e49886b99055577c37cf902138b2dc6bbbc548e1745f1ad93"
     },
     {
       "path": "app/停止工作台.bat",
@@ -3204,8 +3204,8 @@
     },
     {
       "path": "assets/工作台.png",
-      "bytes": 116414,
-      "sha256": "858cd4591a43e5801fe2962d675cd2ed8ba79c5d04388b42ef18ad012cdbe7fd"
+      "bytes": 117366,
+      "sha256": "73339293ff53561ea0c3c44cd75b02f181711caa2ccd2832a5c24be2301d4e35"
     },
     {
       "path": "docs/交付来源.md",

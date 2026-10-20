@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "scope": "GitHub delivery snapshot, excluding self and .git; remote verification recorded separately",
+  "scope": "Public project files excluding this manifest; app bytes retain original manifest scope",
   "files": [
     {
       "path": ".gitattributes",
@@ -3203,14 +3203,19 @@
       "sha256": "127f7569ac57b11b7693747cd2f12d29dd4ba1e841763d5d81996da4a05d0160"
     },
     {
-      "path": "docs/交付来源.md",
-      "bytes": 1364,
-      "sha256": "87ccccd4a9908b56e88fb074a8859af79a4c6bb4a13f68a7486535ca4afc07bd"
+      "path": "assets/工作台.png",
+      "bytes": 204241,
+      "sha256": "3bb93469db46dd143cd1558f65351a6ea6d6fe540cb7166dc7f158cb7dde8664"
     },
     {
-      "path": "docs/同学使用与视频指南.md",
-      "bytes": 3536,
-      "sha256": "aa000c63618fb09dea154a0ac4f64a630dc52acbb605862603d7d8aa596a35ba"
+      "path": "docs/交付来源.md",
+      "bytes": 1396,
+      "sha256": "1a380a64bdcb69774fcdce42d506533c3c45b81c057cf24c1d8c6b9773928b0f"
+    },
+    {
+      "path": "docs/使用指南.md",
+      "bytes": 2350,
+      "sha256": "b70f6a38db4411881432ec8f3cd1a8269edf8bd19753a82fcb9d8a20136eacd0"
     },
     {
       "path": "LICENSE",
@@ -3228,21 +3233,6 @@
       "sha256": "4bc221b7b2b8222c6f4eff2e61119c8485c6b72a4f269985b318d870bc724f1e"
     },
     {
-      "path": "materials/PhotonGuard_技术报告.pdf",
-      "bytes": 729443,
-      "sha256": "7568d77efeaa0287752c59af50645956fdc7a7d87662151941ab976be1819b98"
-    },
-    {
-      "path": "materials/PhotonGuard_项目展示.pdf",
-      "bytes": 483465,
-      "sha256": "70170863ea4f7089eed9055be422efdbcc43b9195f6bf744fc10a115a1c9db11"
-    },
-    {
-      "path": "materials/PhotonGuard_项目展示.pptx",
-      "bytes": 314110,
-      "sha256": "a0ddf2c82de97ffb44eec8ac191a22a097aa5bc7a0c958ae5ed26b8694b3b427"
-    },
-    {
       "path": "materials/主案例采样与调用阶段核对.json",
       "bytes": 9651,
       "sha256": "33b99e4b96118bbe2c222249518d71d149afb9a9bb7c75850d527b7d1149c593"
@@ -3253,69 +3243,14 @@
       "sha256": "07067b826aab0212e43a10b8adb931d73a4ae2a13d8f166468995483abc7c9e3"
     },
     {
-      "path": "materials/原创矢量图/反向研究流程.svg",
-      "bytes": 2432,
-      "sha256": "6d5dfc14890b57e30790debe75455e05cba8008b61f01c906cf06553c51b699f"
-    },
-    {
-      "path": "materials/原创矢量图/整体架构.svg",
-      "bytes": 4038,
-      "sha256": "d43b35422c4871e97f734f5f9a0d78d42d3e45a8aea8f5c92b699744f3f2d62d"
-    },
-    {
-      "path": "materials/原创矢量图/膜厚候选同尺度对比.svg",
-      "bytes": 6622,
-      "sha256": "cd15fa93fdd2c2f1ec45799c5cec1212c213dfec44fc79752b40b96881293738"
-    },
-    {
-      "path": "materials/开源与第三方资源使用清单.md",
-      "bytes": 6425,
-      "sha256": "b49d4f59f21577aa603060f8d336b64de0fceb5349905b39c97a3bde8f14bb28"
-    },
-    {
-      "path": "materials/视频制作流程.md",
-      "bytes": 8417,
-      "sha256": "a42157fd7e1bb6f18071b023f70b6f5d2c2e83d7342742ab49025795f92b4039"
-    },
-    {
-      "path": "materials/视频素材/个人AI连接.png",
-      "bytes": 89717,
-      "sha256": "155e9ace460948b34a236deacb670533ee4aed0eb2658467f28f72ac1112ff1a"
-    },
-    {
-      "path": "materials/视频素材/保存计划.png",
-      "bytes": 46206,
-      "sha256": "38b795b1e9a668f50195c1c6f69f1840bfc5327699e311f3361177bf24730825"
-    },
-    {
-      "path": "materials/视频素材/历史AI补测建议.png",
-      "bytes": 39926,
-      "sha256": "a0fa0c14773df03e9a58f459a0ae3d1db382fb9cc19c0c5d054fcd55233dde66"
-    },
-    {
-      "path": "materials/视频素材/历史AI补测建议_局部.png",
-      "bytes": 16177,
-      "sha256": "3fc69ee04984b4f4b496d305ea422540538e1f6376498cd3310933f25a23c8a9"
-    },
-    {
-      "path": "materials/视频素材/素材来源.json",
-      "bytes": 522,
-      "sha256": "0d7cfc8a264f43c7c68da8cafadf9865e4672c6a4074bfe2fff91978c2367139"
-    },
-    {
-      "path": "materials/视频素材/首页.png",
-      "bytes": 204241,
-      "sha256": "3bb93469db46dd143cd1558f65351a6ea6d6fe540cb7166dc7f158cb7dde8664"
-    },
-    {
       "path": "README.md",
-      "bytes": 8263,
-      "sha256": "5d1d315e8e11b4fbab69ca378a31f7d5fdd517006a4eeddf8c8139fbe00e6c7e"
+      "bytes": 7769,
+      "sha256": "09a042300092bd72bd2a8105459d3e3bd170470f629863f098d1443c3ec45ad4"
     },
     {
       "path": "THIRD_PARTY_NOTICE.md",
-      "bytes": 1234,
-      "sha256": "247dde20743a8bf3b57f7bc8cb47724eb400bc7d0b8c5964f736381a54776ed8"
+      "bytes": 1040,
+      "sha256": "926bd9777e047be230d496a925d2a29d2f8a44c11e80495666852e703b6e2e25"
     },
     {
       "path": "停止工作台.bat",
@@ -3328,9 +3263,9 @@
       "sha256": "01e4a859da3a2e663b9939a20a7723f1592a614472f33976d2ed464e4fb8d632"
     },
     {
-      "path": "打开视频素材.html",
-      "bytes": 1674,
-      "sha256": "50f13e452a8faea4ca9dbbf776c8ea79e56580c38ef0b5a0117aac5a7bf06cc5"
+      "path": "查看示例结果.html",
+      "bytes": 633,
+      "sha256": "d34570a5bceecc645821269cb4ab63e85303342a2bd12989d13ad7116dcc4606"
     },
     {
       "path": "首次准备环境.bat",

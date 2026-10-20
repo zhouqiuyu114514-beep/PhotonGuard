@@ -137,8 +137,10 @@
     const form = node('form'); form.autocomplete = 'off';
     const keyLabel = node('label','API Key'); keyLabel.htmlFor = 'personal-api-key';
     const key = node('input'); key.id = 'personal-api-key'; key.type = 'password'; key.autocomplete = 'off'; key.spellcheck = false; key.maxLength = 204; key.placeholder = 'sk-…'; key.required = true;
-    const limitLabel = node('label','本工作区累计 AI 请求上限（1–100 次）'); limitLabel.htmlFor = 'personal-ai-limit';
-    const limit = node('input'); limit.id = 'personal-ai-limit'; limit.type = 'number'; limit.min = '1'; limit.max = '100'; limit.step = '1'; limit.value = String(binding.request_limit); limit.required = true;
+    const limitLabel = node('label','本工作区累计 AI 请求上限（可自行调整）'); limitLabel.htmlFor = 'personal-ai-limit';
+    const limit = node('input'); limit.id = 'personal-ai-limit'; limit.type = 'number'; limit.min = '1'; limit.step = '1'; limit.value = String(binding.request_limit); limit.required = true;
+    const quotaHelp = node('p','默认20次，可按需提高到200、1000或更多次；这是累计请求上限，不是追加次数。一次操作可能包含多次请求。','field-note');
+    limitLabel.append(quotaHelp);
     const approve = consent('使用我自己的账户，了解后续 AI 请求由 DeepSeek 按实时价格计费。');
     const recover = consent('我已核对上次请求；保留其次数和可能费用，恢复后只发起新的请求。');
     recover.wrap.hidden = !binding.needs_recovery;
@@ -146,7 +148,7 @@
     const disconnect = button('断开 AI 连接',()=>change('/ai/disconnect',{}));
     disconnect.disabled = !(binding.connected || boot.ai?.live_enabled);
     const official = node('a','前往 DeepSeek 创建 API Key ↗'); official.href = 'https://platform.deepseek.com/api_keys'; official.target = '_blank'; official.rel = 'noopener noreferrer';
-    const update = () => { submit.disabled = busy || !key.value.trim() || !approve.input.checked || !limit.validity.valid || Number(limit.value) <= binding.requests_used || binding.needs_recovery && !recover.input.checked; };
+    const update = () => { submit.disabled = busy || !key.value.trim() || !approve.input.checked || !limit.validity.valid || !Number.isSafeInteger(Number(limit.value)) || Number(limit.value) <= binding.requests_used || binding.needs_recovery && !recover.input.checked; };
     [key,limit,approve.input,recover.input].forEach(el=>el.addEventListener('input',update));
     const redraw = () => {
       const drafts = [...$('content').querySelectorAll('textarea')].map(el=>el.value);
@@ -534,6 +536,7 @@
     append(box,node('p','高斯：z_mm,radius_1e2_um；薄膜：wavelength_nm,reflectance_calibrated；双缝：position_mm,intensity_relative。导入后核对已知物理条件，未知值不会自动填成教学参数。','field-note'));
     inverseUpload(box,({approve,...data})=>startTask({text,mode:'inverse',model:choice.value,...data},()=>{}));host.replaceChildren(box);
   }
+  const SUCCESS_EXAMPLE = "薄膜任务，目标850 nm反射率不低于75%。设计波长也是850 nm，高低折射率材料分别为2.2和1.46。四分之一波光学厚度，高低层交替从高层开始，总层数目录2、4、6、8。实际计算波长700、850、950 nm，正入射、两侧空气、无损无色散。只做快速计算，不做Meep。先出计划，等我确认才算。";
   function renderHome() {
     const host=$('content');append(host,node('p','PHOTONGUARD · AI 光学实验工作台','eyebrow'),node('h1','你想完成什么实验任务？'),node('p','从一个目标、一份观测，或一个教学实验开始。AI 帮你整理条件、选择下一步；你核对计划后，工具实际执行并保留结果。','lead'));
     const box=card(),label=node('label','你想研究什么？','input-label'),q=node('textarea');label.htmlFor='new-material';q.id='new-material';q.maxLength=6000;q.rows=3;q.placeholder='例如：我有高斯光束的扫描数据，只有5次补测机会，希望先弄清束腰位置。';q.value=load('new-draft')?.text||'';
@@ -541,6 +544,9 @@
     const feedback=out=>{branch.replaceChildren();if(out.status==='NEEDS_INTENT')append(branch,node('p',out.question,'inline-notice'),button('比较已知参数的方案',()=>startTask({text:q.value,mode:'forward'},feedback),'small'),button('从已有观测反推参数',()=>startTask({text:q.value,mode:'inverse'},feedback),'small'));else if(out.status==='NEEDS_DATA')taskDataForm(branch,q.value,out.model);};
     const begin=button('开始这个任务',()=>startTask({text:q.value},feedback),'primary',!q.value.trim());
     q.addEventListener('input',()=>{const bad=credentialLike(q.value);begin.disabled=busy||!q.value.trim()||bad;if(bad){clear('new-draft');hint.textContent='检测到疑似密钥，请移除后再保存。';}else{save('new-draft',{text:q.value});hint.textContent='先整理任务，不会自动调用 AI 或启动计算。';}});
+    const example=card('从一个达标设计开始 · 850 nm 薄膜');
+    append(example,node('p','自然语言输入 → AI整理条件 → 四候选比较 → 找到达标方案。','lead'),node('p','比较2、4、6、8层，目标反射率至少75%。已有保存案例中，8层达到86.02%；新任务按实际计算结果判断。','field-note'),button('填入这组示例条件',()=>{q.value=SUCCESS_EXAMPLE;q.dispatchEvent(new Event('input'));q.focus();},'small'));
+    host.append(example);
     append(box,label,q,hint,append(node('div',null,'actions'),begin,button('导入数据',()=>taskDataForm(branch,q.value),''),button('没有数据，体验教学任务',()=>{const teaching=card('选择一个教学任务');append(teaching,node('p','采用公开教学条件和独立冻结的模拟对象；不是仪器观测。条件在分析前集中核对。'),button('高斯 · 安排5次补测',()=>startTask({text:q.value.trim()||'高斯教学：已有数据，只有5次测量机会，束腰位置优先',model:INV_GAUSS,teaching:true},feedback),'small'),button('薄膜 · 选择补测波长',()=>startTask({text:q.value.trim()||'薄膜教学：只有633、660、780 nm三个可用波长，区分厚度候选',model:'single_film_known_index_v1',teaching:true},feedback),'small'),button('双缝 · 修改观测约束',()=>startTask({text:q.value.trim()||'双缝教学：缝宽优先，保护缝距，补采71个点，最大行程4 mm',model:INV_SLIT,teaching:true},feedback),'small'));branch.replaceChildren(teaching);},'')),branch);host.append(box);
     append(host,node('p',boot.ai?.live_enabled?'AI 已连接。发送资料前，请核对本次内容。':'可以先导入数据并完成本地分析；需要 AI 建议时，连接自己的 API Key 即可。','inline-notice'));
     const library=append(node('details',null,'card'),node('summary','浏览案例库与更多分析工具'));renderLibrary(library);renderMissions(library);renderInverseImport(library);renderObservationImport(library);

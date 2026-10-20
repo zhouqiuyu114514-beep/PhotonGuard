@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "scope": "Public project files excluding this manifest; app bytes retain original manifest scope",
+  "scope": "Current public project excluding self",
   "files": [
     {
       "path": ".gitattributes",
@@ -24,8 +24,8 @@
     },
     {
       "path": "app/launcher/server.py",
-      "bytes": 2874,
-      "sha256": "dff08d1a57aa7fae97ece935b527094c2de5c1a268785e6127616e4b68ef5da5"
+      "bytes": 2920,
+      "sha256": "51f8c9c6baec2198fee0ddcf3aa05ef632846d481c8ef1141708f833fb407af8"
     },
     {
       "path": "app/launcher/setup-wsl.ps1",
@@ -44,8 +44,8 @@
     },
     {
       "path": "app/MANIFEST.json",
-      "bytes": 77172,
-      "sha256": "f263fe4ff0b47bbfcf010c6c9b971ec708920ead12a4a77a7b137145063a4b41"
+      "bytes": 77230,
+      "sha256": "cb79df51d58b5db1ad8300588ad95cce6c14a7dd0927fe5c5a5d621db256e8e2"
     },
     {
       "path": "app/source/.gitignore",
@@ -864,8 +864,8 @@
     },
     {
       "path": "app/source/photonguard/experiments/ai_binding.py",
-      "bytes": 12562,
-      "sha256": "1d8744bc50eac3ef642d151debcf7a09d625777bf1b5751f2c4e33ba841648dc"
+      "bytes": 12952,
+      "sha256": "d7132a5c2a2e4de405c58e1e6c9a4de0fc8b23898a6b4680292af64504688c2c"
     },
     {
       "path": "app/source/photonguard/experiments/baseline_design.py",
@@ -1414,8 +1414,8 @@
     },
     {
       "path": "app/source/photonguard/workflow_assets/experiments.js",
-      "bytes": 156625,
-      "sha256": "c7a15058068be87b2bd089a696c310758fa4a43f7fa7ede20b2019a7c6381d75"
+      "bytes": 158704,
+      "sha256": "c5671fec0baffe81cf0fa2f1a3ea9de012ad0ee6a15e5476321ac471045296fc"
     },
     {
       "path": "app/source/photonguard/workflow_assets/index.html",
@@ -2864,8 +2864,8 @@
     },
     {
       "path": "app/source/tests/test_personal_ai_binding.py",
-      "bytes": 9227,
-      "sha256": "838fe8cc09fe5817b0cbdf41239325bdc691c17e0a82c71100478e7c32082571"
+      "bytes": 10103,
+      "sha256": "593b7546d33a06b88033c2ca57dcc85d86dce2e07115ad2dba0c631ca7631889"
     },
     {
       "path": "app/source/tests/test_prepare_yee_research.py",
@@ -3179,8 +3179,8 @@
     },
     {
       "path": "app/SOURCE_MANIFEST.json",
-      "bytes": 71852,
-      "sha256": "4651974fc0ff66865166fa8afbe014ca7fb4d4e39016ae000484b19e009ba56d"
+      "bytes": 71841,
+      "sha256": "eea94525cca8820d73d691b9a12e8e4b49390406ce4efd0d30ce10ae9cbf749f"
     },
     {
       "path": "app/停止工作台.bat",
@@ -3204,18 +3204,18 @@
     },
     {
       "path": "assets/工作台.png",
-      "bytes": 204241,
-      "sha256": "3bb93469db46dd143cd1558f65351a6ea6d6fe540cb7166dc7f158cb7dde8664"
+      "bytes": 116414,
+      "sha256": "858cd4591a43e5801fe2962d675cd2ed8ba79c5d04388b42ef18ad012cdbe7fd"
     },
     {
       "path": "docs/交付来源.md",
-      "bytes": 1396,
-      "sha256": "1a380a64bdcb69774fcdce42d506533c3c45b81c057cf24c1d8c6b9773928b0f"
+      "bytes": 762,
+      "sha256": "547dd8617a472421c3553b435ac2aa9f1c4b0abb9396b9e9fb6f6dc4b99d2761"
     },
     {
       "path": "docs/使用指南.md",
-      "bytes": 2350,
-      "sha256": "b70f6a38db4411881432ec8f3cd1a8269edf8bd19753a82fcb9d8a20136eacd0"
+      "bytes": 2412,
+      "sha256": "577e7c6d3f73552bc7ae6a71eb1021b19bf456a7c204f4d0a88c668e4cb6d202"
     },
     {
       "path": "LICENSE",
@@ -3244,8 +3244,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7769,
-      "sha256": "09a042300092bd72bd2a8105459d3e3bd170470f629863f098d1443c3ec45ad4"
+      "bytes": 7701,
+      "sha256": "54c71a264dc150fcd7ad11c3f48e5d8dae7ffb64aa91db5d06471283c9df6938"
     },
     {
       "path": "THIRD_PARTY_NOTICE.md",
@@ -3264,8 +3264,8 @@
     },
     {
       "path": "查看示例结果.html",
-      "bytes": 633,
-      "sha256": "d34570a5bceecc645821269cb4ab63e85303342a2bd12989d13ad7116dcc4606"
+      "bytes": 777,
+      "sha256": "37e682f31f5196ece13982cac10891076fc95cdcf60c92cc6428e1f533a1eeab"
     },
     {
       "path": "首次准备环境.bat",

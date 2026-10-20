@@ -62,7 +62,7 @@ def test_connection_restart_disconnect_never_restores_owner_key(manager, owner):
 
 
 @pytest.mark.parametrize('extra', [{'approve': False}, {'request_limit': True}, {'request_limit': 0},
-    {'request_limit': 101}, {'api_key': 'password'}, {'api_key': KEY+'\r\nInjected'}, {'endpoint': 'https://evil.invalid'}])
+    {'request_limit': 1.5}, {'request_limit': -1}, {'request_limit': ab.MAX_SAFE_REQUESTS + 1}, {'api_key': 'password'}, {'api_key': KEY+'\r\nInjected'}, {'endpoint': 'https://evil.invalid'}])
 def test_invalid_binding_never_probes(manager, monkeypatch, extra):
     monkeypatch.setattr(ab, 'account_check', lambda key: pytest.fail('must reject before network'))
     with pytest.raises(WorkflowError):
@@ -223,3 +223,16 @@ def test_account_probe_uses_only_official_get_and_sanitizes(monkeypatch, mode):
         with pytest.raises(WorkflowError) as caught:
             ab.account_check(KEY)
         assert KEY not in str(caught.value)
+
+
+@pytest.mark.parametrize("limit", [101, 1000, 1000000, ab.MAX_SAFE_REQUESTS])
+def test_user_quota_above_old_cap_persists(manager, owner, limit):
+    manager.connect(config(request_limit=limit))
+    assert manager.status()['request_limit'] == limit
+    assert ab.RequestQuota(owner).snapshot()['limit'] == limit
+    manager.quota.state['attempts'] = 100
+    manager.quota.write()
+    manager.quota.request_hash = 'a' * 64
+    manager.quota.reserve_worst(None)
+    assert manager.quota.snapshot()['attempts'] == 101
+    assert manager.quota.snapshot()['limit'] == limit

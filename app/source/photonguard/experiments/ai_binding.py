@@ -21,6 +21,7 @@ from ..backend import _NoRedirects, _strict_json
 from ..workflow import WorkflowError, atomic_json
 from ..workflow_model import wire
 
+MAX_SAFE_REQUESTS = 2**53 - 1  # Exact integer range shared with browser JSON.
 MODEL = 'deepseek-flash'
 API = 'https://api.deepseek.com'
 TOKEN_BOUND = wire.INPUT_BOUND + wire.OUTPUT_BOUND
@@ -88,7 +89,7 @@ class RequestQuota:
         if (not isinstance(value, dict) or value.get('version') != 1 or
                 any(type(value.get(k)) is not int or value[k] < 0 for k in
                     ('limit', 'attempts', 'settled_tokens', 'held_tokens')) or
-                not 1 <= value['limit'] <= 100 or value['attempts'] > value['limit'] or
+                not 1 <= value['limit'] <= MAX_SAFE_REQUESTS or value['attempts'] > value['limit'] or
                 type(value.get('managed')) is not bool or type(value.get('halted')) is not bool or
                 not isinstance(value.get('unknown_hashes'), list) or
                 any(not isinstance(h, str) or not re.fullmatch('[a-f0-9]{64}', h) for h in value['unknown_hashes']) or
@@ -219,8 +220,8 @@ class BindingManager:
 
     def connect(self, data):
         if (set(data) - {'api_key', 'request_limit', 'approve', 'resume'} or data.get('approve') is not True or
-                type(data.get('request_limit')) is not int or not 1 <= data['request_limit'] <= 100):
-            raise WorkflowError('请确认使用自己的账户，并设置 1–100 次累计请求上限。')
+                type(data.get('request_limit')) is not int or not 1 <= data['request_limit'] <= MAX_SAFE_REQUESTS):
+            raise WorkflowError('请确认使用自己的账户，并将累计请求上限设为可精确表示的正整数。')
         key = data.get('api_key')
         if not isinstance(key, str) or not re.fullmatch(r'sk-[A-Za-z0-9_-]{16,200}', key.strip()):
             raise WorkflowError('请填写完整的 DeepSeek API key，勿填写聊天账号密码。')

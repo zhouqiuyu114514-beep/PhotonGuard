@@ -32,7 +32,7 @@ def main():
     info=verify(root);port=int(sys.argv[3])
     from photonguard.workflow import make_server
     with make_server(root/'data/workspace',port=port,allow_workers=True) as server:
-        server.store.service_identity={'release_id':'photonguard-rc9-success-quota-20261020','source_root':str(root/'source'),'data_root':str(root/'data/workspace'),'source_commit':info['source_commit'],'package_root':str(root)}
+        server.store.service_identity={'release_id':'photonguard-rc9-single-slit-20261021','source_root':str(root/'source'),'data_root':str(root/'data/workspace'),'source_commit':info['source_commit'],'package_root':str(root)}
         state={'pid':os.getpid(),'port':port,'package_root':str(root),'url':f'http://127.0.0.1:{port}/experiments'}
         statefile.write_text(json.dumps(state),encoding='utf-8')
         print('READY '+state['url'],flush=True)

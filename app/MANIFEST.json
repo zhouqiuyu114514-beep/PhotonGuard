@@ -5,9 +5,9 @@
   "files": {
     "launcher/environment-linux-64.lock": "aaaf235b2778edf0d97e1f50de0b8e008ec92bcf3199b829dc8be6bb31377a2b",
     "launcher/runtime-sources.json": "79ca3abf83e7b8587281ccbf3ae4429fcee57a95d80796faa41c3b3d486a8c1d",
-    "launcher/server.py": "51f8c9c6baec2198fee0ddcf3aa05ef632846d481c8ef1141708f833fb407af8",
+    "launcher/server.py": "9c6f95400700d0069e212f0941e0632ead24f95ecee2f49931efb058af275cc4",
     "launcher/setup-wsl.ps1": "fd5a8f358f47b5eaeda159e9c6904d660685a46201952ab1defd2f3dd3298446",
-    "launcher/start.ps1": "5002edfd621f52f09525313aab32ac9cf6815747bb98f3cd50495d488efff586",
+    "launcher/start.ps1": "57b569edc853d7c25c1e14e144e92981a3b319b6eb045dfe71237e0447fdb0b7",
     "launcher/wsl-entry.sh": "59af3fd2d1466331bb8000f1fef578f05d6ffefa1bd3dfea6a523a9e5b7eaac5",
     "source/.gitignore": "43937a8eedd6d43e9432296531a351aac72c2851dc7ac88cdefd9290402bc6e7",
     "source/benchmark/run_development.py": "77593f802213b9f662d2fd19ff633737fc28241fa804952abef68b93e3bb106e",
@@ -282,7 +282,7 @@
     "source/photonguard/workflow_assets/certificate-report.css": "46cdcf4cfd665c335136e1741e8371b12395501536480ed3139349b787c126c1",
     "source/photonguard/workflow_assets/experiments.css": "1501cc266cb03344ade5950e32084fd0c36a4da1b2cecf177f7d91b813cb0f8d",
     "source/photonguard/workflow_assets/experiments.html": "4315a54db6cb94d0da4f506bb3c1b96c32f199571f4bca88084ded3725f3e94e",
-    "source/photonguard/workflow_assets/experiments.js": "65600a4861968bedcdd96e0ca775e60bc01df620aa457583d53e9654c53e069d",
+    "source/photonguard/workflow_assets/experiments.js": "2ba472d2bc2e50f04929f47ec07d752ef72fd0ef0e20f78549fef236a080a1fa",
     "source/photonguard/workflow_assets/index.html": "742c20c05ff9c21e81cd20d22654a4f8a11670d4ca4bc5fc2751da41db82ae90",
     "source/photonguard/workflow_assets/intake.js": "4955f4c6b91c9190b05a7da207ab43d65391358d45c74730229563a267e7f057",
     "source/photonguard/workflow_assets/mode-report.css": "fa3195d008519d77e96f06ed51c01ee1b40e47bae131c579317a53a18b0d6ea5",
@@ -635,11 +635,11 @@
     "source/validation/check_merge_baseline.py": "5cb6b002658140239b613b0eca32906a45e509ee20b8c53d21887d4a4d603353",
     "source/WORKFLOW_SOURCE_MANIFEST.sha256": "dfbb559860ba2d3e6cb3732e24bd8fcb3a1a5eb85d48b35c8ed3f9613fdeea28",
     "source/WORKFLOW_TEST_REPORT_ZH.txt": "389efbb7c49a024ebf426336c5f21ff6bc7e75409dbe0f1d0b7ae7f8725d5fe7",
-    "SOURCE_MANIFEST.json": "baa06b3216008c0e49886b99055577c37cf902138b2dc6bbbc548e1745f1ad93",
+    "SOURCE_MANIFEST.json": "db86c5732fe2b7bb0f5b36405957015d525bd104d885982c3b32ac1574801bed",
     "停止工作台.bat": "6c2379d40503219645d39bccd778fcebdbbe5c40dd7f87df66db005fd43d4b56",
     "先读我.md": "013474dbc81563a213a4cabb723108aa32ecd64f7ab1bca71e95a6390234fb6e",
     "启动工作台.bat": "40280f72d494b6da92369f29c408727f91ea344b89d3b813946421e4fd98dea3",
     "首次准备环境.bat": "127f7569ac57b11b7693747cd2f12d29dd4ba1e841763d5d81996da4a05d0160"
   },
-  "maintenance": "success-example-user-quota-20261020"
+  "maintenance": "single-slit-example-launcher-20261021"
 }

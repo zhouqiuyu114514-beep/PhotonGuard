@@ -3,7 +3,7 @@
   "source_commit": "176976938f9a6d0603c4799339623227aae35c90",
   "core_freeze_commit": "7f11fb09b9ba99b73525fb038c1c2ba9e170b179",
   "version": "0.2.0rc9",
-  "maintenance": "success-example-user-quota-20261020",
+  "maintenance": "single-slit-example-launcher-20261021",
   "files": {
     ".gitignore": "43937a8eedd6d43e9432296531a351aac72c2851dc7ac88cdefd9290402bc6e7",
     "benchmark/run_development.py": "77593f802213b9f662d2fd19ff633737fc28241fa804952abef68b93e3bb106e",
@@ -278,7 +278,7 @@
     "photonguard/workflow_assets/certificate-report.css": "46cdcf4cfd665c335136e1741e8371b12395501536480ed3139349b787c126c1",
     "photonguard/workflow_assets/experiments.css": "1501cc266cb03344ade5950e32084fd0c36a4da1b2cecf177f7d91b813cb0f8d",
     "photonguard/workflow_assets/experiments.html": "4315a54db6cb94d0da4f506bb3c1b96c32f199571f4bca88084ded3725f3e94e",
-    "photonguard/workflow_assets/experiments.js": "65600a4861968bedcdd96e0ca775e60bc01df620aa457583d53e9654c53e069d",
+    "photonguard/workflow_assets/experiments.js": "2ba472d2bc2e50f04929f47ec07d752ef72fd0ef0e20f78549fef236a080a1fa",
     "photonguard/workflow_assets/index.html": "742c20c05ff9c21e81cd20d22654a4f8a11670d4ca4bc5fc2751da41db82ae90",
     "photonguard/workflow_assets/intake.js": "4955f4c6b91c9190b05a7da207ab43d65391358d45c74730229563a267e7f057",
     "photonguard/workflow_assets/mode-report.css": "fa3195d008519d77e96f06ed51c01ee1b40e47bae131c579317a53a18b0d6ea5",

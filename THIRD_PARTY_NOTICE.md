@@ -5,7 +5,7 @@ PhotonGuard项目源码遵循GPL-2.0-or-later，许可文本位于根目录LICEN
 | 资源 | 作用 | 许可或使用方式 |
 |---|---|---|
 | Python | 本地服务与执行环境 | PSF |
-| NumPy | 数值数组与解析计算 | BSD-3-Clause及发行通知 |
+| NumPy | 数值数组、二维FFT与解析计算 | BSD-3-Clause及发行通知 |
 | tmm | 薄膜传输矩阵计算 | MIT |
 | SciPy | 有界非线性最小二乘与局部参数优化 | BSD-3-Clause及发行通知 |
 | DeepSeek API | 条件理解与下一步建议 | 服务商适用条款，使用者个人账户 |
